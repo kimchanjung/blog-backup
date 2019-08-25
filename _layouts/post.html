@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    {% include post-head.html %}
+    <body>
+        {% include post-header.html %}
+        <section id="content"></section>
+        <main class="page-content" aria-label="Content">
+            <div class="wrapper">
+                <div class="home">
+                    <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
+                        <article role="article" id="scroll" class="post-content" itemprop="articleBody">
+                            {{ content }}
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
