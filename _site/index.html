@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>A blog about lorem ipsum dolor sit amet</title>
-  <meta name="description" content="A blog about lorem ipsum dolor sit amet">
+  <title>Developer KimChanjung</title>
+  <meta name="description" content="A blog about Developer KimChanJung">
 
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
@@ -23,11 +23,11 @@
         <a aria-label="My Github" target="_blank" href="https://github.com/kimchanjung"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
         <a aria-label="My Twitter" target="_blank" href="#"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
         <a aria-label="My Google Plus" target="_blank" href="#"><i class="icon fa fa-google-plus" aria-hidden="true"></i></a>
-        
       </div>
       <div class="header-links">
         <a class="link" href="#about" data-scroll>About Me</a>
         <a class="link" href="#projects" data-scroll>Projects</a>
+        <a class="link" href="/resume/2019/08/01/resume.html">My Resume</a>
       </div>
   </div>
   <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
@@ -35,10 +35,10 @@
 
       <section id="about">
          <div class="user-details">
-  <h1> My experience </h1>
+  <h1> My Experience </h1>
   <p style="text-align: left"> 
     <strong>최근 까지 우아한형제들(배달의민족</strong>) 딜리버리플랫폼팀(배빈라이더스)에서 라이더의 배달 업무 수행을 위한 <strong>실시간 배달 관재 운영 시스템</strong> 및 라이더앱 API 개발, 
-    <strong>Amazone Webservice</strong> 인프라 기반에서 Java Spring 과 JPA 로 Back-End API 및 라이더앱 API를 개발해왔습니다.<br/> <br/> 
+    <strong>Amazon Webservice</strong> 인프라 기반에서 Java Spring 과 JPA 로 Back-End API 및 라이더앱 API를 개발해왔습니다.<br/> <br/> 
     <strong>팀내 Front-End 기술리딩을 맡아 React와 Mobx</strong>로 Front-End를 개발, 
     실시간으로 라이더 및 배달 정보를 관리 하기 위하여 <strong>Node.js Socket.io 기반 Websocket Server 개발경험</strong>을 가지고 있습니다. 또한 사내 타 시스템과 연동을 위해 <strong>MSA 환경을 고려한 개발경험</strong>이 있습니다.
 
@@ -67,6 +67,11 @@
       <p><strong>Amazon Webservice에서 Elastic Beanstalk에서 서버운영</strong>, SNS, SQS를 MSA 구축 활용, Jenkins 배포 환경에서 개발, JIRA, Confluence 환경에서 업무.</p>
     </div>
 </div>
+<div class="user-details">
+  <h1> My Career </h1>
+  <p><strong>배달의민족</strong> - 딜리버리플랫폼팀(배민라이더스), 서버, API, 웹 프론트엔드 개발 , 2013/03 ~ 2019/06 (6년)</p>
+  <p><strong>부동산써브</strong> - 부동산종합정보제공 교육 컨설팅, 웹개발, 2008/09 ~2012/08 (4년)</p>
+</div>
 
       </section>
       <section id="projects">
@@ -75,9 +80,28 @@
 </div>
 <div class="user-projects">
   <div class="images-right">
-    <img alt="mountains" src="/assets/img/bros-chatting.jpg" />
+    <img alt="rider-management" src="/assets/img/rider-management-list.jpg" />
   </div>
   <div class="contents">
+    <h3> 라이더 관리 시스템 </h3>
+    <ul>
+      <li>Back-End - Java Spring, JPA</li>
+      <li>Front-End - React, Mobx, Material-UI</li>
+      <li>Etc - Amazon SNS, SQS</li>
+    </ul>
+    <p>
+      라이더정보 등록 및 관리,
+      배달운영시스템과 MSA로 분리 구성 되어 상호 비동기 데이터 연동 (AWS - SQS, SNS),
+      SAP(ERP) 시스팀과 연동
+    </p>
+    <a class="project-link" href="/tech/2019/01/01/react-mobx.html">Check it out</a>
+  </div>
+</div>
+<div class="user-projects">
+  <div class="images-left">
+    <img alt="bros2.0" src="/assets/img/brms-dashboard.png" />
+  </div>
+  <div class="contents-right">
     <h3> BROS 2.0 </h3>
     <ul>
       <li>Back-End - Java Spring, JPA</li>
@@ -89,29 +113,52 @@
       배달권역 및 운영에 필요한 설정 기능,
       라이더 배달료 정산에 필요한 각종 데이터 제공,
       BROS 1.0에 더 추가된 각종 기능 셋 제공</p>
-    <a class="project-link" href="#">Check it out</a>
   </div>
 </div>
 <div class="user-projects">
-  <div class="images-left">
-    <img alt="mountains" src="/assets/img/skate.jpg" />
+  <div class="images-right">
+    <img alt="bros1.0" src="/assets/img/bros-chatting.jpg" />
   </div>
   <div class="contents-right">
-    <h3> Project Title </h3>
+    <h3> BROS 1.0 </h3>
     <ul>
-      <li> Featured Skills</li>
+      <li>주문접수 및 실시간 배달 현황, 라이더 관제 종합 오퍼레이팅 시스템</li>
+      <li>AngularJS 1.xx, Node.js Socket.io</li>
+      <li>Etc - Redis, Websocket</li>
     </ul>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a class="project-link" href="#">Check it out</a>
+    <p>
+      주문접수 및 취소 기능, 채팅기능 제공, 
+      실시간 배달현황 및 라이더 위치 정보 제공, 라이더에게 실시간 배달건 배차 및 관제 기능,
+      주문, 배달, 라이더 배달료정산 데이터 조회 및 제공.
+    </p>
+    <a class="project-link" href="/tech/2017/09/09/real-time-service.html">Check it out</a>
   </div>
-</div>
+  <div class="user-projects">
+    <div class="images-left">
+      <img alt="real-time-server" src="/assets/img/socket-server-monitor.jpg" />
+    </div>
+    <div class="contents-right">
+      <h3> Real-Time Event Server </h3>
+      <ul>
+        <li>주요기능 -실시간 이벤트 데이터 송수신, 멀티 플랫폼 지원, 채팅 구축 가능.</li>
+        <li>실시간 서버현황(접속유저, NameSpace, Room) 및 CPU/Memory 사용량 모니터링 페이지 제공</li>
+        <li>Etc - Socekt.io, Redis pub/sub, clustering</li>
+      </ul>
+      <p>
+        통합 배달 운영 시스템의 실시간 이벤트 업데이트와 채팅 기능에 사용하기 위하여 구축</p>
+    </div>
+  </div>
 
       </section>
       <section id="posts">
         <div class="user-details">
     <h1> My Posts </h1>
     
+    <p> <a href="/resume/2019/08/01/resume.html">resume</a></p>
+    
     <p> <a href="/tech/2019/01/01/react-mobx.html">React 에서 Mobx 사용기</a></p>
+    
+    <p> <a href="/tech/2017/09/09/real-time-service.html">실시간 서비스 경험기(배달운영시스템 BROS1.0)</a></p>
     
 </div>
       </section>

@@ -3,9 +3,28 @@
 </div>
 <div class="user-projects">
   <div class="images-right">
-    <img alt="mountains" src="{{ "/assets/img/bros-chatting.jpg" | prepend: site.baseurl }}" />
+    <img alt="rider-management" src="{{ "/assets/img/rider-management-list.jpg" | prepend: site.baseurl }}" />
   </div>
   <div class="contents">
+    <h3> 라이더 관리 시스템 </h3>
+    <ul>
+      <li>Back-End - Java Spring, JPA</li>
+      <li>Front-End - React, Mobx, Material-UI</li>
+      <li>Etc - Amazon SNS, SQS</li>
+    </ul>
+    <p>
+      라이더정보 등록 및 관리,
+      배달운영시스템과 MSA로 분리 구성 되어 상호 비동기 데이터 연동 (AWS - SQS, SNS),
+      SAP(ERP) 시스팀과 연동
+    </p>
+    <a class="project-link" href="/tech/2019/01/01/react-mobx.html">Check it out</a>
+  </div>
+</div>
+<div class="user-projects">
+  <div class="images-left">
+    <img alt="bros2.0" src="{{ "/assets/img/brms-dashboard.png" | prepend: site.baseurl }}" />
+  </div>
+  <div class="contents-right">
     <h3> BROS 2.0 </h3>
     <ul>
       <li>Back-End - Java Spring, JPA</li>
@@ -17,19 +36,38 @@
       배달권역 및 운영에 필요한 설정 기능,
       라이더 배달료 정산에 필요한 각종 데이터 제공,
       BROS 1.0에 더 추가된 각종 기능 셋 제공</p>
-    <a class="project-link" href="#">Check it out</a>
   </div>
 </div>
 <div class="user-projects">
-  <div class="images-left">
-    <img alt="mountains" src="{{ "/assets/img/skate.jpg" | prepend: site.baseurl }}" />
+  <div class="images-right">
+    <img alt="bros1.0" src="{{ "/assets/img/bros-chatting.jpg" | prepend: site.baseurl }}" />
   </div>
   <div class="contents-right">
-    <h3> Project Title </h3>
+    <h3> BROS 1.0 </h3>
     <ul>
-      <li> Featured Skills</li>
+      <li>주문접수 및 실시간 배달 현황, 라이더 관제 종합 오퍼레이팅 시스템</li>
+      <li>AngularJS 1.xx, Node.js Socket.io</li>
+      <li>Etc - Redis, Websocket</li>
     </ul>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a class="project-link" href="#">Check it out</a>
+    <p>
+      주문접수 및 취소 기능, 채팅기능 제공, 
+      실시간 배달현황 및 라이더 위치 정보 제공, 라이더에게 실시간 배달건 배차 및 관제 기능,
+      주문, 배달, 라이더 배달료정산 데이터 조회 및 제공.
+    </p>
+    <a class="project-link" href="/tech/2017/09/09/real-time-service.html">Check it out</a>
   </div>
-</div>
+  <div class="user-projects">
+    <div class="images-left">
+      <img alt="real-time-server" src="{{ "/assets/img/socket-server-monitor.jpg" | prepend: site.baseurl }}" />
+    </div>
+    <div class="contents-right">
+      <h3> Real-Time Event Server </h3>
+      <ul>
+        <li>주요기능 -실시간 이벤트 데이터 송수신, 멀티 플랫폼 지원, 채팅 구축 가능.</li>
+        <li>실시간 서버현황(접속유저, NameSpace, Room) 및 CPU/Memory 사용량 모니터링 페이지 제공</li>
+        <li>Etc - Socekt.io, Redis pub/sub, clustering</li>
+      </ul>
+      <p>
+        통합 배달 운영 시스템의 실시간 이벤트 업데이트와 채팅 기능에 사용하기 위하여 구축</p>
+    </div>
+  </div>

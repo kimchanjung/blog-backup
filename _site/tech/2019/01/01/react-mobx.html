@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <title>React 에서 Mobx 사용기</title>
-    <meta name="description" content="A blog about lorem ipsum dolor sit amet">
+    <meta name="description" content="React와 state 관리 라이브러리 mobx사용기 및 redux와 비교기">
     
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/post.css">
@@ -20,7 +20,11 @@
         <span class="site-description">January 01, 2019</span>
       </h1>
       <div class="header-links">
-        <span>KimChanJung Developer's Blog</span>
+        <span> Developer KimChanJung's Blog</span>
+      </div>
+      <div class="header-icons">
+        <a aria-label="Send email" href="mailto:mogomezwai@gmail.com"><i class="icon fa fa-envelope"></i></a>
+        <a aria-label="My Github" target="_blank" href="https://github.com/kimchanjung"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
       </div>
   </div>
   <a class="down" href="#content" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
@@ -189,7 +193,7 @@
 
 <p>다음 이미지는 <strong>Google로 ‘redux diagram’ 키워드</strong>로 검색했을 때 검색된 결과 들입니다. 리덕스의 개념을 설명하는데 <strong>Data Flow Diagram</strong>이 자주 등장 합니다. <strong>Action, Reducer, Dispatcher, Store, View</strong> 이런 개념들은 사실 State를 렌더링 하고 변경하기 위한 어떤 메소드 즉 서비스 같은 것을 가져다 그냥 사용하는 것 뿐인 데 개념을 장황하게 설명합니다. 그리고 그것들이 상호 작용하기 위해서 추가 해주는 보일러플레이트 코들이 매 Component마다 추가 해주어야합니다. 컴포넌트와 리덕스를 연결하기위해서 <strong>mapStateToProps, mapDispatchToProps</strong> 함수를 사용하고 <strong>Action을 정의</strong> 하고.. 등등 <strong>Javascript의 높은 문법 자유</strong>도 때문에 <strong>예제 코드들의 선언 방식 또한 자유 분방</strong>합니다. 바로 이런 것들이 React가 다소 어렵다라는 인식을 주게되는 하나의 요인 같댜는 생각이 개인적으로 들기도 합니다.</p>
 
-<p><img src="/img/redux-diagram.jpg" alt="redux-data-flow-diagram" /></p>
+<p><img src="/post-img/react-mobx/redux-diagram.jpg" alt="redux-data-flow-diagram" /></p>
 
 <p>그림 1. redux diagram 키워드 검색한 결과</p>
 
@@ -209,7 +213,7 @@
 
 <p>Mobx의 <strong>State(데이터)의 흐름과 핵심 개념</strong>을 간단하게 표현 해보았습니다. 사실 더 자세한 개념은 공식문서에 있지만 이해하는 데 방해가되는 개념은 제외하고 제가 이해한 부분을 간략하게 그려보았습니다. 배달 리스트를 가져오기 위해서 <strong>DeliveryStore</strong>(Spring의 서비스의 역할과 거의 비슷하다)의 <strong>findAllDeliveries</strong>를 호출하여 서버로 부터 가져온 데이터를 선언해둔 <strong>deliveries</strong> state에 할당 해주면 <strong>DeliveryComponent</strong>에서 <strong>deliveries</strong> 를 Rendering 하게 되는데 이것이 기본 동작 개념입니다. 기타 <strong>Mobx Store</strong>와 <strong>React 컴포넌트를 연결</strong>하는 방법은 Redux와 달리 <strong>@inject</strong> 데코레이더 한줄로 이루어 집니다. 물론 그외 여러가지 기능을 하는 <strong>데코레이더 들이 제공</strong>되고 있으며 설명은 이후 자세히 하겠습니다.</p>
 
-<p><img src="/img/mobx-data-flow.jpg" alt="mobx-data-flow-diagram" /></p>
+<p><img src="/post-img/react-mobx/mobx-data-flow.jpg" alt="mobx-data-flow-diagram" /></p>
 
 <p>그림 2. mobx 데이터 흐름</p>
 
@@ -217,7 +221,7 @@
 
 <p>Mobx는 렌더링 할 State를 관찰대상으로 지정, State를 변경하면 React Component Render 메소드에 의해서 Rerendering 되는 아키텍쳐를 기본 골격으로 합니다. 예제와 함께 Mobx의 작동 방식과 특징을 알아 보겠습니다. 마치 <strong>Java Spring Framework유사한 Layer 아키텍쳐</strong>를 가지고 있고 실제로 그런식으로 Layer를 분리하여 아키텍쳐를 구성하는 것을 권장하고 있습니다.</p>
 
-<p><img src="/img/mobx-spring-layer.png" alt="mobx-spring-layer-table" /><br />
+<p><img src="/post-img/react-mobx/mobx-spring-layer.png" alt="mobx-spring-layer-table" /><br />
 표 1.spring과 mobx layer 비교</p>
 
 <h3 id="store--service">Store = Service</h3>
@@ -477,7 +481,7 @@
 
 <h3 id="같은-역할을-하는-두-라이브러리의-layer또는-라이브러리">같은 역할을 하는 두 라이브러리의 Layer(또는 라이브러리)</h3>
 
-<p><img src="/img/mobx-redux-layer.png" alt="mobx-redux-layer-table" /><br />
+<p><img src="/post-img/react-mobx/mobx-redux-layer.png" alt="mobx-redux-layer-table" /><br />
 표 2. Mobx와 Redux Layer 비교</p>
 
 <h3 id="service-layer---storemobx-vs-reducerredux">Service Layer - Store(Mobx) VS Reducer(Redux)</h3>
@@ -1138,10 +1142,10 @@
   <p>단순히 아웃풋을 빨리 뽑아내는데 집중한 것이 아니라 NPM에 넘쳐나는 React 관련 라이브러리들과 패턴을 관련 블로그나 문서들을 통하여 비교 조사하고 적용 해보면서 최상의 패턴과 라이브러리를 조합하는데 더 집중 하였습니다.</p>
 </blockquote>
 
-<p><strong>Mobx와 Material-UI를 적용한 배달현황</strong> <img src="/img/brms-dashboard.png" alt="brms-dashboard" /><br />
+<p><strong>Mobx와 Material-UI를 적용한 배달현황</strong> <img src="/post-img/react-mobx/brms-dashboard.png" alt="brms-dashboard" /><br />
 그림 5. mobx와 material-ui를 배달현황</p>
 
-<p><strong>Mobx와 Material-UI를 적용한 라이더관리</strong> <img src="/img/brms-search-rider.png" alt="brms-search-rider" /><br />
+<p><strong>Mobx와 Material-UI를 적용한 라이더관리</strong> <img src="/post-img/react-mobx/brms-search-rider.png" alt="brms-search-rider" /><br />
 그림 5. mobx와 material-ui를 라이더 관리</p>
 
 <p>이를 통하여 <strong>마주한 고민</strong>과 더불어 실제 <strong>개발 해보면서 느낀 것</strong> 들과 약간의 정보 그런 이야기를 한번 해보고자 합니다.</p>
@@ -1162,10 +1166,10 @@
 
 <p>간략한 특징은 다음과 같이 Atoms(원자), Molecules(분자), Organisms(유기체), Templates, Pages 분류로 React Component의 종류와 규모에 맞게 적절히 분류해서 생성하여 관리합니다.</p>
 
-<p><strong>Atomic Design 단계 구분</strong> <img src="/img/atomic-design.png" alt="atomic-design" /><br />
+<p><strong>Atomic Design 단계 구분</strong> <img src="/post-img/react-mobx/atomic-design.png" alt="atomic-design" /><br />
 그림 5. Atomic Design 단계구분</p>
 
-<p><strong>Atomic Design 적용한 폴더 구조</strong> <img src="/img/atomic-design-folder.png" alt="atomic-design-folder" /><br />
+<p><strong>Atomic Design 적용한 폴더 구조</strong> <img src="/post-img/react-mobx/atomic-design-folder.png" alt="atomic-design-folder" /><br />
 그림 5. Atomic Design 폴더 구조</p>
 
 <h3 id="react-component의-유형-구분">React Component의 유형 구분</h3>
@@ -1176,7 +1180,7 @@
   <p>React는 기본적으로 명확하게 두 영역을 구분해서 설계된 것이 아니기 때문에 Tutorial에서는 구분해서 코드를 설명하지는 않는다. 하지만 이런 식으로 두 영역을 명확하게 구분하여 개발하는 것이 좀더 구조적으로 유용하기 때문에 구분하는 것을 권장하고 있다.</p>
 </blockquote>
 
-<p><strong>Component 유형구분</strong> <img src="/img/component-type.png" alt="component-type" /><br />
+<p><strong>Component 유형구분</strong> <img src="/post-img/react-mobx/component-type.png" alt="component-type" /><br />
 그림 5. React Component의 유형</p>
 
 <p><strong>Container Component</strong> React Component 를 상속한 RiderSearchContainer는 State와 Method를 적절히 중간에서 연결해 주는 <strong>Controller와 같은 역할</strong>만 수행하고 HTML 렌더링은 RiderListTemplate 같은 Presentational 영역을 담당하는 Component가 담당한다.</p>
@@ -1305,7 +1309,7 @@ Bootstrap 4가 나온 상황에서 <strong>style이 좀 예전 것</strong>이�
 
 <p>개인적으로 Mobx로 개발을 진행 했을 때 Material-UI도 같이 적용 했습니다. 사실 처음에 <strong>우려되는 점이 다른 라이브러들과의 궁합</strong>을 걱정했지만 이제 정식으로 3대 버전까지 개발되었으며 <strong>Mobx-React-Form(form validation 라이브러리 with mobx)이 Material-UI를 지원</strong>하기 때문에 input의 <strong>유효성 검사와 그에 따른 UI의 변화와 오류 메시지 표시</strong>등이 별다른 custom 작업없이 Style이 틀어지거나 하지 않고 자연스럽게 작동했고, 사용율도 Bootstrap 기반의 라이브러리들보다 훨씬 높은 수치를 나타내고 있습니다.</p>
 
-<p><strong>최근 NPM 경향</strong> <img src="/img/npm-trend-ui-lib.png" alt="npm-trend-ui-lib" /><br />
+<p><strong>최근 NPM 경향</strong> <img src="/post-img/react-mobx/npm-trend-ui-lib.png" alt="npm-trend-ui-lib" /><br />
 그림 5. npm trend ui 라이브러리</p>
 
 <p><strong>장점</strong></p>
@@ -1314,7 +1318,7 @@ Bootstrap 4가 나온 상황에서 <strong>style이 좀 예전 것</strong>이�
   <li><strong>Web, Mobile, Desktop</strong>에 까지 광범위하게 사용되고 있는 <strong>Google Material Design의 깔끔한 style</strong>을 적용할 수 있다.</li>
   <li>
     <p>테마변경의 경우 <strong>css, sass를 새로 변경 rebuild</strong>하는 것이 아니라 아주 <strong>간편하게 코드상</strong>으로 <strong>변경</strong>할 수 있어서 <strong>Dark Mode</strong> 및 <strong>색상테마</strong>를 사용자가 <strong>직접 설정해서 변경 할수 있도록 기능으로도 제공</strong> 할 수 도 있다. <br />
-<img src="/img/brms-dashboard-dark.png" alt="brms-dashboard-dark" /><br />
+<img src="/post-img/react-mobx/brms-dashboard-dark.png" alt="brms-dashboard-dark" /><br />
 그림 5. material-ui dark mode</p>
   </li>
   <li>css를 적용하는 방식이 아닌 [<strong>jss]<a href="https://medium.com/@oleg008/jss-is-css-d7d41400b635">15</a> 방식으로 style을 해당 페이지에서 사용하는 스타일만 따로 격리</strong>된 javascript객체로 관리가능 하고 <strong>동적으로 style 변경 적용이 직관적</strong>이다</li>
@@ -1336,7 +1340,7 @@ Bootstrap 4가 나온 상황에서 <strong>style이 좀 예전 것</strong>이�
 <p>Redux만 npm에서 다운받으면 되는 줄 알았는데 <strong>이게 다뭐야 하시는 분들</strong>이 분명히 계실 것 이라고 생각됩니다. 리서치 하다보면 <strong>꼬리에 꼬리를 무는 수많은 추가 라이브러리</strong>들과 그 것들이 뭐하는 라이브러리인지 파악하는 일도 상당한 리소스가 투여되는 경험이였습니다. 일단 Redux를 사용 할 것이라면 2018년 5월 기준으로 보편 아래 나열한 키워드의 라이브러리들을 기본적으로 사용하면 됩니다.</p>
 
 <p><strong>Redux와 관련 라이브러리</strong><br />
-<img src="/img/redux-with-libs.png" alt="redux-with-lib" /><br />
+<img src="/post-img/react-mobx/redux-with-libs.png" alt="redux-with-lib" /><br />
 그림 5. Redux와 관련 라이브러리들</p>
 
 <blockquote>

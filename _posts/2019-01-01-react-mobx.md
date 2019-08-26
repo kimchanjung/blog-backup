@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "React 에서 Mobx 사용기"
+description: React와 state 관리 라이브러리 mobx사용기 및 redux와 비교기
+author: kimchanjung
 date:   2019-01-01 16:16:01 +0900
 categories: tech
 ---
@@ -1437,22 +1439,22 @@ rest-api method - X**
 
 주관적 경험을 통해 느낀점이지만 Mobx는 Redux에 비해서 낮은 러닝 커브와 높은 가독성이 확실한 장점으로 다가 왔습니다. React State관리 라이브러리를 선택할 때 조금이나마 도움이 되었으면 하는 바램과 함께 글을 마칩니다.
 
-[1]: /img/redux-diagram.jpg
+[1]: /post-img/react-mobx/redux-diagram.jpg
 [2]: https://repo.yona.io/doortts/blog/post/297
-[3]: /img/mobx-data-flow.jpg
-[4]: /img/mobx-spring-layer.png
-[5]: /img/mobx-redux-layer.png
-[6]: /img/brms-dashboard.png
-[7]: /img/brms-search-rider.png
+[3]: /post-img/react-mobx/mobx-data-flow.jpg
+[4]: /post-img/react-mobx/mobx-spring-layer.png
+[5]: /post-img/react-mobx/mobx-redux-layer.png
+[6]: /post-img/react-mobx/brms-dashboard.png
+[7]: /post-img/react-mobx/brms-search-rider.png
 [8]: https://brunch.co.kr/@ultra0034/63
-[9]: /img/atomic-design.png
-[10]: /img/atomic-design-folder.png
+[9]: /post-img/react-mobx/atomic-design.png
+[10]: /post-img/react-mobx/atomic-design-folder.png
 [11]: https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0
-[12]: /img/component-type.png
-[13]: /img/npm-trend-ui-lib.png
-[14]: /img/brms-dashboard-dark.png
+[12]: /post-img/react-mobx/component-type.png
+[13]: /post-img/react-mobx/npm-trend-ui-lib.png
+[14]: /post-img/react-mobx/brms-dashboard-dark.png
 [15]: https://medium.com/@oleg008/jss-is-css-d7d41400b635
-[16]: /img/redux-with-libs.png
+[16]: /post-img/react-mobx/redux-with-libs.png
 [17]: https://redux-form.com/8.1.0/
 [18]: https://davidkpiano.github.io/react-redux-form/docs.html
 [19]: https://github.com/jaredpalmer/formik
