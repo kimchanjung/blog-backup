@@ -8,11 +8,11 @@
       
 
       
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
       
 
       
-          <priority>0.5</priority>
+          <priority>1.0</priority>
       
 
     </url>
@@ -24,11 +24,11 @@
       
 
       
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
       
 
       
-          <priority>0.5</priority>
+          <priority>1.0</priority>
       
 
     </url>
@@ -40,11 +40,11 @@
       
 
       
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
       
 
       
-          <priority>0.5</priority>
+          <priority>1.0</priority>
       
 
     </url>
