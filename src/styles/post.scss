@@ -124,6 +124,11 @@ table td { border: 1px solid #e8e8e8; }
 @media screen and (max-width: 600px) { .footer-col { float: none; width: -webkit-calc(100% - (30px / 2)); width: calc(100% - (30px / 2)); } }
 
 /** Page content */
+
+.post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
+  margin-top: 50px;
+}
+
 .page-content { padding: 30px 0; flex: 1; }
 
 .page-heading { font-size: 32px; }
