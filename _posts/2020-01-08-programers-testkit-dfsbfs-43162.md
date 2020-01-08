@@ -28,7 +28,7 @@ published: true
 ```
 1. 그래프 그룹 1 - 2  - 3 =  1개
 
-## 해결방법 (TEST CASE 1기준)
+### 해결방법 (TEST CASE 1기준)
 각 노드 1, 2, 3을 출발점으로 DFS 탐색을 한다.
 
 > 1번을 시작으로  => 1[방문] -> 2[방문] 종료 =  1개
@@ -47,7 +47,7 @@ published: true
 > 1-2-3 의 경우는 모두 연결되어 있으므로 1,2,3, 개별 노드를 출발점으로 DFS 하더라도 
 > 미방문시에만 DFS하도록 되어 있어 결론은 1번이 된다.
 
----
+### 소스코드
 ```java
 class Solution {
     private static int[][] nodes;
