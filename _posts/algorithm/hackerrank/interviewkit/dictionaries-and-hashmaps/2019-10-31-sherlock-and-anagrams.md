@@ -13,16 +13,19 @@ published: true
 
 ### 문제 조건
 1. 문자열의 순서는 변경되지 않는다  
-2. 문자열 "abba"의 경우 가능한 케이스는  
+2. 문자열 "abba"의 경우 가능한 케이스는 
+
 ```
 [a,a] [ab, ba] [b,b] [abb, bba]  => 4가지
 ```
 3. 문자열 "ifailuhkqq" 경우는
+
 ```
 [i,i] [g,g] [ifa, fai] => 처럼 3가지다 
 
 ifa, fai 처럼 같은 문자열포함 쌍인데 ifa = fia 이렇게 순서를 변경한 케이스는 없다
 ```
+
 4. 문자열 "kkkk" 경우는 
 ``` 
 [k,k] [k,k] [k,k] [k,k]
@@ -102,7 +105,9 @@ aa  = 2개 이고 공식적용 = 1
 aaa = 1개라 공식적용 = 0
 1+3 = 모두 더하면 4가 된다.
 ```
+
 ### 소스코드
+
 ```java
 public class SherlockAndAnagrams {
     public static int sherlockAndAnagrams(String s) {
