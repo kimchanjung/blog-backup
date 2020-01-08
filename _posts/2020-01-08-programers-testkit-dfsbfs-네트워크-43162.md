@@ -1,0 +1,69 @@
+---
+layout: post
+title: [프로그래머스] 코딩테스트 연습 > 깊이/너비 우선 탐색(DFS/BFS) > 네트워크 (43162)
+description: 
+author: kimchanjung
+date:   2020-01-08 00:00:00 +0900
+categories: algorithm
+published: true
+---
+
+### 이 문제는 서로연결된 그래프 그룹이 몇개 인지 찾는 문제
+[문제바로가기](https://programmers.co.kr/learn/courses/30/lessons/43162)
+#### TEST CASE 1
+```
+    1
+  /
+2       3
+```
+1. 그래프 그룹 1 - 2 = 1개
+2. 그래프 그룹      3 = 1개
+
+#### TEST CASE 2
+```
+    1
+  /
+2   -   3
+```
+1. 그래프 그룹 1 - 2  - 3 =  1개
+
+## 해결방법 (TEST CASE 1기준)
+각 노드 1, 2, 3을 출발점으로 DFS 탐색을 한다.
+
+> 1번을 시작으로  => 1[방문] -> 2[방문] 종료 =  1개
+
+다음 노드 2번을 출발점으로 DFS 탐색
+
+> 2번은 1번노드 DFS시 방문한 노드 이므로 제외한다(카운트하지 않는다.)
+
+3번 노드 출발점으로 DFS탐색
+
+> 3번노드는 1번 출발점으로 탐색시 연결되어 있지 않아 미방문상태 이므로 DFS 탐색 (카운트 포함)
+
+결론 적으로 1 2 3 을 개별 출발점으로 DFS 하더라도 1-2연결됨으로써 카운트는 1번 
+3은 1,2와 연결되지 않은 개별 그래프 이므로 DFS를 수행하게 됨으로써 카운트 1번
+
+> 1-2-3 의 경우는 모두 연결되어 있으므로 1,2,3, 개별 노드를 출발점으로 DFS 하더라도 
+> 미방문시에만 DFS하도록 되어 있어 결론은 1번이 된다.
+
+---
+```java
+class Solution {
+    private static int[][] nodes;
+    private static boolean[] visited;
+
+    public static int solution(int n, int[][] computers) {
+        nodes = computers;
+        visited = new boolean[n];
+        return IntStream.range(0, n).map(i -> visited[i] ? 0 : dfs(i)).sum();
+    }
+
+    private static int dfs(int node) {
+        if (visited[node]) return 1;
+        visited[node] = true;
+        return IntStream.range(0,nodes[node].length)
+                .map(i -> nodes[node][i] == 1 ? dfs(i) : 0)
+                .max().getAsInt();
+    }
+}
+```
