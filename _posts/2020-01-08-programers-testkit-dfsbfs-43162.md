@@ -1,10 +1,10 @@
 ---
 layout: post
-title: [프로그래머스] 코딩테스트 연습 > 깊이/너비 우선 탐색(DFS/BFS) > 네트워크 (43162)
+title: 프로그래머스 - 코딩테스트 연습 > 깊이/너비 우선 탐색(DFS/BFS) > 네트워크 (43162)
 description: 
 author: kimchanjung
-date:   2020-01-08 00:00:00 +0900
-categories: algorithm
+date: 2020-01-08 00:00:00 +0900
+categories: algorithm/programers
 published: true
 ---
 
