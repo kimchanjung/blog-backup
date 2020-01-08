@@ -1,13 +1,14 @@
 ---
 layout: post
-title: 프로그래머스 - 코딩테스트 연습 > 깊이/너비 우선 탐색(DFS/BFS) > 네트워크 (43162)
-description: 
+title: 프로그래머스 - 네트워크 (43162)
+description: 프로그래머스 - 코딩테스트 연습 > 깊이/너비 우선 탐색(DFS/BFS) > 네트워크 (43162)
 author: kimchanjung
 date: 2020-01-08 00:00:00 +0900
 categories: algorithm/programers
 published: true
 ---
 
+## [프로그래머스] 코딩테스트 연습 > 깊이/너비 우선 탐색(DFS/BFS) > 네트워크 (43162)
 ### 이 문제는 서로연결된 그래프 그룹이 몇개 인지 찾는 문제
 [문제바로가기](https://programmers.co.kr/learn/courses/30/lessons/43162)
 #### TEST CASE 1
