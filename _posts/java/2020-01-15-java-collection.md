@@ -20,7 +20,7 @@ published: true
 | HashSet       | No   | No    | No   | No           |
 | LinkedHashSet | No   | Yes   | No   | No           |
 | TreeSet       | No   | Yes   | Yes  | No           |
-| HashMap       | No   | No    | No   | No           |
+| HashMap       | No   | No    | Yes(Key)   | No           |
 | LinkedHashMap | No   | Yes   | No   | No           |
 | Hashtable     | No   | No    | No   | Yes          |
 | TreeMap       | No   | Yes   | Yes  | No           |
