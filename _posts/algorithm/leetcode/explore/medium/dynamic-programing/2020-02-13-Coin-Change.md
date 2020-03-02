@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [코테][알고리즘] LeetCode -  Coin Change
+title: "[코테][알고리즘] LeetCode -  Coin Change"
 description: LeetCode - explore > top-interview-questions > medium
 author: kimchanjung
 date: 2020-02-15 00:00:00 +0900
