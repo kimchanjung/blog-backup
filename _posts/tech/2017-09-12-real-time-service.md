@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 실시간 서비스 경험기(배달운영시스템 BROS1.0)
+title: [Socket.io][websocket] 실시간 서비스 경험기(배달운영시스템 BROS1.0)
 description: 실시간 이벤트를 이용한 라이더 관제와 배달 운영 시스템 개발 경험기
 author: kimchanjung
 date:   2017-09-09 00:00:00 +0900

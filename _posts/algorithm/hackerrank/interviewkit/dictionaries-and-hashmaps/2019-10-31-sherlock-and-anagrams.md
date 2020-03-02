@@ -1,6 +1,6 @@
 ---
 layout: post
-title: hackerrank - Sherlock and anagrams 
+title: [코테][알고리즘] hackerrank - Sherlock and anagrams 
 description: hackerrank - interview kit > dictionaries and hashmaps
 author: kimchanjung
 date: 2019-10-31 00:00:00 +0900
