@@ -79,4 +79,71 @@ published: true
 > 사실 위 조건들이 마이크로 서비스 설계시 가장 어려운 문제 인 듯 하다.  
 > 모놀리식 서비스 와 마이크로 서비스, 동기와 비동기 등이 어느 한쪽을 선택하면 이익을 얻는 대신 반드시 손해를 보게되는 trade-off 관계 이기 때문이다.
 
+## 마이크로서비스로의 전환 계획
+> 실제 책에서 예제로 나오는 항공사 예약 시스템 대신 본인이 주로 다뤄 왔단 배달 도메인을 예로 설명 합니다.
 
+### 전환 관점에서 제기되는 몇가지 중요한 질문
+- 마이크로서비스 경계 실별
+- 마이그레이션을 위한 마이크로서비스 우선순위 지정
+- 전화 단계에서의 데이터 동기회 처리
+- 이전 UI와 새로운 UI를 다루기 위한 사용자 인터페이스 통합
+- 새로운 시스템에서의 참조 데이터 처리
+- 비즈니스 범위기 제대로 유지될 수 있게 보장하는 테스트 전략
+- 마이크로 서비스의 기능. 프레임워크 등과 같은 마이크로서비스 개발을 위한 전제 조건 확인
+
+### 첫번째 - 마이크로서비스의 경계 식별
+- 가장 먼저 해야 할 일이 모놀리식 서비스에서 마이크로서비스로 전환 하고자 하는 도메인의 경계를 식별하는 것
+- 모놀리식 서비스를 분해 해본다는 관점으로 접근
+
+### 두번째 - 의존 관계 분석
+- 첫번째 단계에서 뽑아낸 마이크로서비스 후보들 간의 의존성을 분석한다.
+- 분석한 의존성을 바탕으로 의존 관계 그래프를 그려본다.
+
+![dependency-diagram](/post-img/spring-microservice/dependency-diagram.png)
+
+### 세번째 - 면밀한 의존 관계 분석
+#### 이벤트 소싱에 유리한 케이스
+![spring-microservice-get-delivery-list](/post-img/spring-microservice/spring-microservice-get-delivery-list.png)
+
+- 배달 운영에 관한 각종 현황 정보를 조회 및 모니터링 가능한 배달운영관리 시스템과 배달을 분리 할 수 있다.  
+- 위 그림 처림 배달 운영 시스템이 배달을 직접 가져오는 대신 배달의 생성 및 상태 변경을 배달 모듈이 이벤트를 발행하고, 배달운영관리 시스템은 배달의 변경사항을 구독한다.  
+- 이런 시나리오는 배달, 라이더, 배달팁 모듈들에서 변경사항 이벤트를 발행하고, 배달 운영 관리 시스템음 각 모듈의 변경사항을 구독하여 관리하는 방식으로 여러 모듈들에게 적용할 수 있다. 
+
+#### 이벤트 소싱에 불리한 케이스
+![spring-microservice-get-delivery-list-from-calculator](/post-img/spring-microservice/spring-microservice-get-delivery-list-from-calculator.png)
+
+- 라이더에게 지급할 배달팁 정산을 위해서 정산 시스템 배달 목록을 가져오는데  월단위, 주단위, 일단위 정산이 일반적이므로 모든 배달 데이터는 사실상 필요가 없다
+- 이벤트 소싱으로 구성 된다면 정산 시스템은 항상 모든 배달건의 상태 변경에 대한 이벤트를 구독 받아 처리 해야하므로 불필요한 자원 낭비가 될 수 있다.
+- 차라리 정산 주기에 따라 1번씩 해당 하는 정산 기간의 배달 데이터를 공급 배달 모듈로 부터 공급 받는 것이 결과적으로 유리하다.
+
+![spring-microservice-get-delivery-list-from-crm](/post-img/spring-microservice/spring-microservice-get-delivery-list-from-crm.png)
+- 고객응대 시스템에서 발생하는 배달건의 고객응대 건수는 발생하는 배달 건수에 비해 현저하게 적을 건수를 가진다. (배달이 100건이라고 한다면 배달불만 접수는 10건이라고 한다면)
+- 이런 경우 고객응대 시스템에서 배달건마다 발생하는 모든 이벤트를 구독받아 배달 데이터를 유지하고 있는 것은 사실상 리소스 낭비에 해당한다.
+- 배달건에 대한 고객 불만 사항이 발생 할때 차라리 직접 배달을 가져오는 편이 유리하다.
+
+#### 동기화 되어야 할 서비스들 사이에서의 이벤트소싱
+
+![spring-microservice-delivery-dashboard-direct](/post-img/spring-microservice/spring-microservice-delivery-dashboard-direct.png)
+- 배달 현황 및 각종 정보를 관리하고 실시간 모니터링하는 서비스가 있다고 한다면 지속적으로 각각의 마이크로서비스로 분리된 시스템에서(배달, 라이더, 배달로) 주기적으로 데이터를 직접 가져오는 방식이 될 것이다.
+- 위 그림과 같은 직접 적인 방식에서 아래 그림과 같은 이벤트 소싱 방식으로 전환 할 수 있다.
+
+![spring-microservice-delivery-dashboard-event-sourcing](/post-img/spring-microservice/spring-microservice-delivery-dashboard-event-sourcing.png)
+- 위 그림과 같은 이벤트 소싱 방식으로의 전환이 각 시스템간 의존성을 낮춘다.
+
+#### 동기화 되어야 할 서비스들 사이에서의 이벤트소싱 문제점
+![spring-microservice-wait-delivery-event-sourcing](/post-img/spring-microservice/spring-microservice-wait-delivery-event-sourcing.png)
+- 배달을 라이더에게 배차했을 경우 배차 대기 목록 서비스에서 배달상태변경 이벤트를 비동기 이벤트로 구독받아 변경사항을 반영하고 있다.
+- 라이더는 배차대기 목록을 보고 자신이 배달하고 싶은 배달건을 가져온다.
+- 이런 시나리오에서는 배차대기 배달목록이 비동기로 유지될 경우 배달 상태가 불일치하는 경우가 발생할 수 도 있다.
+- 이런경우 라이더는 이미 다른 라이더에게 배차가된 배달건을 가져올 수도 있다.
+
+#### 마이크로서비스간 유효성을 확인 해야하는 경우
+![spring-microservice-validate-delivery](/post-img/spring-microservice/spring-microservice-validate-delivery.png)  
+배차의 경우 배달건을 배차 할 수 있는 배달건인지 유효성을 다음과 같이 확인 할 것이다.
+- 이 배달건은 미배차 배달 건인가?
+- 이 배달건은 금일 발생한 배달 건인가?
+- 이 배달건은 해당 배달권역의 배달건 인가?
+- 기타 등등
+
+이런 경우는 아래 그림과 같이 복잡한 유효성을 확인 하는 것 보다 적적한 유효성을 기존으로 미 배차 배달건 목록을 배달 마이크로시스템에서 관리하여 타 시스템에게 제공하는 편이 유리할 것이다.
+![spring-microservice-management-wait-delivery-list](/post-img/spring-microservice/spring-microservice-management-wait-delivery-list.png) 
