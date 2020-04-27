@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[MSA] 스프링 마이크로서비스 정리 (spring microservice)"
+title: "[마이크로서비스] 스프링 마이크로서비스 정리 (spring microservice, msa)"
 description: 스프링 마이크로서비스 책 내용 정리
 author: kimchanjung
 date:   2020-04-13 00:00:00 +0900
@@ -8,7 +8,7 @@ categories: tech
 published: true
 ---
 
-# [MSA] 스프링 마이크로서비스 정리 (spring microservice)
+# [마이크로서비스] 스프링 마이크로서비스 정리 (spring microservice)
 
 스프링 마이크로서비스 책 내용을 모두 요약 한 것이 아니라 개인 적으로 중요하다고 생각되는 개념만 정리 한 것임을 미리 밝혀 둡니다.  
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[코테][알고리즘] 프로그래머스 - 정수삼각형 (43105)"
+title: "정수삼각형 (43105) - 프로그래머스 [코테][알고리즘]"
 description: 프로그래머스 - 코딩테스트 연습 > 동적계획법(Dynamic Programming) > 정수 삼각형 (43105)
 author: kimchanjung
 date: 2020-01-04 00:00:00 +0900

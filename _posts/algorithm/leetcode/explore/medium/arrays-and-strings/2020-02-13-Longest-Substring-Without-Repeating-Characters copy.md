@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[코테][알고리즘] LeetCode - Longest Substring Without Repeating Characters"
+title: "Longest Substring Without Repeating Characters - LeetCode [코테/알고리즘]"
 description: LeetCode - explore > top-interview-questions > medium
 author: kimchanjung
 date: 2020-02-13 00:00:00 +0900
