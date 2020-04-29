@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Mobx] React 에서 Mobx 사용기
+title: "[Mobx] React 에서 Mobx 사용기"
 description: React와 state 관리 라이브러리 mobx사용기 및 redux와 비교기
 author: kimchanjung
 date:   2019-01-01 16:16:01 +0900
