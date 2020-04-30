@@ -1060,7 +1060,7 @@ fun simpleFunction(name: String?): String {
 > - 코틀린 예외는 cheked와 unchecked 구문없다. 모든 예외는 unchecked다
 > - 예외 처리 블럭이 if, when 처 표현식 처럼 동작한다. value가 숫자형이 아니면 null이 result 할당된다
 
-### Destructuring 을 위한 class 선언
+### Destructuring 을 위한 일반 class 선언
 
 ```kotlin
 // 일반 클래스는 componentN 메소드를 구현 해야 한다.
@@ -1074,7 +1074,10 @@ val (name, age) = person
 
 assertEquals("김찬정", name)
 assertEquals(20, age)
+```
 
+### Destructuring 을 위한 data class 선언
+```kotlin
 // 데이터 클래스는 기본으로 componentN 제공한다.
 data class NewPerson(val age: Int, val name: String) 
 
@@ -1084,12 +1087,14 @@ val (newName, newAge) = newPerson
 
 assertEquals(20, newName) // age가 먼저 선언 되었으므로 사실상 age값이 된다.
 assertEquals("김찬", newAge)
+```
 
+### Destructuring 배열
+```kotlin
 // 배열
 val coordinates = arrayOf(1, 2, 3)
 val (x, y, z) = coordinates
 ```
-> javascript es6 의 destructuring 과 같다 객체를 풀어서 개별 변수에 할당한다.
 
 
 
