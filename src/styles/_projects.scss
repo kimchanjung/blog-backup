@@ -26,6 +26,7 @@
   }
   p {
     margin-right: 5px;
+    font-size: 1.1rem;
   }
 }
 
@@ -79,23 +80,42 @@
   outline: none;
   text-decoration: none;
   cursor: pointer;
-  transition: color 0.3s ease-out,
-              background-color 0.3s ease-out,
-              border-color 0.3s ease-out;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out,
+    border-color 0.3s ease-out;
   &:hover {
     background-color: $purple;
     border-color: $purple;
     color: #fff;
-    transition: color 0.3s ease-in,
-                background-color 0.3s ease-in,
-                border-color 0.3s ease-in;
+    transition: color 0.3s ease-in, background-color 0.3s ease-in,
+      border-color 0.3s ease-in;
   }
   &:active {
     background-color: $purple;
     border-color: $purple;
     color: #fff;
-    transition: color 0.3s ease-in,
-                background-color 0.3s ease-in,
-                border-color 0.3s ease-in;
+    transition: color 0.3s ease-in, background-color 0.3s ease-in,
+      border-color 0.3s ease-in;
+  }
+}
+
+.post_link {
+  &:link {
+    color: #333;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: #333;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: #333;
+    text-decoration: none;
+  }
+
+  &:active {
+    color: #333;
+    text-decoration: none;
   }
 }
