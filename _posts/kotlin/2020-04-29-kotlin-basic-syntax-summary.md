@@ -224,8 +224,8 @@ infix fun Int.multiply(value: Int): Int {
     return this * value
 }
 
-println(9 multiply 1) // 10 출력
-println(9.multiply(1)) // 10 출력
+println(9 multiply 1) // 9 출력
+println(9.multiply(1)) // 9 출력
 println(3 + 2 multiply 2) // 10 출력, + 연산자 우선순위가 더 높다 
 ```
 > 중위함수 선언 조건
