@@ -964,6 +964,8 @@ listOf.get(0)
 listOf[0]
 mutableListOf.add(3, 4)
 mutableListOf.remove(1)
+// even [2], odd [1,3] 각각 리스트를 구분 해서 반환함
+val (even, odd) = listOf.partition { it % 2 == 0 }
 ```
 
 ### Map
@@ -1005,6 +1007,72 @@ val newList = listOf.filter { it > 2 }
 ```
 
 ## ETC
+
+### 연산자 오버로딩
+```kotlin
+operator fun Int.plus(b: String) = "$this$b"
+println(10 + "2") // 102 출력
+```
+> + 연산자를 overloading 할 수 있다, overriding 아닌 overloading 이다!!
+
+### 연산자 확장
+```kotlin
+class Position(var a: Int, var b: Int) {
+    operator fun plus(position: Position): Position {
+        return Position(a + position.a, b + position.b)
+    }
+}
+
+val position = Position(1, 2) + Position(3, 4)
+println(position.a) // 4 출력
+```
+> 클레스에 연산자를 확장하여 사용 할 수 있다.
+
+### Collection get/set 확장
+```kotlin
+class Position(var a: Int, var b: Int) {
+    operator fun set(position: Int, value: Int) {
+        when (position) {
+            0 -> a = value
+            1 -> b = value
+            else -> throw IndexOutOfBoundsException("error")
+        }
+    }
+
+    operator fun get(position: Int): Int = when (position) {
+        0 -> a
+        1 -> b
+        else -> throw IndexOutOfBoundsException("error")
+    }
+}
+val position = Position(1,2)
+position[1] = 10
+println(position[1]) // 10 출력
+```
+> 클래스에 콜렉션의 get/set을 확장 할 수 있다.
+
+
+###
+### Observable
+```kotlin
+// 
+var name: String by observable("김찬정") { property, oldValue, newValue -> println("newValue") }
+name = "김찬정님"
+```
+> name 값이 변할 때 println 호출 된다.
+
+### Vetoable
+```kotlin
+var age: Int by vetoable(0) { property, oldValue, newValue -> newValue > oldValue }
+
+age = 10
+assertEquals(10, age)
+age = 5
+assertEquals(10, age)
+age = 20
+assertEquals(20, age)
+```
+> age가 변경 될 때 마다 수행 되는데 true 일 때만 값이 변경 된다.
 
 ### Higher Order Function
 Higher Order Function은 매개변수로 다른 함수나 람다식을 인자로 받는 함수를 말한다
