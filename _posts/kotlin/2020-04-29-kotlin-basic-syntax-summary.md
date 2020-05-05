@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "코틀린 기본 문법 - [kotlin/정리/cheat sheet] "
-description: 코틀린 기본 문법 정리 요약
+title: "코틀린 기본 문법 요약 정리 - [kotlin/cheat sheet]"
+description: 코틀린 기본 문법 요약 정리 
 author: kimchanjung
 date: 2020-04-29 00:00:00 +0900
 categories: kotlin
