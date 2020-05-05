@@ -54,7 +54,7 @@ val age: Int? = name as? Int?
 ### IF 표현식
 
 ```kotlin
-// String msg = msgType == 1 ? "안녕" : "잘가"; 와 같다
+// String msg = msgType == 1 ? "안녕" : "잘가"; 와 같다
 val msg = if (msgType == 1) "안녕" else "잘가"
 
 // 함수 선언 시 if를 아래와 같이 사용가능 하다 
