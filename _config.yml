@@ -15,6 +15,6 @@ gplus_username:  KimChanJung
 
 # Google-analytics
 google-analytics:
-  id: ""
+  id: "UA-165866221-1"
 
 exclude: ['package.json', 'src' , 'node_modules']
