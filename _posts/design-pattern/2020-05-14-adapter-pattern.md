@@ -3,7 +3,7 @@ layout: post
 title: "어탭터 패턴 - Adapter Pattern [디자인패턴]"
 description: 어탭터 패턴 - Adapter Pattern [디자인패턴][디자인패턴]
 author: kimchanjung
-date: 2020-05-14 00:00:00 +0900
+date: 2020-05-20 00:00:00 +0900
 categories: design pattern
 published: true
 ---
@@ -117,7 +117,6 @@ class FaceBookLoginAdapterImpl : LoginAdapter {
 
 ### 추상화된 로그인 서비스를 사용하는 클라이언트
 ```kotlin
-
 class LoginService(private val loginAdapter: LoginAdapter) {
     fun login(id: String, pw: String, redirectUrl: String) = loginAdapter
             .goLoginPage()
