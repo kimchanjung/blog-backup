@@ -8,7 +8,7 @@ categories: kotlin
 published: true
 ---
 
-## 코틀린 기본 문법
+# 코틀린 기본 문법
 
 kotlin 기본 문법을 간략하게 파악 해보기 위한 요약 정리 입니다. kotlin 문법의 모든 내용을 다루지는 않지만 간략하게 훝어 보는 용도로 포스팅합니다.
 
