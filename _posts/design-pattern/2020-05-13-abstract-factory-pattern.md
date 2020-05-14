@@ -3,7 +3,7 @@ layout: post
 title: "추상팩토리 패턴 - Abstract Factory Pattern [디자인패턴]"
 description: 추상팩토리 패턴 - Abstract Factory Pattern
 author: kimchanjung
-date: 2020-05-13 00:00:00 +0900
+date: 2020-05-14 09:00:00 +0900
 categories: design pattern
 published: true
 ---
