@@ -47,6 +47,9 @@ published: true
 ## 단점
 - 여러 종류의 객체를 일반화 시켰기 때문에 특정 객체에 제약 조건을 주거나 할 수 없다.
 
+## 클래스 다이어그램
+![class-diagram](/post-img/design-pattern/composite-pattern-class-diagram.png)
+
 
 ## 예제코드
 

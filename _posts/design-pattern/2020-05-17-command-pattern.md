@@ -42,6 +42,13 @@ published: true
 - 클라이언트는 배달명령이라는 일련의 메소드가 추상화된 배달명령의 탈것운전() 메소드만 사용한다.
 - 탈 것 종류가 추가 되어도 코드 변경은 없다.
 
+ ## 장점
+ - 기존 Code를 수정하지 않고, 새 명령을 쉽게 추가할 수 있다
+ - 명령의 호출자와 수신자의 의존성을 제거한다.  
+ 
+ ## 단점
+ - 명령에 대한 클래스가 늘어난다.
+
 ## 클래스 다이어그램
 ![class-diagram](/post-img/design-pattern/command-pattern-class-diagram.png)
 
