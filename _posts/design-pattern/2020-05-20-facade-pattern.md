@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "퍼사드 패턴 - Facade Pattern [디자인패턴]"
 description: 퍼사드 패턴 - Facade Pattern [디자인패턴]
 author: kimchanjung
@@ -18,7 +19,7 @@ published: true
 - AWS 에서 제공하는 S3 라이브러리를 추가하고 사용하여 이미지를 업로드한다.
 
 ### 퍼사드 패턴 미적용
-```kotlin
+```bash
 라이더서비스 {
     이미지저장(이미지) {
         AwsS3 s3 = AwsS3()
@@ -32,10 +33,10 @@ published: true
     }
 }
 ```
-> 클라이언트는 매먼 이미지를 업로드 할 때마다 AwsS3 객체를 생성 및 필요한 정보를 설정 해줘야 한다.
+> 클라이언트는 매번 이미지를 업로드 할 때마다 AwsS3 객체 생성 및 필요한 정보를 설정 해줘야 한다.
 
 ### 퍼사드 패턴 적용
-```kotlin
+```bash
 아마존S3서비스
    업로드이미지(이미지) {
         AwsS3 s3 = AwsS3()
@@ -54,7 +55,7 @@ published: true
     }
 }
 ```
-> 업로드를의한 일련의 작업을 하나의 클래스로 만들어 클라이언트에게 제공한다.  
+> 업로드를 위한 일련의 작업들을 하나의 클래스로 만들어 클라이언트에게 제공한다.  
 > 클라이언트는 세부 사용방법을 알 필요없이 "아마존S3서비스.업로드이미지(이미지)"만 사용하면 된다. 
 
 
@@ -63,7 +64,7 @@ published: true
 - 클라이언트는 서브시스템(라이브러리 및 클래스)의 다루기위한 정보와 행위가 줄어들거나 몰라도 된다.
 
 ## 단점
-- Client가 서브시스템 내부의 클래스를 직접 사용하는 것을 막을 수 없다. Namespace를 선언하는 것이 대한이 될 수 있다. (<= 무슨말일지 솔직히 이해는 안됨)
+- Client가 서브시스템 내부의 클래스를 직접 사용하는 것을 막을 수 없다. Namespace를 선언하는 것이 대한이 될 수 있다. (<= 무슨말인지 솔직히 이해는 안됨)
 
 ## 클래스 다이어그램
 ![class-diagram](/post-img/design-pattern/facade-pattern-class-diagram.png)
@@ -94,7 +95,7 @@ class AwsS3UploadService {
     }
 }
 ```
-> 아마존 s3 객체를 생성하고 업로드에 필요한 정보를 설정하고 업로드 까지 일련의 로직을 구현하여 upload 메소드로 제공한다.
+> 아마존 s3 객체를 생성하고 업로드에 필요한 정보를 설정하고 업로드하기 까지 일련의 로직을 구현하여 upload 메소드로 제공한다.
 
 ### 클라이언트
 ```kotlin
@@ -103,4 +104,4 @@ class RiderService {
     fun uploadRiderProfile(image: Image) = awsS3UploadService.upload(image)
 }
 ```
-> 라이더정보를 다루는 라이더서비스에서는 라이더 프로필을 업로드 하기위해 아마존 s3를 직접 다루지 않고 AwsS3UploadService를 사용한다.
+> 라이더정보를 다루는 라이더서비스는 라이더 프로필을 업로드 하기위해 아마존 s3를 직접 다루지 않고 AwsS3UploadService를 사용한다.
