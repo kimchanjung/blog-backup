@@ -1,19 +1,19 @@
 ---
 layout: post
-title: "어탭터 패턴 - Adapter Pattern [디자인패턴]"
-description: 어탭터 패턴 - Adapter Pattern 
+title: "어댑터 패턴 - Adapter Pattern [디자인패턴]"
+description: 어댑터 패턴 - Adapter Pattern 
 author: kimchanjung
 date: 2020-05-15 09:00:00 +0900
 categories: design pattern
 published: true
 ---
 
-# 어탭터 패턴 - Adapter Pattern
+# 어댑터 패턴 - Adapter Pattern
 
-## 어탭터 패턴이란
-> 사용자는 일관성있는 인터페이스를 사용하여 구현체의 변경으로 부터 자유롭고   
-> 인터페이스의 구현체들은 각각 세부로직은 다르지만 인터페이스에 맞게 구현하여  
-> 사용자는 세부 구현이 다른 클래스들을 일관성있게 사용하는 패턴이다.
+## 어댑터 패턴이란
+> 사용자는 일관성있는 인터페이스를 사용하여 각각 구현체의 세부로직과 변경에 관계없이 일관성있는 사용이 가능하다.
+> 현실에서 가장 이해하기 쉬운 예는 바로 만능 리모컨이다 사용자는 TV 종류에 따라 약간식 조작 방법이 다른 개별 리모컨을 이용하는 대신 만능 리모컨 하나만 사용한다.  
+> 그렇게됨으써 TV가 삼성에서 LG로 변경되더라도 그에 맞게 리모컨을 바꾸고 사용방법을 파악 할 필요가 없는 것이다.
 
 ## 이해를 돕기위한 설명 
 ### 어댑터 패턴 미적용 시
@@ -64,7 +64,7 @@ published: true
 ![class-diagram](/post-img/design-pattern/adapter-pattern-class-diagram.png)
 
 ## 예제코드
-### 로그인서비스를 추상화
+### 로그인어댑터를 추상화
 ```kotlin
 /**
  * 어댑터 인터페이스를 선언한다
@@ -77,7 +77,6 @@ interface LoginAdapter {
 
 /**
  * 각각 어탭터 인터페이스를 구현한다
- * 기존 로그인 서비스를 사용하는 구현체
  */
 class GoogleLoginAdapterImpl : LoginAdapter {
     private val googleLoginService = GoogleLoginService()
@@ -131,5 +130,5 @@ val clientService2 = LoginService(GoogleLoginAdapterImpl())
 clientService.login("id", "pw,", "www.home.com")
 clientService.login("id", "pw,", "new.home.com")
 ```
-> 클라이언트는 어떤 로그인서비스를 사용할지 스스로 판단단하여 필요한 로직을 추가 구현 할 필요없이 로그인 어댑터 인터페이스만 사용하면 된다.
+> 클라이언트는 어떤 로그인서비스를 사용할지 스스로 판단하여 필요한 로직을 추가 구현 할 필요없이 로그인 어댑터 인터페이스만 사용하면 된다.
 > 인증업체가 추가되어도 클라이언트코드는 변경이 없다.
