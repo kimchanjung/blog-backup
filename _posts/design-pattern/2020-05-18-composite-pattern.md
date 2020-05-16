@@ -11,7 +11,7 @@ published: true
 # 컴포지트 패턴 - Composite Pattern
 
 ## 컴포지트 패턴이란
-> 하나의 객체이거나 여러개의 객체이거나 상관없이 하나의 객체처럼 다룰 수 있게 해주는 패턴
+> 하나 또는 여러개의 객체이거나 상관없이 하나의 객체처럼 다룰 수 있게 해주는 패턴
 
 ## 이해를 돕기위한 설명
 ### 컴포지트 패턴 미적용
@@ -98,8 +98,9 @@ class RiderService(private val allTypeRider: AllTypeRider) {
 }
 
  val allTypeRider = AllTypeRider()
+ 
  // 새로운 라이더타입의 객체를 추가 할 수 도 있다
- deliveryCenter.add(NewRiderType())
+ allTypeRider.add(NewRiderType())
 
 // 모든라이더의 배달 메소드를 호출한다.
  val riderService = RiderService(allTypeRider)

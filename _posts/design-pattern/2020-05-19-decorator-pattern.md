@@ -16,7 +16,7 @@ published: true
 ## 이해를 돕기위한 설명
 - 개발자는 **개발**이라는 업무만 할 수 있다.
 - 그런데 추가적으로 **개발업무**에 **프론트엔드개발**라는 업무을 넣고 싶다.
-- 하지만 **개발업무**만 하는 개발자를 필요할 수도 있기 때문에 필요할때 만  **프론트엔드개발**라는 업무를 추가 하고 싶다.
+- 하지만 **개발업무**만 하는 개발자가 필요할 수도 있기 때문에 필요할때 만  **프론트엔드개발**라는 업무를 추가 하고 싶다.
 
 ### 상속을 통하여 기능을 추가한 클래스를 만들면 기능조합에 따른 클래스의 수가 늘어난다
 
@@ -42,7 +42,7 @@ published: true
 > 정의된 클래스로 모든 경우의 조합이 가능하다.
 
 ## 장점
-- 데코레이터 패턴은 기본적인 데이터에 추가할 기능이 다양하고 일정하지 않을 때 효율적이다.
+- 데코레이터 패턴은 기본적인 클래스에 추가할 기능이 다양하고 일정하지 않을 때 효율적이다.
 
 ## 단점
  - 연관 클래스들이 많이 필요하게 된다.
@@ -58,7 +58,7 @@ published: true
 /**
  * 기본 기능 즉 "일한다" 정의한 추상 클래스를 만든다
  */
-abstract class Employee(var jobType:String) {
+abstract class Employee(var jobType: String = "") {
     open fun showJobType() = jobType
     abstract fun working(): String
 }
@@ -83,14 +83,14 @@ class Developer(jobType: String) : Employee(jobType) {
 ### 업무를 추가할 수 있는 데코레이터 추상 클래스를 만든다
 
 ```kotlin
-abstract class CompanyWorkDecorator : Employee("") {
+abstract class CompanyWorkDecorator : Employee() {
     // Employee 클래스를 상속 할때 추상 메소드가 아닌 메소드를
     // 필요에 의해서 임의로 추상 메소드를 만들 수 도 있다. 
     abstract override fun showJobType(): String
 }
 ```
 
-### 데코레이터 추상 클래스를 상속하여 실제 추가에 사용할 클래스를 정의한다
+### 데코레이터 추상 클래스를 상속하여 실제 추가에 사용할 클래스를 구현한다
 ```kotlin
 class RiderWithRepairVehicle(private var rider: Employee) : CompanyWorkDecorator() {
     override fun showJobType() = rider.showJobType() + "|수리기사"

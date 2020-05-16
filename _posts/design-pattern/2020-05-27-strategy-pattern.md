@@ -116,11 +116,11 @@ class Rider(
     }
 }
 
- private var motorCycleStrategy = MotorCycleStrategy()
- private var bikeStrategy = BikeStrategy()
- private var bySubwayStrategy = BySubwayStrategy()
- private var byCarStrategy = ByCarStrategy()
- private var dontGoToWorkStrategy = DontGoToWorkStrategy()
+private var motorCycleStrategy = MotorCycleStrateg()
+private var bikeStrategy = BikeStrategy()
+private var bySubwayStrategy = BySubwayStrategy()
+private var byCarStrategy = ByCarStrategy()
+private var dontGoToWorkStrategy =DontGoToWorkStrategy()
 
 val rider = Rider("김찬정", bySubwayStrategy, motorCycleStrategy)
 rider.goToWork() // 지하철 타고 출근

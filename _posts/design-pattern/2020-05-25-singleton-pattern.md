@@ -26,11 +26,6 @@ published: true
 
 > 스프링은 싱글톤패턴은 대신해서 싱글톤을 만들 관리해주는 싱글톤레지스트리를 사용하여 단점을 해결함
 
-
-## 클래스 다이어그램
-![class-diagram](/post-img/design-pattern/singleton-pattern-class-diagram.png)
-
-
 ## 예제코드
 ### kotlin object 키워드 사용 
 ```kotlin

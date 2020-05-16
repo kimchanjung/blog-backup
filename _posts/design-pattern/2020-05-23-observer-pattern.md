@@ -87,4 +87,4 @@ class DeliveryStatusSubscriber : Subscriber {
     }
 }
 ```
-> 구독자는 이벤트 발생 시 발행 인터페이스에서 onUpdate 메소드가 호출 되어 이벤트를 수신 받게 된다.
+> 구독자는 이벤트 발생 시 발행자에서 onUpdate 메소드가 호출 되어 이벤트를 수신 받게 된다.

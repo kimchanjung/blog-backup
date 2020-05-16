@@ -73,9 +73,8 @@ interface DeliveryCommand {
 }
 
 class MotorCycleCommand(private var motorCycle: MotorCycle) : DeliveryCommand {
-    override fun driveVehicle() :String{
-       return motorCycle.start() + motorCycle.accelerate()
-    }
+    override fun driveVehicle() =
+            motorCycle.start() + motorCycle.accelerate()
 }
 
 class BikeCommand : DeliveryCommand {

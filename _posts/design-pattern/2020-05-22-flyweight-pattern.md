@@ -18,7 +18,7 @@ published: true
 매번 새로운 인스턴스를 생성하면 매모리 낭비가 심한 경우가 발생하는 경우에 적용하면 유리함.
 
 ## 싱글톤 패턴과의 차이는?
-싱글톤 패턴은 클래스자체가 오직 1개의 인스턴스만 허용하지만, 싱글톤이 아닌 클래스를 플라이웨이트 패턴의 팩토리가 제어 하는 것이다. 인스턴스 생성의 제안을 누가 제어하느냐에 차이
+싱글톤 패턴은 클래스자체가 오직 1개의 인스턴스만 허용하지만, 플라이웨이트 패턴은 싱글톤이 아닌 클래스를 플라이웨이트 패턴의 팩토리가 제어하는 것이다. 인스턴스 생성의 제안을 누가 제어하느냐에 차이
 
 ## 장점
 - 많은 객체를 만들때 성능을 향상시킬수 있다.
@@ -69,7 +69,7 @@ class PartTimeRider(override var center: String) : Rider {
     override fun delivery() = "$center 자전거배달"
 }
 ```
-> 클래스들을 추상화 하는 이유는 여러종류의 라이터 타입 객체를 처리할 때 팩토리에서 분기 처리를 제거 하기 위함이다.
+> 클래스들을 추상화하는 이유는 여러종류의 라이터 타입 객체를 처리할 때 팩토리에서 분기 처리를 제거 하기 위함이다.
 
 ### 팩토리를 생성 
 ```kotlin
@@ -77,7 +77,7 @@ class RiderFactory {
     // 인스턴스 생성시 if문을 제거 하기 위해서 map활용하여 관리함 
     private val riderClasses =
             mapOf("fulltime" to FullTimeRider::class, "parttime" to PartTimeRider::class)
-    // 생성된 인턴스가 관리됨         
+    // 생성된 인스턴스가 관리됨         
     private val riderMap = mutableMapOf<String, Rider>()
 
     // 강남지점-정규직라이더가 이미 있으면 리턴

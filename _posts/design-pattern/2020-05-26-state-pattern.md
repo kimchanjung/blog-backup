@@ -109,7 +109,7 @@ object Pickup : DeliveryStatus {
 // 전달완료 
 object Complete : DeliveryStatus {
     override val name = "전달완료"
-    // 전달완료는 다음 상태 가 없기 때문에 진행불가
+    // 전달완료는 다음상태가 없기 때문에 진행불가
     override fun forward(delivery: Delivery) = "진행불가"
 
     override fun backward(delivery: Delivery): String {

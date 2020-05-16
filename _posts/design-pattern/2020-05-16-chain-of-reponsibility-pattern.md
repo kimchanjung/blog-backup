@@ -32,19 +32,20 @@ interface Rider {
     fun delivery(foodType: String): String
 }
 
-class FullTimeRider(var next: Rider?) : Rider {
+class FullTimeRider(var next: Rider? = null) : Rider {
     override fun delivery(foodType: String) =
             if (foodType == "양식") "양식배달" else next!!.delivery(foodType)
 }
 
-class PartTimeRider(var next: Rider?) : Rider {
+class PartTimeRider(var next: Rider? = null) : Rider {
     override fun delivery(foodType: String) =
             if (foodType == "한식") "한식배달" else next!!.delivery(foodType)
 }
 
-class ConnectRider(var next: Rider?) : Rider {
+class ConnectRider(var next: Rider? = null) : Rider {
     override fun delivery(foodType: String) =
             if (foodType == "분식") "분식배달" else next!!.delivery(foodType)
+}
 }
 ```
 > 처리할 수 없으면 다음 객체에 처리를 넘긴다.  
@@ -55,7 +56,7 @@ class ConnectRider(var next: Rider?) : Rider {
 
 class RiderService {
     // 정규직 > 파트타임 > 배민커넥트 순으로 처리객체를 구성한다.
-    val rider = FullTimeRider(PartTimeRider(ConnectRider(null)))
+    val rider = FullTimeRider(PartTimeRider(ConnectRider()))
 
     fun delivery(foodType:String): String {
         // 분기 처리가 사라진다. 
