@@ -46,7 +46,6 @@ class ConnectRider(var next: Rider? = null) : Rider {
     override fun delivery(foodType: String) =
             if (foodType == "분식") "분식배달" else next!!.delivery(foodType)
 }
-}
 ```
 > 처리할 수 없으면 다음 객체에 처리를 넘긴다.  
 > 처리의 전체적인 구성은 인스턴스 생성시 어떻게 다음 객체들을 구성 했느냐에 따라 달라진다.  
@@ -54,10 +53,7 @@ class ConnectRider(var next: Rider? = null) : Rider {
 ### 클라이언트
 ```kotlin
 
-class RiderService {
-    // 정규직 > 파트타임 > 배민커넥트 순으로 처리객체를 구성한다.
-    val rider = FullTimeRider(PartTimeRider(ConnectRider()))
-
+class RiderService(private val rider: Rider) {
     fun delivery(foodType:String): String {
         // 분기 처리가 사라진다. 
         // if (foodType == "양식")
@@ -72,7 +68,7 @@ class RiderService {
     }  
 }
 
-val riderService = RiderService()
+val riderService = RiderService(FullTimeRider(PartTimeRider(ConnectRider())))
 
 val delivery = riderService.delivery("분식")
 ```

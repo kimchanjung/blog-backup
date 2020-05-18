@@ -94,11 +94,11 @@ class AllTypeRider : Rider {
 ```kotlin
 class RiderService(private val allTypeRider: AllTypeRider) {
     fun deliveryAllRiders(vehicle: String) =
-            allTypeRider.delivery("오토바")
+            allTypeRider.delivery("오토바이")
 }
 
  val allTypeRider = AllTypeRider()
- 
+
  // 새로운 라이더타입의 객체를 추가 할 수 도 있다
  allTypeRider.add(NewRiderType())
 
