@@ -8,7 +8,7 @@ categories: design pattern
 published: true
 ---
 
-# 플라이웨이트 패턴 - Flyweight Pattern
+# 플라이웨이트 패턴 - Flyweight Pattern 
 
 ## 플라이웨이트 패턴이란 
 > 공통으로 사용하는 클래스를 생성하는 팩토리클래스를 만들고 필요한 클래스의 인스턴스가 없는 경우 인스턴스를 새로 생성하고 이미 있는 경우는 생성해둔 인스턴스를 리턴해서 1개만 생성하여 공유해서 사용할 수 있도록 제공하는 패턴
