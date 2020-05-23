@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "어댑터 패턴 - Adapter Pattern [디자인패턴]"
+title: "어댑터 패턴 - Adapter Pattern [디자인패턴/코틀린/kotlin]"
 description: 어댑터 패턴 - Adapter Pattern 
 author: kimchanjung
 date: 2020-05-15 09:00:00 +0900

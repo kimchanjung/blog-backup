@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "책임 연쇄 패턴 - Chain Of Reponsibility Pattern [디자인패턴]"
+title: "책임 연쇄 패턴 - Chain Of Reponsibility Pattern [디자인패턴/코틀린/kotlin]"
 description: 책임 연쇄 패턴 - Chain Of Reponsibility Pattern [디자인패턴]
 author: kimchanjung
 date: 2020-05-16 09:00:00 +0900

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "싱글톤 패턴 - Singleton Pattern [디자인패턴]"
-description: 싱글톤 패턴 - Singleton Pattern [디자인패턴]
+title: "싱글톤 패턴 - Singleton Pattern [디자인패턴/코틀린/kotlin]"
+description: 싱글톤 패턴 - Singleton Pattern [디자인패턴/코틀린/kotlin]
 author: kimchanjung
 date: 2020-05-25 09:00:00 +0900
 categories: design pattern

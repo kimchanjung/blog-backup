@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "전략 패턴 - Strategy Pattern [디자인패턴]"
-description: 전략 패턴 - Strategy Pattern [디자인패턴]
+title: "전략 패턴 - Strategy Pattern [디자인패턴/코틀린/kotlin]"
+description: 전략 패턴 - Strategy Pattern [디자인패턴/코틀린/kotlin]
 author: kimchanjung
 date: 2020-05-27 09:00:00 +0900
 categories: design pattern
