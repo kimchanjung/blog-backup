@@ -8,7 +8,7 @@ categories: design pattern
 published: true
 ---
 
-# 추상팩토리 패턴 - Abstract Factory Pattern
+# 추상팩토리 패턴 - Abstract Factory Pattern 
 
 ## 추상팩토리 패턴이란
 > 추상팩토리 패턴은 어떤 연관된 클래스들을 팩토리를 통하여 일관성 있게 객체생성을 가능 가능하도록 그룹으로 묶어 제공하고 변경도 유연하도록 제공한다.
