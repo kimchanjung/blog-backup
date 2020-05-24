@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "템플릿 메소드 패턴 - Template Method Pattern [디자인패턴/코틀린/kotlin]"
-description: 템플릿 메소드 패턴 - Template Method Pattern [디자인패턴/코틀린/kotlin]
+description: 템플릿 메소드 패턴 - Template Method Pattern [디자인패턴/코틀린/kotlin] 
 author: kimchanjung
 date: 2020-05-28 09:00:00 +0900
 categories: design pattern
