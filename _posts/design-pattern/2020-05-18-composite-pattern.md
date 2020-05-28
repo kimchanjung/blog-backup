@@ -11,7 +11,7 @@ published: true
 # 컴포지트 패턴 - Composite Pattern
 
 ## 컴포지트 패턴이란
-> 하나 또는 여러개의 객체이거나 상관없이 하나의 객체처럼 다룰 수 있게 해주는 패턴
+> 하나 또는 하나이상의 객체이거나 상관없이 하나의 객체처럼 다룰 수 있게 해주는 패턴
 
 ## 이해를 돕기위한 설명
 ### 컴포지트 패턴 미적용
@@ -35,13 +35,13 @@ published: true
     for (라이더 : 라이더리스트)
         라이더.배달()
 ```
-> 모든 라이더타입 클래스들을 인터페이스를 구현하도록 하고 리스트로 관리될 수 있도록 하고 리스트를 순회 하여
-배달() 메소드를 호출하도록 코드화 함으로써 개별 객체생성 및 메소드 호출 코드가 제거 된다.  
-> 라이터타입이 추가되어도 변경으로 부터 자유롭다.
+> 모든 라이더타입 클래스들을 인터페이스를 구현하도록 하고 리스트에 포함 된다.
+> 리스트를 순회 하여 배달() 메소드를 호출하도록 코드화함으로써 개별 객체생성 및 메소드 호출 코드가 제거 된다.  
+> 라이더타입이 추가되어도 변경으로 부터 자유롭다.
 
 
 ## 장점
-- 하나던 여려개던 일관성있는 방법으로 객체를 사용가능하여 클라이언트 코드가 단순해짐
+- 하나던 여러개던 일관성있는 방법으로 객체를 사용가능하며 클라이언트 코드가 단순해짐
 - 새로운 객체를 추가하는 것이 용이함 클라이언트 코드를 변경할 필요 없음
 
 ## 단점
@@ -76,8 +76,7 @@ class ConnectRider : Rider {
 
 ### 리스트로 관리되는 라이더객체들
 ```kotlin
-class AllTypeRider : Rider {
-    private val riders = mutableListOf(FullTimeRider(), PartTimeRider(), ConnectRider())
+class AllTypeRider(private val riders: MutableList<Rider>) : Rider {
 
     override fun delivery(vehicle: String): String {
         return riders.joinToString(separator = "") { it.delivery(vehicle) }
@@ -88,18 +87,18 @@ class AllTypeRider : Rider {
     fun remove(rider: Rider) = riders.remove(rider)
 }
 ```
-> 클라이언트에게  마치 하나의 객체를 다루는 방식으로 제공한다  
+> 클라이언트에게 마치 하나의 객체를 다루는 방식으로 제공한다  
 
 ### 클라이언트 
 ```kotlin
 class RiderService(private val allTypeRider: AllTypeRider) {
     fun deliveryAllRiders(vehicle: String) =
-            allTypeRider.delivery("오토바이")
+            allTypeRider.delivery(vehicle)
 }
 
- val allTypeRider = AllTypeRider()
+ val allTypeRider = AllTypeRider(mutableListOf(FullTimeRider(), PartTimeRider(), ConnectRider()))
 
- // 새로운 라이더타입의 객체를 추가 할 수 도 있다
+ // 새로운 라이더타입의 객체를 추가 할 수도 있다
  allTypeRider.add(NewRiderType())
 
 // 모든라이더의 배달 메소드를 호출한다.
