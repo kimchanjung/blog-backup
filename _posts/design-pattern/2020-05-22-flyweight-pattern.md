@@ -69,7 +69,7 @@ class PartTimeRider(override var center: String) : Rider {
     override fun delivery() = "$center 자전거배달"
 }
 ```
-> 클래스들을 추상화하는 이유는 여러종류의 라이터 타입 객체를 처리할 때 팩토리에서 분기 처리를 제거 하기 위함이다.
+> 클래스들을 추상화하는 이유는 여러종류의 라이더 타입 객체를 처리할 때 팩토리에서 분기 처리를 제거 하기 위함이다.
 
 ### 팩토리를 생성 
 ```kotlin
@@ -102,5 +102,5 @@ class RiderService {
 val riderService = RiderService()
 riderService.delivery("강남","fulltime")
 ```
-> 라이더의 배달을 수행하는 라이더서비스는 배달 메소드 호출 시 지점과 라이터 타입만 매개변수로 받아서 riderFactory를 사용하여 라이더 객체를 가져온다. 수많은 객체가 필요해도 riderFactory에서 적절히 관리하여 1개의 인스턴스만 유지되고 라이더 서비스는 라이터타입의 추가, 객체성성 로직의 변화로 부터 자유롭다.
+> 라이더의 배달을 수행하는 라이더서비스는 배달 메소드 호출 시 지점과 라이더 타입만 매개변수로 받아서 riderFactory를 사용하여 라이더 객체를 가져온다. 수많은 객체가 필요해도 riderFactory에서 적절히 관리하여 1개의 인스턴스만 유지되고 라이더 서비스는 라이더타입의 추가, 객체성성 로직의 변화로 부터 자유롭다.
 

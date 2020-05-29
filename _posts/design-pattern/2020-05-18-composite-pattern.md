@@ -27,7 +27,7 @@ published: true
 
     ...
 ```
-> 모든 라이더타입들의 객체를 생성하고 배달 메소드를 모드 호출한다. 라이더타입이 추가 될 때 마다 코드는 수정 되어야 한다.  
+> 모든 라이더타입들의 객체를 생성하고 배달 메소드를 모드 호출한다. 라이더타입이 추가될 때마다 코드는 수정 되어야 한다.  
 
 ### 컴포지트 패턴 적용
 ```bash
@@ -35,7 +35,7 @@ published: true
     for (라이더 : 라이더리스트)
         라이더.배달()
 ```
-> 모든 라이더타입 클래스들을 인터페이스를 구현하도록 하고 리스트에 포함 된다.
+> 모든 라이더타입은 인터페이스를 구현하도록 하고 리스트에 포함 된다.
 > 리스트를 순회 하여 배달() 메소드를 호출하도록 코드화함으로써 개별 객체생성 및 메소드 호출 코드가 제거 된다.  
 > 라이더타입이 추가되어도 변경으로 부터 자유롭다.
 
@@ -96,13 +96,13 @@ class RiderService(private val allTypeRider: AllTypeRider) {
             allTypeRider.delivery(vehicle)
 }
 
- val allTypeRider = AllTypeRider(mutableListOf(FullTimeRider(), PartTimeRider(), ConnectRider()))
+val allTypeRider = AllTypeRider(mutableListOf(FullTimeRider(), PartTimeRider(), ConnectRider()))
 
- // 새로운 라이더타입의 객체를 추가 할 수도 있다
- allTypeRider.add(NewRiderType())
+// 새로운 라이더타입의 객체를 추가 할 수도 있다
+allTypeRider.add(NewRiderType())
 
 // 모든라이더의 배달 메소드를 호출한다.
- val riderService = RiderService(allTypeRider)
- val delivery = riderService.deliveryAllRiders("자전거")
+val riderService = RiderService(allTypeRider)
+val delivery = riderService.deliveryAllRiders("자전거")
 ```
 > 클라이언트는 하나의 객체처럼 다룬다. 

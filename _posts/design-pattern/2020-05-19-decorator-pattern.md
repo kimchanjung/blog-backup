@@ -11,7 +11,7 @@ published: true
 # 데코레이터 패턴 - Decorator Pattern
 
 ## 데코레이터 패턴이란
->  데코레이터 패턴은 특정 클래스의 기본 기능에 추가 기능을 기존 클래스를 수정 하지 않고 패턴을 통하여 덧 붙이고 싶을 때 사용한다.
+>  데코레이터 패턴은 특정 클래스의 기본기능에 추가기능을 기존 클래스를 수정하지 않고 패턴을 통하여 덧 붙이고 싶을 때 사용한다.
 
 ## 이해를 돕기위한 설명
 - 개발자는 **개발**이라는 업무만 할 수 있다.
@@ -84,7 +84,7 @@ class Developer(jobType: String) : Employee(jobType) {
 
 ```kotlin
 abstract class CompanyWorkDecorator : Employee() {
-    // Employee 클래스를 상속 할때 추상 메소드가 아닌 메소드를
+    // Employee 클래스를 상속할 때 추상 메소드가 아닌 메소드를
     // 필요에 의해서 임의로 추상 메소드를 만들 수 도 있다. 
     abstract override fun showJobType(): String
 }
@@ -112,7 +112,7 @@ class DeveloperWithSpringBoot(private val rider: Employee) : CompanyWorkDecorato
     override fun working() = rider.working() + "|springboot"
 }
 ```
-> 이 클래스들은 나중에 필요한 기능을 조합할때 덧붙여 조합하여 최종 기능을 만드는데 활용된다.
+> 이 클래스들은 나중에 필요한 기능을 조합할 때 덧붙여 조합하여 최종 기능을 만드는데 활용된다.
 
 ### 클라이언트
 ```kotlin
