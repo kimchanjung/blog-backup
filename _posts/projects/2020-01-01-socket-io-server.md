@@ -18,6 +18,8 @@ published: true
 ## 관련 기술블로그
 - [실시간 서비스 경험기(배달운영시스템)](https://woowabros.github.io/woowabros/2017/09/12/realtime-service.html)
 
+## 프로젝트 참여도
+- 프로젝트 인원 1명 전담하여 개발
 
 ## 주요 기능
 - websocket 실시간 메시징을 지원하여 실시간 서비스 개발을 지원함
