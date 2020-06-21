@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "[react] react-router 에서 트리구조로 중첩된 URL 페이지를 구성하는 방법"
-description: "[react] react-router 에서 트리구조로 중첩된 URL 페이지를 구성하는 방법"
+title: "[react] react-router 에서 트리구조의 부무자식 URL 페이지를 구성하는 방법"
+description: "[react] react-router 에서 트리구조의 부무자식 URL 페이지를 구성하는 방법"
 author: kimchanjung
 date: 2020-06-21 18:00:00 +0900
 categories: projects
 published: true
 ---
 
-# react-router 에서 트리구조로 중첩된 URL 페이지를 구성하는 방법
+# react-router 에서 트리구조의 부무자식 URL 페이지를 구성하는 방법
 react-router를 이용해서 아래와 같은 url 구조가 있을 때 구현 하는 방법을 알아 봅니다
 
 ### URL 항목
@@ -82,7 +82,7 @@ export default function UserRouters({ match }) {
   return (
     <React.Fragment>
         <Route
-            path="/user"
+            path={match.url}
             render={props => (
                 <React.Fragment>
                     <Route exact path={`${props.match.url}/list`} component={UserList} />
@@ -102,7 +102,7 @@ export default function OrderRouters({ match }) {
   return (
     <React.Fragment>
         <Route
-            path="/order"
+            path={match.url}
             render={props => (
                 <React.Fragment>
                     <Route exact path={`${props.match.url}/list`} component={UserList} />
