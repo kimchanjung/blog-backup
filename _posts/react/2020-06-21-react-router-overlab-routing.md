@@ -3,7 +3,7 @@ layout: post
 title: "[react] react-router 에서 트리구조로 중첩된 url 구현하는 방법"
 description: "[react] react-router 에서 트리구조로 중첩된 url 구현하는 방법"
 author: kimchanjung
-date: 2020-06-21 01:00:00 +0900
+date: 2020-06-21 18:00:00 +0900
 categories: projects
 published: true
 ---
