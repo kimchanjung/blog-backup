@@ -4,7 +4,7 @@ title: "[react] react-router 에서 트리구조의 부무자식 URL 페이지�
 description: "[react] react-router 에서 트리구조의 부무자식 URL 페이지를 구성하는 방법"
 author: kimchanjung
 date: 2020-06-21 18:00:00 +0900
-categories: projects
+categories: react
 published: true
 ---
 

@@ -4,7 +4,7 @@ title: "[react] mobx 와 react-router 사용시 history를 이용한 url 이동�
 description: "[react] mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법"
 author: kimchanjung
 date: 2020-06-21 20:00:00 +0900
-categories: projects
+categories: react
 published: true
 ---
 
