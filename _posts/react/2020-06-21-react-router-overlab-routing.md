@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "[react] react-router 에서 트리구조로 중첩된 url 구현하는 방법"
-description: "[react] react-router 에서 트리구조로 중첩된 url 구현하는 방법"
+title: "[react] react-router 에서 트리구조로 중첩된 URL 페이지를 구성하는 방법"
+description: "[react] react-router 에서 트리구조로 중첩된 URL 페이지를 구성하는 방법"
 author: kimchanjung
 date: 2020-06-21 18:00:00 +0900
 categories: projects
 published: true
 ---
 
-# react-router 에서 중첩된 url 구현하는 방법
+# react-router 에서 트리구조로 중첩된 URL 페이지를 구성하는 방법
 react-router를 이용해서 아래와 같은 url 구조가 있을 때 구현 하는 방법을 알아 봅니다
 
 ### URL 항목
@@ -19,7 +19,6 @@ user/detail
 order/list
 order/detail
 ```
-
 
 ### URL의 구조
 일반적으로는 이렇게 부모 자식으로 구성됩니다.
@@ -66,7 +65,7 @@ order - list
 </React.Fragment>
 ```
 
-### react-router 에서 URL 매핑을 부모자식(트리구조)구조의 컴포넌트로 분리 하는 방법
+### react-router 에서 URL 매핑을 트리구조 구조의 컴포넌트로 분리하는 방법
 부모 자식의 트리 구조로 컴포넌트를 분리하여 URL 매핑을 구성할 수 있다.
 #### Root Router (부모라우터)
 ```react
