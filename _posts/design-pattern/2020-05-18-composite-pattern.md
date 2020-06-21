@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "컴포지트 패턴 - Composite Pattern [디자인패턴/코틀린/kotlin]"
-description: 컴포지트 패턴 - Composite Pattern [디자인패턴/코틀린/kotlin]
+description: "컴포지트 패턴 - Composite Pattern [디자인패턴/코틀린/kotlin]"
 author: kimchanjung
 date: 2020-05-18 09:00:00 +0900
 categories: design pattern

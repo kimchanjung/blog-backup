@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "퍼사드 패턴 - Facade Pattern [디자인패턴/코틀린/kotlin]"
-description: 퍼사드 패턴 - Facade Pattern [디자인패턴/코틀린/kotlin]
+description: "퍼사드 패턴 - Facade Pattern [디자인패턴/코틀린/kotlin]"
 author: kimchanjung
 date: 2020-05-20 09:00:00 +0900
 categories: design pattern

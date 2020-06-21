@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "상태 패턴 - State Pattern [디자인패턴/코틀린/kotlin]"
-description: 상태 패턴 - State Pattern [디자인패턴/코틀린/kotlin]
+description: "상태 패턴 - State Pattern [디자인패턴/코틀린/kotlin]"
 author: kimchanjung
 date: 2020-05-26 18:00:00 +0900
 categories: design pattern

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "플라이웨이트 패턴 - Flyweight Pattern [디자인패턴/코틀린/kotlin]"
-description: 플라이웨이트 패턴 - Flyweight Pattern [디자인패턴/코틀린/kotlin]
+description: "플라이웨이트 패턴 - Flyweight Pattern [디자인패턴/코틀린/kotlin]"
 author: kimchanjung
 date: 2020-05-22 09:00:00 +0900
 categories: design pattern

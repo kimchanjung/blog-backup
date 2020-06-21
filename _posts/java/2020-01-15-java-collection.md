@@ -1,7 +1,7 @@
 ---
 layout: post
-title: JAVA - 자료구조, Collection 별 특징 정리
-description: JAVA - 기본
+title: "JAVA - 자료구조, Collection 별 특징 정리"
+description: "JAVA - 기본"
 author: kimchanjung
 date: 2020-01-15 00:00:00 +0900
 categories: java

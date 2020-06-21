@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "커맨드 패턴 - Command Pattern [디자인패턴/코틀린/kotlin]"
-description: 커맨드 패턴 - Command Pattern [디자인패턴]
+description: "커맨드 패턴 - Command Pattern [디자인패턴]"
 author: kimchanjung
 date: 2020-05-17 09:00:00 +0900
 categories: design pattern
@@ -25,12 +25,11 @@ published: true
         자전거 자전거 = 자전거()
         자전거.페달을밟는다()
     ...        
-```  
-
-- 오토바이와 자전거가 있다 두 탈 것들을 운전하는 방법이 서로 다르다.
+```   
+- 두종류의 이동 수단은 조작 하는 방법이 서로다르다
 - 오토바이는 시동을 건다, 가속핸들을 돌린다, 자전거는 페달을 밟는다.
 - 각 탈것 종류에 따라 운전하는 방법을 분기처리한다.
-- 탈 것이 추가 되면 코드 수정이 필요하다.
+- 탈 것이 추가 되면 코드 수정이 필요하다. 
 
 ### 커맨트 패턴 적용 
 ```bash

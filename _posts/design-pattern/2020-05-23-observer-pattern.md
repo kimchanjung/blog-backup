@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "옵저버 패턴 - Observer Pattern [디자인패턴/코틀린/kotlin]"
-description: 옵저버 패턴 - Observer Pattern [디자인패턴/코틀린/kotlin]
+description: "옵저버 패턴 - Observer Pattern [디자인패턴/코틀린/kotlin]"
 author: kimchanjung
 date: 2020-05-23 18:00:00 +0900 
 categories: design pattern

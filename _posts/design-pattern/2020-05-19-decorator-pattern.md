@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "데코레이터 패턴 - Decorator Pattern [디자인패턴/코틀린/kotlin]"
-description: 컴포지트 패턴 - Decorator Pattern [디자인패턴/코틀린/kotlin]
+description: "컴포지트 패턴 - Decorator Pattern [디자인패턴/코틀린/kotlin]"
 author: kimchanjung
 date: 2020-05-19 09:00:00 +0900
 categories: design pattern

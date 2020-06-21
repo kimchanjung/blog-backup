@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "방문자 패턴 - Visitor Pattern [디자인패턴/코틀린/kotlin]"
-description: 방문자 패턴 - Visitor
- Pattern [디자인패턴/코틀린/kotlin]
+description: "방문자 패턴 - Visitor Pattern [디자인패턴/코틀린/kotlin]"
 author: kimchanjung
 date: 2020-05-29 18:00:00 +0900 
 categories: design pattern
