@@ -3,7 +3,7 @@ layout: post
 title: "[react] mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법"
 description: "[react] mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법"
 author: kimchanjung
-date: 2020-06-21 20:00:00 +0900
+date: 2020-06-22 09:00:00 +0900
 categories: react
 published: true
 ---
@@ -88,10 +88,13 @@ ReactDOM.render(
   node
 );
 ```
+- mobx-react-router 라는 라이브러리를 설치합니다.
+- mobx-react-router 의 syncHistoryWithStore, RouterStore 를 이용하여 기존 Router의 history 설정에 추가적인 설정이 포함되도록 합니다.
 
-### 컴포넌트에서 페이지이동은 기존과 같다
+### 컴포넌트에서 페이지 이동하는 방법
+기존 방법과 동일합니다. 컴포넌트의 props에 history를 기존대로 사용하면 됩니다.
 
-### 컴포넌트 이외의 곳(store)에서 history를 사용하여 페이지 이동 하는 방법
+### 컴포넌트 이외의 곳(store)에서 history를 사용하여 페이지 이동하는 방법
 ```javascript
 import { RouterStore } from 'mobx-react-router';
 
@@ -103,7 +106,7 @@ class AboutStore() {
   }
 }
 ```
-> mobx-react-router의 RouterStore 객체를 생성하여 history를 가져온 다음 동적으로 페이지 이동이 가능하다.
+> mobx-react-router의 RouterStore 객체를 생성하여 history를 가져온 다음 동적으로 페이지 이동이 가능합니다.
 
 ### 마무리
 react-router 사용할때 동적으로 페이지를 이동하는 방법에서 mobx를 사용할때 동작하지 않는 부분을 mobx-react-router 라이브러리를 이용하여 설정을 추가한 후 해결하는 방법을 알아 보았습니다.  
