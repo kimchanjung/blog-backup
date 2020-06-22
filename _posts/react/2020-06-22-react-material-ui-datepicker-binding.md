@@ -3,7 +3,7 @@ layout: post
 title: "[react] mobx-react-form 사용시 material-ui datepicker의 date format이 제대로 동작하지 않는 문제 해결"
 description: "[react] mobx-react-form 사용시 material-ui datepicker의 date format이 제대로 동작하지 않는 문제 해결"
 author: kimchanjung
-date: 2020-06-22 09:00:00 +0900
+date: 2020-06-22 12:00:00 +0900
 categories: react
 published: true
 ---
