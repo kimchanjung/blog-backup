@@ -1,23 +1,23 @@
 ---
 layout: post
-title: "[react] mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법"
-description: "[react] mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법"
+title: "[React] Mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법"
+description: "[React] Mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법"
 author: kimchanjung
 date: 2020-06-22 12:00:00 +0900
 categories: react
 published: true
 ---
 
-# mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법
+# Mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법
 
-### 일반적으로 react에서 react-router 사용시 링크를 설정하는 경우
+## 일반적으로 React에서 react-router 사용시 링크를 설정하는 경우
 ```react
 <Link to="/about">About</Link>
 // <a href="/about">About</a> 와 같습니다
 ```
-> react에서 react-router와 같이 사용하는 경우 링크설정시 아래와 같이 사용합니다.
+> React에서 react-router와 같이 사용하는 경우 링크설정시 아래와 같이 사용합니다.
 
-### javascript에서 history를 이용하여 동적으로 URL 이동하는 경우
+## javascript에서 history를 이용하여 동적으로 URL 이동하는 경우
 ```javascript
 document.location.href = "/about";
 document.location.hash = "#about";
@@ -27,7 +27,7 @@ window.history.pushState(null, null, "/about")
 > 일반적인 상황에서는 a태그 대신 javascript를 사용해서 위 예제 처럼 동적으로 페이지 이동이 필요한 경우도 있습니다.  
 
 
-## react에서 react-router를 사용하는 경우 동적으로 페이지 이동 하는 방법
+## React에서 react-router를 사용하는 경우 동적으로 페이지 이동 하는 방법
 ### Router 설정
 ```javascript
 import { createBrowserHistory } from "history";
@@ -41,7 +41,7 @@ ReactDOM.render(
   node
 );
 ```
-> react에서 react-router를 사용하는 경우 보통 createBrowserHistory() 사용하여 history props에 선언합니다  
+> React에서 react-router를 사용하는 경우 보통 createBrowserHistory() 사용하여 history props에 선언합니다  
 > 그리고 각각의 컴포넌트에 history, location, match 객체를 props로 제공하여 사용할 수 있도록 합니다.
 
 ### 컴포넌트에서 react-router의 history 이용하여 페이지 이동하는 예
@@ -108,9 +108,9 @@ class AboutStore() {
 ```
 > mobx-react-router의 RouterStore 객체를 생성하여 history를 가져온 다음 동적으로 페이지 이동이 가능합니다.
 
-### 마무리
+## 마무리
 react-router 사용할때 동적으로 페이지를 이동하는 방법에서 mobx를 사용할때 동작하지 않는 부분을 mobx-react-router 라이브러리를 이용하여 설정을 추가한 후 해결하는 방법을 알아 보았습니다.  
 
-react로 개발하다 보면 뭔가 매끄럽거나 깔끔하지 못한 부분이 많은데 아무래도 react는 rendering만 제공하는 프레임워크가 아닌 라이브러리이기 때문에 나머지 기능은 서드파티 라이브러리를 사용한다는 점에서 매끄럽지 못한 것 같다.  
+React로 개발하다 보면 뭔가 매끄럽거나 깔끔하지 못한 부분이 많은데 아무래도 React는 rendering만 제공하는 프레임워크가 아닌 라이브러리이기 때문에 나머지 기능은 서드파티 라이브러리를 사용한다는 점에서 매끄럽지 못한 것 같다.  
 
 깔끔한 방법을 아시는 분은 코멘트 남겨 주시면 감사하겠습니다.
