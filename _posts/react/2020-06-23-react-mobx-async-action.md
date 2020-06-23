@@ -3,7 +3,7 @@ layout: post
 title: "[react] mobx의 async action(비동기 액션) 처리를 가장 깔끔하게 구현하는 방법"
 description: "[react] mobx의 async action(비동기 액션) 처리를 가장 깔끔하게 구현하는 방법"
 author: kimchanjung
-date: 2020-06-22 17:00:00 +0900
+date: 2020-06-23 15:00:00 +0900
 categories: react
 published: true
 ---
