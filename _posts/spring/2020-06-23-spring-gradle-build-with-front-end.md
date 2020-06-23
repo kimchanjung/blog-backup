@@ -8,7 +8,7 @@ categories: spring
 published: true
 ---
 
-# yarn 빌드 react 프로젝트를 Spring 프로젝트 gradle 빌드에 통합하여 빌드하는 방법
+# Yarn 빌드 React 프로젝트를 Spring 프로젝트 Gradle 빌드에 통합하여 빌드하는 방법
 스프링 프로젝트를 빌드할 때 **백엔드 API + 프론트엔드 구성의 프로젝트** 빌드시 yarn을 사용하여 빌드하는 **프론트엔드 빌드를 Gradle 빌드에 포함**하여 빌드하는 방법을 알아 봅니다.
 
 ## 벡엔드 API와 프론트엔드의 일반적인 구성
@@ -21,7 +21,7 @@ published: true
 - **Gradle v4.7**
 - **[gradle-node-plugin v1.2.0](https://plugins.gradle.org/plugin/com.moowork.node)**
 
-## node 플러그인 의존성추가 
+## Node 플러그인 의존성추가 
 ```groovy
 buildscript {
     ext {
