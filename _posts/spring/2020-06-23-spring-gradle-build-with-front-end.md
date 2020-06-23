@@ -18,6 +18,7 @@ published: true
 ## 적용 버전 정보
 - **Java v1.8**
 - **Spring-Boot v2.1.2**
+- **Gradle v4.7**
 - **[gradle-node-plugin v1.2.0](https://plugins.gradle.org/plugin/com.moowork.node)**
 
 ## node 플러그인 의존성추가 
@@ -65,7 +66,6 @@ configure(nodeProjects) {
     // node와 yarn을 설치하고 yarn install 명령을 하나의 테스크로 묶었다.
     task nodeModuleInstall {
         doLast {
-            println "nodeModuleInstall"
             nodeSetup.execute() // node를 설치
             yarnSetup.execute() // yarn을 설치
             yarnInstallProduction.execute() // package.json에 추가된 의존 모듈을 설치(yarn install)
@@ -121,6 +121,10 @@ project(":api-server") {
 }
 ```
 > 프로젝트 빌드시 프론트엔드빌드 task를 추가하고 빌드 프로세스에 포함 시키는 설정을 추가합니다.
+
+## 주의
+**Gradle task 설정**을 추가 할때는 프론트엔드 빌드 task가 완전히 완료된 후 java 빌드가 수행되도록 되어야 합니다.   
+그렇지 않으면 **프론트빌드가 완료되기 전에 java 빌드가 되기 때문에 프론트 파일이 미포함**되는 경우가 발생하기 때문에 주의 해야합니다.
 
 ## 마무리
 Spring 프로젝트 Gradle 빌드에 **프론트엔드 빌드를 통합하여 빌드하는 방법**을 알아 보았습니다. 더 좋은 방법이 있으면 코멘트 남겨주세요
