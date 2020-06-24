@@ -37,10 +37,10 @@ const PrivateRoute = ({component: Component, ...parentProps}) => {
 **부모 컴포넌트로 부터 넘겨 받은 props**에서 Component를 제외한 **나머지 props를 parentProps에 모두 담습니다**.   
 **parentProps**는 **exact**, path="/users" 같은 **react-router**의 **Route 컴포넌트**를 사용할때 제공하는 설정 값들을 넘겨받아서 **{...parentProps}** 와 같이 스프레드 문법으로 **그대로 설정해주기 위함**입니다.  
 ```html
-  // parentProps로 받아온 나머지 props를 스프레드 문법으로 풀어주면
-  <Route {...parentProps} />
+// parentProps로 받아온 나머지 props를 스프레드 문법으로 풀어주면
+<Route {...parentProps} />
   // 사실상 아래 처럼 되는 것과 같습니다.
-  <Route exact path="/users" .... />
+<Route exact path="/users" .... />
 ```
 
 ## 권한을 체크하는 커스텀 Private Router를 사용
