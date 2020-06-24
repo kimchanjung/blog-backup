@@ -3,7 +3,7 @@ layout: post
 title: "[Spring] yarn 빌드 react 프로젝트를 gradle에 통합 포함하여 빌드하는 방법"
 description: "[Spring] yarn 빌드 react 프로젝트를 gradle에 통합 포함하여 빌드하는 방법"
 author: kimchanjung
-date: 2020-06-23 18:00:00 +0900
+date: 2020-06-24 14:00:00 +0900
 categories: spring
 published: true
 ---
@@ -127,4 +127,4 @@ project(":api-server") {
 그렇지 않으면 **프론트빌드가 완료되기 전에 java 빌드가 되기 때문에 프론트 파일이 미포함**되는 경우가 발생하기 때문에 주의 해야합니다.
 
 ## 마무리
-Spring 프로젝트 Gradle 빌드에 **프론트엔드 빌드를 통합하여 빌드하는 방법**을 알아 보았습니다. 더 좋은 방법이 있으면 코멘트 남겨주세요
+**Spring 프로젝트 Gradle** 빌드에 **프론트엔드 빌드를 통합하여 빌드하는 방법**을 알아 보았습니다. 더 좋은 방법이 있으면 코멘트 남겨주세요

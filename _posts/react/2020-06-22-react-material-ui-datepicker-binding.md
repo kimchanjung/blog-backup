@@ -17,10 +17,10 @@ published: true
 실제값은 **yyyy-MM-dd**가 아닌 **Fry May 31 2019 13:44:31 GMT+0900** 되어 있는 버그입니다  
 
 ## 문제가 발생했던 라이브러리의 버전정보
-- mobx v5.9
-- mobx-react-form v2.0.2
-- material-ui v3.9.3
-- material-ui-pickers v2.2.4
+- **mobx v5.9**
+- **mobx-react-form v2.0.2**
+- **material-ui v3.9.3**
+- **material-ui-pickers v2.2.4**
 
 ## mobx-react-form의 input 필드의 일반적인 바인딩의 예시
 ```react
@@ -40,11 +40,12 @@ published: true
     {...form.$('retireDate').bind()}
 />    
 ```
-- DatePicker 컴포넌트에 mobx-react-form을 바인딩합니다. 
-- DatePicker 컴포넌트가 제공하는 속성값 **format="yyyy-MM-dd"** 에 날짜 포맷을 설정합니다
+- **DatePicker** 컴포넌트에 **mobx-react-form**을 바인딩합니다. 
+- **DatePicker** 컴포넌트가 제공하는 속성값 **format="yyyy-MM-dd"** 에 날짜 포맷을 설정합니다
 - **{...form.$('retireDate').bind()} mobx-react-form** 을 사용하여 바인딩합니다
 - 날짜변경 및 화면에 선택된 날짜는 **yyyy-MM-dd** 형식으로 잘 표시 되지만 실제 **retireDate**의 값을 보면 **Fry May 31 2019 13:44:31 GMT+0900** 값으로 설정되어 있습니다.
-- **{...form.$('retireDate').bind()}** 바인딩 처리를 했기 때문에 내부적으로 **onChange이벤트리스너**에 변경 함수가 자동적으로 생성이 되어 있는데 이 함수가 **yyyy-MM-dd** 형식으로 값을 적용하지 못하는 문제입니다.  
+- **{...form.$('retireDate').bind()}** 바인딩 처리를 했기 때문에 내부적으로 **onChange이벤트리스너**에 변경 함수가 자동적으로 생성이 되어 있는데 이 함수가 **yyyy-MM-dd** 형식으로 값을 적용하지 못하는 문제입니다.
+- 결론적으로 서버로 **submit**할 때 *yyyy-MM-dd** 아니라 **Fry May 31 2019 13:44:31 GMT+0900** 형식으로 전송되는 것이 문제 입니다.
 
 ## datepicker onChange 메소드를 오버라이드 하여 해결합니다.
 ```react
