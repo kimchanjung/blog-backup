@@ -24,7 +24,7 @@ const PrivateRoute = ({component: Component, ...parentProps}) => {
         checkAuth() ? (
          <Component {...props} parentMenu={this.props.menu} />
         ) : (
-         <Redirect to={{ pathname: '/403' }} />
+         <Redirect to="/403" />
         )
       )}
     />
