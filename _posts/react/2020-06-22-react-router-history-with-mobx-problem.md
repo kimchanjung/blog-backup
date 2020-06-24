@@ -56,7 +56,7 @@ class Comp extends React.Component {
 
 ### 컴포넌트 이외(store나 다른 함수등에서) react-router의 history를 이용하여 페이지 이동하는 예
 ```javascript
- import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 class AboutStore() {
   history = useHistory();
