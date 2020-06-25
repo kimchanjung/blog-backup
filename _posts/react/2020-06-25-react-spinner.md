@@ -3,7 +3,7 @@ layout: post
 title: "[React] 로딩처리용 spinner를 효과적이고 깔끔하게 적용하는 방법"
 description: "[React] 로딩처리용 spinner를 효과적이고 깔끔하게 적용하는 방법"
 author: kimchanjung
-date: 2020-06-25 18:00:00 +0900
+date: 2020-06-25 13:00:00 +0900
 categories: react
 published: true
 ---
