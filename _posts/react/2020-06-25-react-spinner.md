@@ -21,7 +21,7 @@ published: true
 
 ### Modal이나 Dialog 사용시 Spinner의 위치 설정문제
 #### 대부분의 모듈들의 사용방법을 보면 아래와 같습니다.
-```react
+```javascript
 class UserPage extends React.Component {
   render() {
     return (
@@ -38,7 +38,7 @@ class UserPage extends React.Component {
 
 #### 그러나 한곳에만 Loader를 포함시켜놓고 코드 중복없이 사용하고 싶습니다. 
 #### App 컴포넌트 
-```react
+```javascript
 // Loader 컴포넌트를 포함시킨다.
 @inject('store')
 @observer
@@ -56,7 +56,7 @@ class App extends React.Component {
 }  
 ```  
 #### User 페이지 컴포넌트 
-```react
+```javascript
 // 개별페이지들은 Store의 값을 컨트롤하여 Spinner를 조작한다.
 // 개별페이지들은 일일히 Spinner 모듈을 가져와 사용할 필요 없어져서 중복이 제거 되었다.
 @inject('store')
@@ -75,7 +75,7 @@ class UserPage extends React.Component {
 }
 ``` 
 #### Store
-```react
+```javascript
 // 스토어는 Mobx를 예로 들었습니다.
 class Store {
   @observable  
@@ -91,7 +91,7 @@ class Store {
 
 #### Modal이나 Dialog는 최상의 엘리먼트 밖에 생성됩니다
 #### App 컴포넌트
-```react
+```javascript
 // App.js
 @inject('store')
 @observer
@@ -131,7 +131,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## React Potal을 이용하여 Spinner 모듈 컴포넌트를 App밖에 생성합니다.
 #### Potal을 이용하여 특정 엘리먼트에 Spinner를 동적으로 위치시키는 컴포넌트
-```react
+```javascript
 // SpinJsLoader.js
 import { Portal } from 'react-portal';
 
@@ -153,7 +153,7 @@ export default function SpinnerLoader(props) {
 - 결국은 **$('.app-root').append('<div id='spinner' style='....'>...</div>');** 와 같은 기능입니다.
 
 #### App 컴포넌트에 추가합니다.
-```react
+```javascript
 import { SpinJsLoader } from 'SpinJsLoader';
 
 class App extends React.Component {
@@ -174,7 +174,7 @@ class App extends React.Component {
 ```
 
 #### Store
-```react
+```javascript
 // 스토어는 Mobx를 예로 들었습니다.
 class Store {
   @observable  
@@ -193,7 +193,7 @@ class Store {
 ```
 
 #### 개별 컴포넌트들은 상황에 맞게 Spinner를 조작합니다.
-```react
+```javascript
 // 사용자 페이지 컴포넌트
 @inject('store')
 @observer
@@ -233,6 +233,7 @@ class Modal extends React.Component {
 
 ### API호출시에 자동으로 Spinner가 로딩되도록 하는 팁
 ```javascript
+import axios from 'axios';
 import { store } from 'stores';
 
 class AxiosConfig {
