@@ -237,7 +237,7 @@ import axios from 'axios';
 import { store } from 'stores';
 
 class AxiosConfig {
-  initInterceptor(store, history) {
+  initInterceptor() {
     const { contentRootStore } = rootStore;
     axios.interceptors.request.use(
       (config) => {
