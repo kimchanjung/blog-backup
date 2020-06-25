@@ -232,8 +232,9 @@ class Modal extends React.Component {
 - 애초에 **App 내부**에 포함하여 사용하는 방식이면 **Modal에서 position 설정의 기준이 다르기** 때문에 **맞지않게 되는 문제**가 발생하지만 **Potal을 이용하여 동적으로 Spinner를 위치** 시키므로써 가능해 졌습니다.
 
 ### API호출시에 자동으로 Spinner가 로딩되도록 하는 팁
-import { store } from 'stores';
 ```javascript
+import { store } from 'stores';
+
 class AxiosConfig {
   initInterceptor(store, history) {
     const { contentRootStore } = rootStore;
@@ -260,7 +261,7 @@ class AxiosConfig {
   }
 }
 ```
-> axios(http 호출 모듈)를 사용한다면 API 호출시 Spinner를 표시하고 완료시 제거하는 코드를 넣어두면 개별 페이지에서 Spinner 호출 코드를 제거하여 중복을 줄일 수 있다. 
+> axios(http 호출 모듈)를 사용한다면 API 호출시 Spinner를 표시하고 완료시 제거하는 store의 메소드를 호출하는 코드를 넣어두면 개별 페이지에서 Spinner 호출 코드를 제거하여 중복을 줄일 수 있다. 
 
 ### 마무리
 **Spinner모듈을 Modal**과 일반 페이지 둘다 **position 설정이 가능하도록 Portal**을 이용하여 **구현하는 방법**을 알아 보았습니다.
