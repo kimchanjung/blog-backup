@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[React] Mobx의 async action(비동기 액션) 처리를 가장 깔끔하게 구현하는 방법"
-description: "[React] Mobx의 async action(비동기 액션) 처리를 가장 깔끔하게 구현하는 방법"
+description: "react 비동기 액션 async action mobx-util runinaction without flow 없이 깔끔"
 author: kimchanjung
 date: 2020-06-24 14:00:00 +0900
 categories: react
