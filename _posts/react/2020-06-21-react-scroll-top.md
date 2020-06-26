@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[React] 페이지 이동시 스크롤을 상단으로 초기화 하는 방법(scroll top)"
-description: "[React] 페이지 이동시 스크롤을 상단으로 초기화 하는 방법(scroll top)"
+description: "react scroll top"
 author: kimchanjung
 date: 2020-06-25 16:00:00 +0900
 categories: react

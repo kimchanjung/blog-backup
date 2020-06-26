@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[마이크로서비스] 스프링 마이크로서비스 정리 (spring microservice, msa)"
-description: "스프링 마이크로서비스 책 내용 정리"
+description: "spring 스프링 msa 마이크로서비스 cqrs 이벤트소싱 event sourcing"
 author: kimchanjung
 date: 2020-05-06 00:00:00 +0900
 categories: tech

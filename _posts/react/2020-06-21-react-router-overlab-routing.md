@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[React] react-router 에서 트리구조의 부모자식 URL 페이지를 구성하는 방법"
-description: "[React] react-router 에서 트리구조의 부모자식 URL 페이지를 구성하는 방법"
+description: "트리구조 무모자식 react-router react"
 author: kimchanjung
 date: 2020-06-22 09:00:00 +0900
 categories: react

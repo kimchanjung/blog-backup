@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[React] react-router에서 Private Router 구현하기(권한별 routing)"
-description: "[React] react-router에서 Private Router 구현하기, 권한별 routing 메뉴 구현"
+description: "react react-router router route private 권한 인증 auth"
 author: kimchanjung
 date: 2020-06-24 18:00:00 +0900
 categories: react

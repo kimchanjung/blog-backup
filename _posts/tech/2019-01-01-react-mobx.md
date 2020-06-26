@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Mobx] React 에서 Mobx 사용기"
-description: "React와 state 관리 라이브러리 mobx사용기 및 redux와 비교기"
+description: "mobx react 사용기 비교기 경험기 redux vs mobx 프로젝트구조 atomic design material-ui"
 author: kimchanjung
 date: 2020-05-08 00:00:00 +0900
 categories: tech

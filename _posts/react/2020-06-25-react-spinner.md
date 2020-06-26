@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[React] 로딩처리용 spinner를 효과적이고 깔끔하게 적용하는 방법"
-description: "[React] 로딩처리용 spinner를 효과적이고 깔끔하게 적용하는 방법"
+description: "react loading loader spinner api 적용 깔끔"
 author: kimchanjung
 date: 2020-06-26 14:00:00 +0900
 categories: react
