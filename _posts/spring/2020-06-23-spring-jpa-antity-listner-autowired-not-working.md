@@ -33,12 +33,12 @@ public class Rider {
 **Rider** 엔티티 **CRUD**이벤트를 처리하는 **RiderEntityListener**에 스냅샷을 저장하는 **RiderLog 앤티티**를 생성하고 저장하기위해 **RiderLogRepository의 의존성을 추가**합니다.   
 **Rider**엔티티를 조작하는 코드마다 **로그를 남기는 코드의 중복을 제거**할 용도로 사용할 수 있습니다.  
 ```java
-public class RiderAccountEntityListener {
+public class RiderEntityListener {
 
     private RiderLogRepository riderLogRepository;
 
     @Autowired
-    public RiderAccountEntityListener(RiderLogRepository riderLogRepository) {
+    public RiderEntityListener(RiderLogRepository riderLogRepository) {
         this.riderLogRepository = riderLogRepository;
     }
 
@@ -89,14 +89,14 @@ public class RiderEntityEvent extends ApplicationEvent {
 }
 ```
 ### Rider 엔티티 변경 이벤트 발행 
-**ApplicationEvent** 이용하여 event를 발행합니다. **ApplicationEventPublisher가 @Autowired DI되는 이유**는 **repository**나 **service** 처럼 사용자가 생성한 빈이 아니라 **스프링이 제공하는 이미 등록된 기능의 빈**이기 때문에 **RiderAccountEntityListener**가 생성시 **이미 ApplicationEventPublisher는 존재**하기 때문입니다.
+**ApplicationEvent** 이용하여 event를 발행합니다. **ApplicationEventPublisher가 @Autowired DI되는 이유**는 **repository**나 **service** 처럼 사용자가 생성한 빈이 아니라 **스프링이 제공하는 이미 등록된 기능의 빈**이기 때문에 **RiderEntityListener**가 생성시 **이미 ApplicationEventPublisher는 존재**하기 때문입니다.
 ```java
-public class RiderAccountEntityListener {
+public class RiderEntityListener {
 
     private ApplicationEventPublisher applicationEventPublisher;
 
     @Autowired
-    public RiderAccountEntityListener(ApplicationEventPublisher applicationEventPublisher) {
+    public RiderEntityListener(ApplicationEventPublisher applicationEventPublisher) {
         this.applicationEventPublisher = applicationEventPublisher;
     }
 
@@ -126,7 +126,7 @@ public class RiderAccountEntityListener {
 
 #### 위 방법이 아니라면 아마도 이런 구조
 ```java
-public class RiderAccountEntityListener {
+public class RiderEntityListener {
     ...
 
     @PostPersist
