@@ -16,13 +16,13 @@ published: true
 > 스프링시큐리티는 **인증과 권한등의 많은 기능을 편리하게 적용**할 수 있도록 도와 주는 라이브러리이지만 **사용법은 결코 만만하지 않다는 느낌을 받습니다.** 스프링과 JAVA공식 문서들이 그렇지만 **방대한 내용과 설명이 많아** 학습하는 것도 쉽지 않습니다. (요즘 React나 Vue같은 프론트엔드 공식문서는 너무도 잘되어 있는 최근 추세에 비해서)  
 
 ## 가장 먼저 학습 해야하는 부분
-그래서 저는 일단 공식 문서를 처음부터 정독하거나, 튜토리얼을 보는 것도 좋지만 **가장 먼저 스프링시큐리티의 동작 구조를 먼저 이해**하는 것이 나중에 학습 + 개발의 리소스를 줄여주는 방법이라고 생각합니다. 
+그래서 저는 일단 공식 문서를 처음부터 정독하거나, 튜토리얼을 보는 것도 좋지만 `가장 먼저 스프링시큐리티의 동작 구조를 먼저 이해`하는 것이 나중에 학습 + 개발의 리소스를 줄여주는 방법이라고 생각합니다. 
 > 스프링시큐리티의 동작 구조를 이해하면 **설정과 추가적인 구현 및 변경이 어느 부분에 적용되어야 되는지 파악이 빨라** 집니다.
 
 ## 스프링시큐리티의 동작 구조
 > 스프링시큐리티는 각각의 **역할에 맞는 작업을 처리하는 여러개의 필터들이 체인형태로 구성**되어 순서에 따라 순차적으로 수행됩니다.   
 
-그 중 **UsernamePasswordAuthenticationFilter**가 **인증처리를 담당**하고 있습니다.  
+그 중 **UsernamePasswordAuthenticationFilter**가 `인증처리를 담당`하고 있습니다.  
 #### Spring Security Flow Communication Diagram
 ![spring-security-flow-diagram](/post-img/spring-security/spring-security-flow-diagram.png)
 [그림1] 스프링시큐리티 동작구조
@@ -31,12 +31,12 @@ published: true
 > 1: doFilter(request: HttpServletRequest, response: HttpServletResponse)
 
 브라우저의 로그인화면에서 아이디와 비번을 입력하고 확인을 누르면 서버에 로그인 인증 요청을 하게 되고 
-스프링시큐리티에 **Chain**형태로 구성된 **Filter**들이 순서에 따라 **doFilter**메소드들이 호출되어 각각의 역할로직들이 수행되게 됩니다.
+스프링시큐리티에 `Chain형태로 구성된 Filter들의 doFilter메소드들이 순서에 따라 호출`되어 각각의 역할로직들이 수행되게 됩니다.
 
 #### 2. 인증 처리 담당하는 UsernamePasswordAuthenticationFilter 실행된다.
 > 2: attemptAuthentication(request: HttpServletRequest, response: HttpServletResponse):Authentication  
 
-- **AbstractAuthenticationProcessingFilter** 추상 클래스의 추상메소드 **attemptAuthentication**를 호출하여 요청을 처리하게 됩니다. **attemptAuthentication**추상메소드의 구현은 상속한 **UsernamePasswordAuthenticationFilter**에 구현 되어 있습니다. 추후 외부인증을 위한 작업을 할때 **UsernamePasswordAuthenticationFilter**를 **Override**하게 됩니다. 
+- **AbstractAuthenticationProcessingFilter** 추상 클래스의 `추상메소드 attemptAuthentication를 호출하여 요청을 처리`하게 됩니다. **attemptAuthentication**추상메소드의 구현은 상속한 **UsernamePasswordAuthenticationFilter**에 구현 되어 있습니다. 추후 `외부인증을 위한 작업을 할때 UsernamePasswordAuthenticationFilter를 Override`하게 됩니다. 
 - 인증 성공 실패에 따라 **AuthenticationSuccessHandler**, **AuthenticationFailureHandler** 를 최종적으로 호출하게 됩니다.
 - 인증이 성공했다면 리턴값 **UsernamePasswordAuthenticationToken**를 세션에 저장합니다
 
@@ -44,7 +44,8 @@ published: true
 #### 3. AuthenticationManager가 적절한 AuthenticationProvider를 찾는다.
 > 3: authenticate(authRequest):Authentication  
 
-**AuthenticationManager**는 인터페이스이며 구현체는 **ProviderManager**입니다. ProviderManager는 실제 인증을 처리하는 로직이 포함된 **AuthenticationProvider** 인터페이스의 구현체들 중에 설정된 인증 처리방식의 구현체를 찾아 실행합니다.
+**AuthenticationManager**는 인터페이스이며 구현체는 **ProviderManager**입니다. `ProviderManager`
+는 실제 `인증을 처리하는 로직이 포함된 AuthenticationProvider 인터페이스의 구현체`들 중에 설정된 인증 처리방식의 구현체를 찾아 실행합니다.
 
 #### 4. 실제 인증처리하는 AuthenticationProvider의 인증처리 메소드를 호출한다.
 > 4: authenticate(authRequest):Authentication   

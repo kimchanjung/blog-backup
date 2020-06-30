@@ -2,7 +2,7 @@
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
 /** Basic styling */
-body {  color: #555;font-family: 'Noto Sans KR', "Helvetica Neue", sans-serif }
+body {  color: rgb(58, 57, 57);font-family: 'Noto Sans KR', "Helvetica Neue", sans-serif }
 
 /** Set `margin-bottom` to maintain vertical rhythm */
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight { margin-bottom: 15px; }
@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight { mar
 main { display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */ }
 
 /** Images */
-img { max-width: 100%; vertical-align: middle; box-shadow: 5px 5px 5px rgb(68, 67, 67); border-radius: 5px;}
+img { max-width: 100%; vertical-align: middle; box-shadow: 5px 5px 5px #8c8888; border-radius: 5px;margin-bottom: 10px;}
 
 /** Figures */
 figure > img { display: block; }
@@ -43,7 +43,7 @@ blockquote { color: #2a2b33; border-left: 4px solid #0ecccc; padding: 15px; font
 blockquote > :last-child { margin-bottom: 0; }
 
 /** Code formatting */
-pre, code { font-size: 0.85rem; border-radius: 3px;}
+pre, code { font-size: .85rem; border-radius: 3px;}
 
 code { padding: 1px 5px; }
 
@@ -170,4 +170,11 @@ table td { border: 1px solid #e8e8e8; }
 .img-center {
   display: block;
   margin: auto;
+}
+
+.highlighter-rouge{
+  font-size: 1rem; 
+  border-radius: 3px;
+  background-color: #0985ef;
+  color: white;
 }
