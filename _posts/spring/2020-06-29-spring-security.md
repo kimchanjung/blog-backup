@@ -28,7 +28,7 @@ published: true
 > 1: doFilter(request: HttpServletRequest, response: HttpServletResponse)
 
 브라우저의 로그인화면에서 아이디와 비번을 입력하고 확인을 누르면 서버에 로그인 인증 요청을 하게 되고 
-스프링시큐리티에 **Chain형태로 구성된 Filter들이 순서에 따라 수행**됩니다.
+스프링시큐리티에 **Chain형태로 구성된 Filter들이 순서에 따라 doFilter메소드들이 호출되어 각각의 역할로직들이 수행되게 됩니다.
 
 #### 2. 인증 처리 담당하는 UsernamePasswordAuthenticationFilter 실행된다.
 > 2: attemptAuthentication(request: HttpServletRequest, response: HttpServletResponse):Authentication  
