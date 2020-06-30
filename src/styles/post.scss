@@ -38,7 +38,7 @@ a:hover { color: #111; text-decoration: underline; }
 .social-media-list a:hover .username { text-decoration: underline; }
 
 /** Blockquotes */
-blockquote { color: #2a2b33; border-left: 4px solid #0ecccc; padding: 15px; font-size: 18px; background-color: #f1f1f1;}
+blockquote { color: #2a2b33; border-left: 4px solid #0ecccc; padding: 15px; font-size: 1.05rem; background-color: #f1f1f1;}
 
 blockquote > :last-child { margin-bottom: 0; }
 
@@ -52,9 +52,9 @@ pre { padding: 8px 12px; overflow-x: auto; }
 pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 /** Wrapper */
-.wrapper { max-width: -webkit-calc(970px - (30px * 2)); max-width: calc(970px - (30px * 2)); margin-right: auto; margin-left: auto; padding-right: 30px; padding-left: 30px; }
+.wrapper { max-width: -webkit-calc(950px - (30px * 2)); max-width: calc(950px - (30px * 2)); margin-right: auto; margin-left: auto; padding-right: 30px; padding-left: 30px; }
 
-@media screen and (max-width: 970px) { .wrapper { max-width: -webkit-calc(970px - (30px)); max-width: calc( - (30px)); padding-right: 15px; padding-left: 15px; } }
+@media screen and (max-width: 950px) { .wrapper { max-width: -webkit-calc(950px - (30px)); max-width: calc( - (30px)); padding-right: 15px; padding-left: 15px; } }
 
 /** Clearfix */
 .wrapper:after, .footer-col-wrapper:after { content: ""; display: table; clear: both; }
