@@ -1053,7 +1053,6 @@ println(position[1]) // 10 출력
 > 클래스에 콜렉션의 get/set을 확장 할 수 있다.
 
 
-###
 ### Observable
 ```kotlin
 // 
