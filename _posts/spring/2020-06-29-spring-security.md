@@ -33,7 +33,7 @@ published: true
 #### 2. 인증 처리 담당하는 UsernamePasswordAuthenticationFilter 실행된다.
 > 2: attemptAuthentication(request: HttpServletRequest, response: HttpServletResponse):Authentication  
 
-- **AbstractAuthenticationProcessingFilter** 추상 클래스의 추상메소드 **attemptAuthentication**를 호출하여 요청을 처리하게 된다 **attemptAuthentication**추상메소드의 구현은 상속한 **UsernamePasswordAuthenticationFilter**에 구현 되어 있습니다. 추후 외부인증을 위한 작업을 할때 **UsernamePasswordAuthenticationFilter**를 **Override**하게 됩니다. 
+- **AbstractAuthenticationProcessingFilter** 추상 클래스의 추상메소드 **attemptAuthentication**를 호출하여 요청을 처리하게 됩니다. **attemptAuthentication**추상메소드의 구현은 상속한 **UsernamePasswordAuthenticationFilter**에 구현 되어 있습니다. 추후 외부인증을 위한 작업을 할때 **UsernamePasswordAuthenticationFilter**를 **Override**하게 됩니다. 
 - 인증 성공 실패에 따라 **AuthenticationSuccessHandler**, **AuthenticationFailureHandler** 를 최종적으로 호출하게 됩니다.
 - 인증이 성공했다면 리턴값 **UsernamePasswordAuthenticationToken**를 세션에 저장합니다
 
