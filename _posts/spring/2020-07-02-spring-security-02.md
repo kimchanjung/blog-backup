@@ -94,7 +94,7 @@ public class BrmsWebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 antMatchers 설정한 리소스의 접근을 인증절차 없이 허용한다는 의미 입니다.
 
 #### hasAnyRole
-> antMatchers("/admin/&#42&#42").hasAnyRole("ADMIN")
+> antMatchers("/admin/&#42;&#42;").hasAnyRole("ADMIN")
 
 리소스 admin으로 시작하는 모든 URL은 `인증후 ADMIN 레벨의 권한을 가진 사용자만 접근을 허용`한다는 의미입니다.
 
