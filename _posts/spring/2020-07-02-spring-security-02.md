@@ -81,22 +81,24 @@ public class BrmsWebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 }    
 ```
-#### 1. antMatchers
+[코드2] 리소스의 인증 및 권한 설정
+
+#### antMatchers
 > antMatchers("/login&#42;&#42;", "/web-resources/&#42;&#42;", "/actuator/&#42;&#42;")
 
 특정 리소스에 대해서 권한을 설정합니다.
 
-#### 2. permitAll
+#### permitAll
 > antMatchers("/login&#42;&#42;", "/web-resources/&#42;&#42;", "/actuator/&#42;&#42;").permitAll() 
 
 antMatchers 설정한 리소스의 접근을 인증절차 없이 허용한다는 의미 입니다.
 
-#### 3. hasAnyRole
+#### hasAnyRole
 > antMatchers("/admin/&#42&#42").hasAnyRole("ADMIN")
 
 리소스 admin으로 시작하는 모든 URL은 `인증후 ADMIN 레벨의 권한을 가진 사용자만 접근을 허용`한다는 의미입니다.
 
-#### 4. anyRequest
+#### anyRequest
 > anyRequest().authenticated()
 
 모든 리소스를 의미하며 접근허용 리소스 및 인증후 특정 레벨의 권한을 가진 사용자만 접근가능한 리소스를 설정하고 `그외 나머지 리소스들은 무조건 인증을 완료해야 접근이 가능`하다는 의미입니다.
@@ -119,42 +121,43 @@ public class BrmsWebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 } 
 ```
-#### 1. formLogin
+[코드3] 로그인 폼 사용 및 설정
+#### formLogin
 로그인 페이지와 기타 로그인 처리 및 성공 실패 처리를 사용하겠다는 의미 입니다.
 > http.formLogin();  
 
 일반적인 로그인 방식 즉 로그인 폼 페이지와 로그인 처리 성공 실패 등을 사용하겠다는 의미입니다. `http.formLogin() 를 호출하지 않으면`
 완전히 로그인처리 `커스텀필터를 만들고 설정하지 않는 이상 로그인 페이지 및 기타처리를 할 수 가 없습니다`. 커스텀 필터를 만들면 사실상 필요 없는 경우도 있습니다. 
 
-#### 2. loginPage
+#### loginPage
 사용자가 따로 만든 로그인 페이지를 사용하려고 할때 설정합니다.
 > loginPage("/login-page") 
 
 따로 설정하지 않으면 디폴트 URL이 **"/login"**이기 때문에 **"/login"**로 호출하면 스프링이 제공하는 기본 로그인페이지가 호출됩니다.
 
-#### 3. loginProcessingUrl
+#### loginProcessingUrl
 로그인 즉 인증 처리를 하는 **URL**을 설정합니다. **"/login-process"** 가 호출되면 인증처리를 수행하는 필터가 호출됩니다.
 > loginProcessingUrl("/login-process") 
 
 로그인 FORM에서 아이디와 비번을 입력하고 확인을 클릭하면 **"/login-process"** 를 호출 하게 되었들 때 `인증처리하는 필터가 호출`되어 아이디 비번을 받아와 인증처리가 수행되게 됩니다. 즉 `UsernamePasswordAuthenticationFilter가 실행` 되게 되는 것입니다.
 
-#### 4. defaultSuccessUrl
+#### defaultSuccessUrl
 정상적으로 인증성공 했을 경우 이동하는 페이지를 설정합니다.
 > defaultSuccessUrl("/main")
 
 설정하지 않는경우 디폴트값은 "/" 입니다.
 
-#### 5. successHandler
+#### successHandler
 정상적인증 성공 후 별도의 처리가 필요한경우 커스텀 핸들러를 생성하여 등록할 수 있습니다.
 > successHandler(new CustomAuthenticationSuccessHandler("/main"))
 
 커스텀 핸들러를 생성하여 등록하면 인증성공 후 사용자가 추가한 로직을 수행하고 성공 페이지로 이동합니다.
 
-#### 4. failureUrl
+#### failureUrl
 인증이 실패 했을 경우 이동하는 페이지를 설정합니다.
 > failureUrl("/login-fail")
 
-#### 5. failureHandler
+#### failureHandler
 인증 실패 후 별도의 처리가 필요한경우 커스텀 핸들러를 생성하여 등록할 수 있습니다.
 > successHandler(new CustomAuthenticationFailureHandler("/login-fail"))
 
@@ -172,6 +175,8 @@ public class BrmsWebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 } 
 ```
+[코드4] 커스텀 필터의 추가 
+
 #### addFilterBefore  
 > 지정된 필터 앞에 커스텀 필터를 추가 (UsernamePasswordAuthenticationFilter 보다 먼저 실행된다)
 
@@ -209,6 +214,7 @@ public class BrmsWebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 } 
 ```
+[코드5] 커스컴 필터의 상세 설정
 
 #### CustomAuthenticationProcessingFilter
 > 인증을 처리하는 커스텀 필터는 AbstractAuthenticationProcessingFilter를 상속하여 생성합니다.
