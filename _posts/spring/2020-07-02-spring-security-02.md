@@ -3,7 +3,7 @@ layout: post
 title: "[Spring Security] 커스텀 필터를 이용한 Google 인증 구현 - 스프링시큐리티 설정(2)"
 description: "spring security custom filter google auth structure configuration"
 author: kimchanjung
-date: 2020-07-02 23:00:00 +0900
+date: 2020-07-02 12:00:00 +0900
 categories: spring
 published: true
 ---
