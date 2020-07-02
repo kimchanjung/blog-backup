@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+/** Reset some basic elements */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 body {
     margin: 0;
     padding: 0;
     font-size: 100%;
     line-height: 1.9;
-    color: rgb(58, 57, 57);
-    font-family: 'Montserrat', sans-serif;
+    color: rgb(66, 65, 65);
+    font-family: "Roboto", "Noto Sans KR", sans-serif; 
+    word-break: break-all;
 }
+
 article, aside, figcaption, figure, footer, header, nav, section {
     display: block;
 }
