@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "[Spring Security] 커스텀 필터를 이용한 Google 인증 구현 - 스프링시큐리티 설정(2)"
-description: "spring security custom filter google auth structure configuration"
+title: "[Spring Security] 커스텀 필터를 이용한 인증 구현 - 스프링시큐리티 설정(2)"
+description: "spring security custom filter auth structure configuration"
 author: kimchanjung
 date: 2020-07-02 12:00:00 +0900
 categories: spring
 published: true
 ---
 
-# Spring Security 커스텀 필터를 이용한 Google 인증 구현 - 스프링시큐리티 설정(2)
-> 본 포스팅은 스프링시큐리티의 전반적인 사용방법을 설명하는 포스팅은 아닙니다. 기본적인 동작구조와 Google 인증 같은 외부 인증을 도입할 때 필요한 커스텀인증필터를 작성하고 적용하는 방법을 알아봅니다.
+# Spring Security 커스텀 필터를 이용한 인증 구현 - 스프링시큐리티 설정(2)
+> 본 포스팅은 스프링시큐리티의 전반적인 사용방법을 설명하는 포스팅은 아닙니다. 기본적인 동작구조와 별도의 인증을 도입할 때 필요한 커스텀인증필터를 작성하고 적용하는 방법을 알아봅니다.
 
 ## 버전정보
 - Spring Boot v2.1.2
@@ -272,5 +272,4 @@ filter.setAuthenticationFailureHandler(new CustomAuthenticationFailureHandler("/
 
 ### 마무리
 스프링시큐리티의 기본적인 설정 방법과 커스텀 필터를 등록하는 방법을 알아 보았습니다. 설정의 세부 내용이 방대하기 때문에 공식 문서를 참고해야합니다.
-본 글에서는 대략적인 설정 내용을 알아 보았습니다. 다음 포스팅에는 `커스텀 필터를 생성해서 구글인증(별도의 인증로직을 구현)같이 사용자가 별도의 
-인증로직을 구현`하는 커스텀 필터의 세부 내용을 알아보도록 하겠습니다.
+본 글에서는 대략적인 설정 내용을 알아 보았습니다. 다음 포스팅에는 `커스텀 필터를 생성해서 사용자가 별도의 인증로직을 구현`하는 커스텀 필터의 세부 내용을 알아보도록 하겠습니다.

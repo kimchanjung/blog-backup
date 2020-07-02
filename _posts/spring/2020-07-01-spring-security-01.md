@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "[Spring Security] 커스텀 필터를 이용한 Google 인증 구현 - 스프링시큐리티 동작구조의 이해(1)"
-description: "spring security custom filter google auth structure"
+title: "[Spring Security] 커스텀 필터를 이용한 인증 구현 - 스프링시큐리티 동작구조의 이해(1)"
+description: "spring security custom filter auth structure"
 author: kimchanjung
 date: 2020-07-01 01:00:00 +0900
 categories: spring
 published: true
 ---
 
-# Spring Security 커스텀 필터를 이용한 Google 인증 구현 - 스프링시큐리티 동작구조의 이해(1)
-> 본 포스팅은 스프링시큐리티의 전반적인 사용방법을 설명하는 포스팅은 아닙니다. 기본적인 동작구조와 Google 인증 같은 외부 인증을 도입할 때 필요한 커스텀인증필터를 작성하고 적용하는 방법을 알아봅니다.
+# Spring Security 커스텀 필터를 이용한 인증 구현 - 스프링시큐리티 동작구조의 이해(1)
+> 본 포스팅은 스프링시큐리티의 전반적인 사용방법을 설명하는 포스팅은 아닙니다. 기본적인 동작구조와 별도의 인증을 도입할 때 필요한 커스텀인증필터를 작성하고 적용하는 방법을 알아봅니다.
 
 ## 버전정보
 - Spring Boot v2.1.2
@@ -69,4 +69,4 @@ published: true
 개발자는 UserDetailsService 인터페이스를 구현해야합니다. UserDetailsService의 구현체에는 일반적으로 회원정보가 DB에 있다고 한다면 사용자의 이름(ID)로 DB를 조회하여 비밀번호가 일치하는지 확인하여 인증을 처리합니다. 인증이 완료되면 UsernamePasswordAuthenticationToken에 회원정보를 담아 리턴하게 됩니다.
 
 ### 마무리
-외부(구글)인증을 구현하기 앞서 스프링시큐리티의 대략적인 동작구조를 알아보았습니다. 다음 포스팅에서는 본격적으로 어떤 부분을 커스텀해야 하는지에 대해 알아 보도록 하겠습니다.
+인증을 구현하기 앞서 스프링시큐리티의 대략적인 동작구조를 알아보았습니다. 다음 포스팅에서는 본격적으로 어떤 부분을 커스텀해야 하는지에 대해 알아 보도록 하겠습니다.
