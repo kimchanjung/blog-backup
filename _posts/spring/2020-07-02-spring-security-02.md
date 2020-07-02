@@ -85,19 +85,19 @@ public class BrmsWebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 #### antMatchers
 ```java
- antMatchers("/login&#42;&#42;", "/web-resources/&#42;&#42;", "/actuator/&#42;&#42;")
+ antMatchers("/login**", "/web-resources/**", "/actuator/**")
 ```
 특정 리소스에 대해서 권한을 설정합니다.
 
 #### permitAll
 ```java
-antMatchers("/login&#42;&#42;", "/web-resources/&#42;&#42;", "/actuator/&#42;&#42;").permitAll() 
+antMatchers("/login**", "/web-resources/**", "/actuator/**").permitAll() 
 ```
 antMatchers 설정한 리소스의 접근을 인증절차 없이 허용한다는 의미 입니다.
 
 #### hasAnyRole
 ```java
-antMatchers("/admin/&#42;&#42;").hasAnyRole("ADMIN")
+antMatchers("/admin/**").hasAnyRole("ADMIN")
 ```
 리소스 admin으로 시작하는 모든 URL은 `인증후 ADMIN 레벨의 권한을 가진 사용자만 접근을 허용`한다는 의미입니다.
 
@@ -141,15 +141,15 @@ http.formLogin();
 ```java
 loginPage("/login-page") 
 ```
-따로 설정하지 않으면 디폴트 URL이 **"/login"**이기 때문에 **"/login"**로 호출하면 스프링이 제공하는 기본 로그인페이지가 호출됩니다.
+따로 설정하지 않으면 디폴트 URL이 "/login"이기 때문에 "/login"로 호출하면 스프링이 제공하는 기본 로그인페이지가 호출됩니다.
 
 #### loginProcessingUrl
-> 로그인 즉 인증 처리를 하는 **URL**을 설정합니다. **"/login-process"** 가 호출되면 인증처리를 수행하는 필터가 호출됩니다.
+> 로그인 즉 인증 처리를 하는 URL을 설정합니다. "/login-process" 가 호출되면 인증처리를 수행하는 필터가 호출됩니다.
 
 ```java
 loginProcessingUrl("/login-process") 
 ```
-로그인 FORM에서 아이디와 비번을 입력하고 확인을 클릭하면 **"/login-process"** 를 호출 하게 되었들 때 `인증처리하는 필터가 호출`되어 아이디 비번을 받아와 인증처리가 수행되게 됩니다. 즉 `UsernamePasswordAuthenticationFilter가 실행` 되게 되는 것입니다.
+로그인 FORM에서 아이디와 비번을 입력하고 확인을 클릭하면 "/login-process" 를 호출 하게 되었들 때 `인증처리하는 필터가 호출`되어 아이디 비번을 받아와 인증처리가 수행되게 됩니다. 즉 `UsernamePasswordAuthenticationFilter가 실행` 되게 되는 것입니다.
 
 #### defaultSuccessUrl
 > 정상적으로 인증성공 했을 경우 이동하는 페이지를 설정합니다.
