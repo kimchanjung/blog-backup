@@ -9,17 +9,16 @@ published: true
 ---
 
 # Yarn 빌드 React 프로젝트를 Spring 프로젝트 Gradle 빌드에 통합하여 빌드하는 방법
-스프링 프로젝트를 빌드할 때 **백엔드 API + 프론트엔드 구성의 프로젝트** 빌드시 yarn을 사용하여 빌드하는 **프론트엔드 빌드를 Gradle 빌드에 포함**하여 빌드하는 방법을 알아 봅니다.
+> 스프링 프로젝트를 빌드할 때 백엔드 API + 프론트엔드 구성의 프로젝트 빌드시 `yarn을 사용하여 빌드하는 프론트엔드 빌드를 Gradle 빌드에 포함하여 빌드`하는 방법을 알아 봅니다.
 
 ## 벡엔드 API와 프론트엔드의 일반적인 구성
-보통 **Java Spring 백엔드 API와 React나 Vue**를 사용한 프론트엔드로 구성된 프로젝트에서는 **Spring 벡엔드 API 서버 프로젝트의 resources 폴더**에 빌드가 완료된 javascript **프론트엔드의 static 파일을 복사하여 포함** 시켜 빌드를 하는 것이 일반적인 방식이라면
-프론트엔드 빌드 과정을 따로하지 않고 **백엔드 API 서버 빌드에 통합하는 방법**을 설명합니다.
+보통 Java Spring 백엔드 API와 React나 Vue를 사용한 프론트엔드로 구성된 프로젝트에서는 Spring 벡엔드 API 서버 프로젝트의 resources 폴더에 빌드가 완료된 javascript 프론트엔드의 static 파일을 복사하여 포함 시켜 빌드를 하는 것이 일반적인 방식이라면 `프론트엔드 빌드 과정을 따로하지 않고 백엔드 API 서버 빌드에 통합하는 방법`을 설명합니다.
 
 ## 적용 버전 정보
-- **Java v1.8**
-- **Spring-Boot v2.1.2**
-- **Gradle v4.7**
-- **[gradle-node-plugin v1.2.0](https://plugins.gradle.org/plugin/com.moowork.node)**
+- Java v1.8
+- Spring-Boot v2.1.2
+- Gradle v4.7
+- [gradle-node-plugin v1.2.0](https://plugins.gradle.org/plugin/com.moowork.node)
 
 ## Node 플러그인 의존성추가 
 ```groovy
@@ -123,8 +122,8 @@ project(":api-server") {
 > 프로젝트 빌드시 프론트엔드빌드 task를 추가하고 빌드 프로세스에 포함 시키는 설정을 추가합니다.
 
 ## 주의
-**Gradle task 설정**을 추가 할때는 프론트엔드 빌드 task가 완전히 완료된 후 java 빌드가 수행되도록 되어야 합니다.   
-그렇지 않으면 **프론트빌드가 완료되기 전에 java 빌드가 되기 때문에 프론트 파일이 미포함**되는 경우가 발생하기 때문에 주의 해야합니다.
+Gradle task 설정을 추가 할때는 `프론트엔드 빌드 task가 완전히 완료된 후 java 빌드가 수행되도록` 되어야 합니다.   
+그렇지 않으면 `프론트빌드가 완료되기 전에 java 빌드가 되기 때문에 프론트 파일이 미포함되는 경우`가 발생하기 때문에 주의 해야합니다.
 
 ## 마무리
-**Spring 프로젝트 Gradle** 빌드에 **프론트엔드 빌드를 통합하여 빌드하는 방법**을 알아 보았습니다. 더 좋은 방법이 있으면 코멘트 남겨주세요
+Spring 프로젝트 Gradle 빌드에 프론트엔드 빌드를 통합하여 빌드하는 방법을 알아 보았습니다. 더 좋은 방법이 있으면 코멘트 남겨주세요

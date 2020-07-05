@@ -148,8 +148,8 @@ class UserPage extends React.Component {
   }
 }            
 ```
-- 렌더링하는 컴포넌트에 Loader 컴포넌트를 가져와서 사용하는 방식입니다.
-- 이런 경우 일일히 모든 페이지에 Loader 가져와서 사용해야합니다.
+> - 렌더링하는 컴포넌트에 Loader 컴포넌트를 가져와서 사용하는 방식입니다.
+> - 이런 경우 일일히 모든 페이지에 Loader 가져와서 사용해야합니다.
 
 ## 그러나 한곳에만 Loader를 포함시켜놓고 코드 중복없이 사용하고 싶습니다. 
 #### App 컴포넌트 
@@ -240,9 +240,9 @@ ReactDOM.render(<App />, document.getElementById('root'));
   </div>
 </body>
 ```
-- **React App**은 id="root" 엘리먼트 하위에 생성됩니다.
-- **Modal은 App**밖에 생성됩니다.
-- 이런경우 **공통으로 사용하기 위한 Spinner**는 **모달에서 사용할 때** 모달엘리먼트 **상위나 하위에 포함된 것이 아니라서** 위치나 포지션 설정시 **원하는 위치에 설정하기 불가능한 상황이 발생합**니다.
+> - **React App**은 id="root" 엘리먼트 하위에 생성됩니다.
+> - **Modal은 App**밖에 생성됩니다.
+> - 이런경우 **공통으로 사용하기 위한 Spinner**는 **모달에서 사용할 때** 모달엘리먼트 **상위나 하위에 포함된 것이 아니라서** 위치나 포지션 설정시 **원하는 위치에 설정하기 불가능한 상황이 발생합**니다.
 
 ## React Potal을 이용하여 Spinner 모듈 컴포넌트를 App밖에 생성
 ### Potal을 이용하여 특정 엘리먼트에 Spinner를 동적으로 위치시키는 컴포넌트
@@ -263,9 +263,9 @@ export default function SpinnerLoader(props) {
   );
 }
 ```
-- 여기서는 R**eact Portal**을 간단하게 사용하게 해주는 **NPM모듈을 사용**하였습니다.  
-- **Spinner(Loader) 모듈**은 이제 **특정 클래스명을 가진 엘리먼트에 동적으로 추가**되록 구성되었습니다.  
-- 결국은 **$('.app-root').append('<div id='spinner' style='....'>...</div>');** 와 같은 기능입니다.
+> - 여기서는 R**eact Portal**을 간단하게 사용하게 해주는 **NPM모듈을 사용**하였습니다.  
+> - **Spinner(Loader) 모듈**은 이제 **특정 클래스명을 가진 엘리먼트에 동적으로 추가**되록 구성되었습니다.  
+> - 결국은 **$('.app-root').append('<div id='spinner' style='....'>...</div>');** 와 같은 기능입니다.
 
 #### App 컴포넌트에 추가
 ```javascript
@@ -341,10 +341,11 @@ class Modal extends React.Component {
   }
 }
 ```
-- 각각의 컴포넌트나 모달은 Spinner를 사용할 때 **Spinner를 위치시킬 엘리먼트의 class명을 함께 지정**합니다.
-- **Spinner**는 생성될때 **지정된 class 하위에 생성**됩니다. **App밖에 생성되는 Modal하위에도 Spinner**는 생성됩니다.
-- **Spinner**의 **position** 즉 **absolute, fixed** 설정이 **Modal을 기준으로 위치**할 수 있게 됩니다.
-- 애초에 **App 내부**에 포함하여 사용하는 방식이면 **Modal에서 position 설정의 기준이 다르기** 때문에 **맞지않게 되는 문제**가 발생하지만 **Potal을 이용하여 동적으로 Spinner를 위치** 시키므로써 가능해 졌습니다.
+> - 각각의 컴포넌트나 모달은 Spinner를 사용할 때 **Spinner를 위치시킬 엘리먼트의 class명을 함께 지정**합니다.
+> - **Spinner**는 생성될때 **지정된 class 하위에 생성**됩니다. 
+> - **App밖에 생성되는 Modal하위에도 Spinner**는 생성됩니다.
+> - **Spinner**의 **position** 즉 **absolute, fixed** 설정이 **Modal을 기준으로 위치**할 수 있게 됩니다.
+> - 애초에 **App 내부**에 포함하여 사용하는 방식이면 **Modal에서 position 설정의 기준이 다르기** 때문에 **맞지않게 되는 문제**가 발생하지만 **Potal을 이용하여 동적으로 Spinner를 위치** 시키므로써 가능해 졌습니다.
 
 ### API호출시에 자동으로 Spinner가 로딩 되도록 하는 팁
 ```javascript

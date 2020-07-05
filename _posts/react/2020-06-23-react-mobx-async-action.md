@@ -9,8 +9,8 @@ published: true
 ---
 
 # Mobx의 async action(비동기 액션) 처리를 가장 깔끔하게 구현하는 방법
-**Mobx**에서 상태를 수정하는 함수는 **@action 데코레이터**를 추가하여 상태를 변경합니다. api를 호출하는 비동기 처리의 경우 Mobx에서는
-몇가지 방식을 제공합니다. **그러나 별로 깔끔하지가 않습니다**. Mobx 공식 문서에 제공하는 비동기액션 처리의 예제보다 **더 깔끔한 처리방법을 살펴봅니다**.
+Mobx에서 `상태를 수정하는 함수는 @action 데코레이터를 추가하여 상태를 변경`합니다. api를 호출하는 `비동기 처리의 경우 Mobx에서는
+몇가지 방식을 제공`합니다. 그러나 별로 깔끔하지가 않습니다. `Mobx 공식 문서에 제공하는 비동기액션 처리의 예제보다 더 깔끔한 처리방법`을 살펴봅니다.
 
 ## Mobx의 일반적인 상태변경 action 처리
 ```javascript
@@ -24,10 +24,10 @@ class UserStore {
   }
 }
 ```
-> changeName 메소드에 **@action** 데코레이터를 붙이므로써 name 값이 변경된다.
+> changeName 메소드에 @action 데코레이터를 붙이므로써 name 값이 변경된다.
 
 ## 예상과 달리 동작하지 않는 Mobx의 비동기 action 처리
-일반적으로 비동기로 api를 호출하는경우 아래와 같이 코드를 작성하는 것이 일반적이나 비동기 api 호출 완료후 결과값을 처리하는 **콜백함수는 Mobx의 action에서 처리되지 않습니다.**
+비동기 api를 호출하는경우 `아래와 같이 코드를 작성하는 것이 일반`적이나 비동기 api 호출 완료후 결과값을 처리하는 `콜백함수는 Mobx의 action에서 처리되지 않습니다`.
 ```javascript
 class UserStore {
   @observable
@@ -46,10 +46,10 @@ class UserStore {
   }
 }
 ```
-> Mobx의 action 에서 비동기 처리 콜백은 동작하지 않기 때문에 **특별한 처리를 해주어야 한다**
+> Mobx의 action 에서 비동기 처리 콜백은 동작하지 않기 때문에 특별한 처리를 해주어야 한다
 
 ## Mobx에서 비동기함수를 사용하여 상태를 변경하는 경우 action 처리
-Mobx 공식 문서에는 여러가지 방법을 제시하고 있습니다. 하지만 **그리 깔끔한 방법들이 아니란 것이 아쉽습니다**.
+Mobx 공식 문서에는 여러가지 방법을 제시하고 있습니다. 하지만 그리 깔끔한 방법들이 아니란 것이 아쉽습니다.
 
 ### 비동기 콜백 함수를 따로 분리하는 방법
 ```javascript
@@ -172,12 +172,12 @@ class UserStore {
   }
 }
 ```
-- **mobx-utils** 라이브러리를 추가하고 import합니다
-- **@asyncAction** 데코레이터를 import하여 함수에 추가합니다.
-- 메소드명 앞에 async* 추가하고 generator yield 이용하여 비동기 처리를 합니다.
+> - mobx-utils 라이브러리를 추가하고 import합니다
+> - @asyncAction 데코레이터를 import하여 함수에 추가합니다.
+> - 메소드명 앞에 async* 추가하고 generator yield 이용하여 비동기 처리를 합니다.
 
 ### 2. mobx-utils의 @actionAsync과 task를 이용하여 async/await 키워드 사용으로 깔끔하게 비동기액션을 처리
-> 예전 버전에는 없는 기능이기 때문에 **Mobx와 mobx-utils의 최신버전**이 필요합니다.  
+> 예전 버전에는 없는 기능이기 때문에 Mobx와 mobx-utils의 최신버전이 필요합니다.  
 
 ```javascript
 import { actionAsync, task } from 'mobx-utils';
@@ -194,12 +194,12 @@ class UserStore {
   }
 }
 ```
-- **mobx-utils** 라이브러리를 추가하고 import합니다
-- **actionAsync, task import**하여 **@actionAsync** 함수에 추가합니다 
-- 메소드명 앞에 **asyn**c 추가하고 **await**를 통하여 비동기 함수를 호출합니다
-- 다만 비동기 함수에 **task**를 이용하여 래핑이 한번 필요합니다.
+> - mobx-utils 라이브러리를 추가하고 import합니다
+> - actionAsync, task import하여 @actionAsync 함수에 추가합니다 
+> - 메소드명 앞에 async 추가하고 await를 통하여 비동기 함수를 호출합니다
+> - 다만 비동기 함수에 task를 이용하여 래핑이 한번 필요합니다.
 
 ## 마무리
-**Mobx 공식 문서**에서 제공하는 비동기액션의 처리방법은 래핑이 많아 깔끔하지 못합니다. 그래서 **mobx-utils** 라이브러이에서 제공하는
-데코레이터와 **generator 또는 async/await 비동기처리 키워드**의 조합을 통하여 직관적이고 **깔끔한 방법으로 비동기처리하는 방법**을 알아보았습니다.
+Mobx 공식 문서에서 제공하는 비동기액션의 처리방법은 래핑이 많아 깔끔하지 못합니다. 그래서 mobx-utils 라이브러이에서 제공하는
+데코레이터와 generator 또는 async/await 비동기처리 키워드의 조합을 통하여 직관적이고 깔끔한 방법으로 비동기처리하는 방법을 알아보았습니다.
 

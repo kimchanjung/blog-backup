@@ -9,8 +9,7 @@ published: true
 ---
 # 실시간 메시징 서버(socket.io)
 
-멀티플랫폼(web/ios/android)을 지원하는 실시간 메시징 서버
-
+> 멀티플랫폼(web/ios/android)을 지원하는 실시간 메시징 서버
 
 ![websocket-server-main](/post-img/projects/websocket-server/socket-server-monitor.png)
 [그림 1] 메인화면
@@ -18,8 +17,12 @@ published: true
 ## 관련 기술블로그
 - [실시간 서비스 경험기(배달운영시스템)](https://woowabros.github.io/woowabros/2017/09/12/realtime-service.html)
 
+## 프로젝트 기간
+- 2015.08 ~ 2016.08
+
 ## 프로젝트 참여도
-- 프로젝트 인원 1명 전담하여 개발
+- 프로젝트 인원 1명 
+- 전담하여 개발
 
 ## 주요 기능
 - websocket 실시간 메시징을 지원하여 실시간 서비스 개발을 지원함
@@ -37,7 +40,7 @@ published: true
 
 ## 간략한 시스템 구성도
 
-![websocket-server-architecture](/post-img/projects/websocket-server/socket-server-architecture.png)
+![websocket-server-architecture](/post-img/projects/websocket-server/socket-server-architecture.png)  
 [그림 2] 구성도 
 
 ### 시스템 구성 설명
@@ -49,7 +52,7 @@ published: true
 
 
 ## 효과
-실시간 이벤트가 필요한 서비스에 기능을 제공, 이를 활용하여 실시간 서비스를 실현 함에도 DB 호출 트래픽을 현저하게 낮춤
+> 실시간 이벤트가 필요한 서비스에 기능을 제공, 이를 활용하여 실시간 서비스를 실현 함에도 DB 호출 트래픽을 현저하게 낮춤
 
 ## 느낀점
 - 초기 개발 문서에 간략히 기술 된 이벤트 수신후 송신 부분만 구현 하면 되는 비교적 간단한 로직으로 생각(빙산의 일각)
