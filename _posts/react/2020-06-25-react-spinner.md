@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[React] 로딩처리용 spinner를 효과적이고 깔끔하게 적용하는 방법"
-description: "NPM react용 Spinner 모듈을 가져와 사용할 때 발생하는 문제점을 해결하고 깔끔한 방식으로 사용할 수 있는 방법을 알아봅니다"
+title: "[React] 로딩처리용 spinner를 사용시 position 옵션 문제를 Portal을 사용해 해결하는 방법"
+description: "NPM react용 Spinner 모듈을 가져와 사용할 때 발생하는 position 옵션 문제를 Portal을 이용해 해결하고 깔끔한 방식으로 사용할 수 있는 방법을 알아봅니다"
 author: kimchanjung
 date: 2020-06-26 14:00:00 +0900
 categories: react
@@ -244,8 +244,8 @@ ReactDOM.render(<App />, document.getElementById('root'));
 > - **Modal은 App**밖에 생성됩니다.
 > - 이런경우 **공통으로 사용하기 위한 Spinner**는 **모달에서 사용할 때** 모달엘리먼트 **상위나 하위에 포함된 것이 아니라서** 위치나 포지션 설정시 **원하는 위치에 설정하기 불가능한 상황이 발생합**니다.
 
-## React Potal을 이용하여 Spinner 모듈 컴포넌트를 App밖에 생성
-### Potal을 이용하여 특정 엘리먼트에 Spinner를 동적으로 위치시키는 컴포넌트
+## React Portal을 이용하여 Spinner 모듈 컴포넌트를 App밖에 생성
+### Portal을 이용하여 특정 엘리먼트에 Spinner를 동적으로 위치시키는 컴포넌트
 ```javascript
 // SpinJsLoader.js
 import { Portal } from 'react-portal';
@@ -345,7 +345,7 @@ class Modal extends React.Component {
 > - **Spinner**는 생성될때 **지정된 class 하위에 생성**됩니다. 
 > - **App밖에 생성되는 Modal하위에도 Spinner**는 생성됩니다.
 > - **Spinner**의 **position** 즉 **absolute, fixed** 설정이 **Modal을 기준으로 위치**할 수 있게 됩니다.
-> - 애초에 **App 내부**에 포함하여 사용하는 방식이면 **Modal에서 position 설정의 기준이 다르기** 때문에 **맞지않게 되는 문제**가 발생하지만 **Potal을 이용하여 동적으로 Spinner를 위치** 시키므로써 가능해 졌습니다.
+> - 애초에 **App 내부**에 포함하여 사용하는 방식이면 **Modal에서 position 설정의 기준이 다르기** 때문에 **맞지않게 되는 문제**가 발생하지만 **Portal을 이용하여 동적으로 Spinner를 위치** 시키므로써 가능해 졌습니다.
 
 ### API호출시에 자동으로 Spinner가 로딩 되도록 하는 팁
 ```javascript

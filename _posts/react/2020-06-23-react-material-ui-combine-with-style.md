@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[React] Material-UI에서 withStyle 사용시 1개 이상 style을 함께 사용하는 방법"
-description: "Material-UI에서 withStyle 함수로 JSS 스타일을 적용할때 1개 이상 스타일을 같이 사용하는 방법을 알아봅니다."
+title: "[React] Material-UI에서 withStyle 사용시 1개 이상 여러개 style을 함께 사용하는 방법(multiple)"
+description: "Material-UI에서 withStyle 함수로 JSS 스타일을 적용할때 1개 이상 여러개(multiple) 스타일을 같이 사용하는 방법을 알아봅니다."
 author: kimchanjung
 date: 2020-06-24 14:00:00 +0900
 categories: react

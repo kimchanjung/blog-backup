@@ -19,7 +19,7 @@ typescript로 프로젝트를 할 때 npm에서 필요한 모듈들을 설치하
 ### d.ts 파일 생성
 ```typescript
 // @types/모듈명/index.d.ts 
-declare module '모듈명';
+declare module '모듈명'
 ```
 > - 모듈명 - import 모듈 from '모듈명'에서 사용하던 모듈명과 동일합니다.
 
