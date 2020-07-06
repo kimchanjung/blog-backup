@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "팩토리 메소드 패턴 - Factory Method Pattern [디자인패턴/코틀린/kotlin]"
-description: ":팩토리 메소드 패턴 객체 생성을 직접 하지 않고 객체를 생성/제공하는 클래스를 사용하여 획득하는 패턴"
+description: "팩토리 메소드 패턴 객체 생성을 직접 하지 않고 객체를 생성/제공하는 클래스를 사용하여 획득하는 패턴"
 author: kimchanjung
 date: 2020-05-21 09:00:00 +0900
 categories: design pattern
