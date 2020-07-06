@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "싱글톤 패턴 - Singleton Pattern [디자인패턴/코틀린/kotlin]"
-description: "싱글톤 패턴 - Singleton Pattern [디자인패턴/코틀린/kotlin]"
+description: "싱글톤 패턴은 매번 새로운 객체를 생성하지 않고 오직 하나의 객체만 생성하어 사용하려고 할때 사용한다."
 author: kimchanjung
 date: 2020-05-25 09:00:00 +0900
 categories: design pattern

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "컴포지트 패턴 - Composite Pattern [디자인패턴/코틀린/kotlin]"
-description: "컴포지트 패턴 - Composite Pattern [디자인패턴/코틀린/kotlin]"
+description: "컴포지트 패턴은 하나 또는 하나이상의 객체이거나 상관없이 하나의 객체처럼 다룰 수 있게 해주는 패턴"
 author: kimchanjung
 date: 2020-05-18 09:00:00 +0900
 categories: design pattern

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sherlock and anagrams - hackerank [코테/알고리즘]"
-description: "코테 코딩테스트 알고리즘 해커랭크 hackerank Sherlock and anagrams"
+description: "코테 코딩테스트 해커랭크 hackerank Sherlock and anagrams 문제의 풀이와 해설을 합니다."
 author: kimchanjung
 date: 2020-05-08 00:00:00 +0900
 categories: algorithm/hackerrank/interviewkit/dictionaries-and-hashmaps

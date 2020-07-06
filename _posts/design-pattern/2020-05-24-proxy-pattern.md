@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "프록시 패턴 - Proxy Pattern [디자인패턴/코틀린/kotlin]"
-description: "프록시 패턴 - Proxy Pattern [디자인패턴/코틀린/kotlin]"
+description: "프록시 패턴은 실제객체를 대신하는 객체가 로직의 흐름을 제어하여 실제 객체를 조작하는 패턴"
 author: kimchanjung
 date: 2020-05-24 09:00:00 +0900
 categories: design pattern
