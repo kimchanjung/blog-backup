@@ -5,6 +5,7 @@ description: "데코레이터 패턴은 특정 클래스의 기본기능에 추�
 author: kimchanjung
 date: 2020-05-19 09:00:00 +0900
 categories: design pattern
+images: ["/post-img/design-pattern/decorator-pattern-class-diagram.png"]
 published: true
 ---
 

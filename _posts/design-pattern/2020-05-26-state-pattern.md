@@ -5,6 +5,7 @@ description: "상태 패턴은 객체가 상태에 따른 행위를 직접 구�
 author: kimchanjung
 date: 2020-05-26 18:00:00 +0900
 categories: design pattern
+images: ["/post-img/design-pattern/adapter-pattern-class-diagram.png"]
 published: true
 ---
 

@@ -5,6 +5,7 @@ description: "컴포지트 패턴은 하나 또는 하나이상의 객체이거�
 author: kimchanjung
 date: 2020-05-18 09:00:00 +0900
 categories: design pattern
+images: ["/post-img/design-pattern/composite-pattern-class-diagram.png"]
 published: true
 ---
 

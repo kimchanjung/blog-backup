@@ -5,6 +5,7 @@ description: "플라이웨이트 패턴은 공통으로 사용하는 클래스�
 author: kimchanjung
 date: 2020-05-22 09:00:00 +0900
 categories: design pattern
+images: ["/post-img/design-pattern/flyweight-pattern-class-diagram.png"]
 published: true
 ---
 

@@ -5,7 +5,7 @@ description: "스프링시큐리티의 기본적인 동작구조와 별도의 �
 author: kimchanjung
 date: 2020-07-01 01:00:00 +0900
 categories: spring
-images: ["/post-img/spring-security/spring-security-flow-diagram.png", "/post-img/spring-security/spring-security-flow-diagram.png"]
+iimages: ["/post-img/spring-security/spring-security-flow-diagram.png", "/post-img/spring-security/spring-security-flow-diagram.png"]
 published: true
 ---
 

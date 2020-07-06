@@ -5,6 +5,7 @@ description: ":팩토리 메소드 패턴 객체 생성을 직접 하지 않고 
 author: kimchanjung
 date: 2020-05-21 09:00:00 +0900
 categories: design pattern
+images: ["/post-img/design-pattern/factory-method-pattern-class-diagram.png"]
 published: true
 ---
 

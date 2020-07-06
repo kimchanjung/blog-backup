@@ -5,6 +5,7 @@ description: "요청을 처리를 하나이상의 체인형태로 구성된 객�
 author: kimchanjung
 date: 2020-05-16 09:00:00 +0900
 categories: design pattern
+images: ["/post-img/design-pattern/chain-of-responsibility-pattern-class-diagram.png"]
 published: true
 ---
 

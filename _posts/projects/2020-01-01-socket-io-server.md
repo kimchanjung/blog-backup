@@ -5,6 +5,7 @@ description: "배달의민족 배민라이더스의 실시간 배달처리 시�
 author: kimchanjung
 date: 2020-01-01 09:00:00 +0900
 categories: projects
+images: ["/post-img/projects/websocket-server/socket-server-monitor.png","/post-img/projects/websocket-server/socket-server-architecture.png"]
 published: true
 ---
 # 실시간 메시징 서버(socket.io)

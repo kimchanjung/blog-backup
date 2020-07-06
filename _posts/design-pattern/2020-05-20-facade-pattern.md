@@ -5,6 +5,7 @@ description: "퍼사드 패턴은 아마도 우리가 프로그래밍 하면서 
 author: kimchanjung
 date: 2020-05-20 09:00:00 +0900
 categories: design pattern
+images: ["/post-img/design-pattern/facade-pattern-class-diagram.png"]
 published: true
 ---
 

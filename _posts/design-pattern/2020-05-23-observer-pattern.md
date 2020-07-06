@@ -5,6 +5,7 @@ description: "옵저버 패턴은 그야 말로 발행/구독 모델 이라고 �
 author: kimchanjung
 date: 2020-05-23 18:00:00 +0900 
 categories: design pattern
+images: ["/post-img/design-pattern/observer-pattern-class-diagram.png"]
 published: true
 ---
 

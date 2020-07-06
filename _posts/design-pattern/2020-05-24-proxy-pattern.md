@@ -5,6 +5,7 @@ description: "프록시 패턴은 실제객체를 대신하는 객체가 로직�
 author: kimchanjung
 date: 2020-05-24 09:00:00 +0900
 categories: design pattern
+images: ["/post-img/design-pattern/proxy-pattern-class-diagram.png"]
 published: true
 ---
 

@@ -5,6 +5,7 @@ description: "템플릿 메소드 패턴 전체적으로는 동일하지만 부�
 author: kimchanjung
 date: 2020-05-28 16:00:00 +0900
 categories: design pattern
+images: ["/post-img/design-pattern/adapter-pattern-class-diagram.png"]
 published: true
 ---
 

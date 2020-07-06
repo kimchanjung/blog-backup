@@ -5,6 +5,7 @@ description: "전략 패턴은 알고리즘 및 로직을 따로 정의하여 �
 author: kimchanjung
 date: 2020-05-27 28:00:00 +0900
 categories: design pattern
+images: ["/post-img/design-pattern/adapter-pattern-class-diagram.png"]
 published: true
 ---
 

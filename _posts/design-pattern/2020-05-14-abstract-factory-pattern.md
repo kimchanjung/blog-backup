@@ -4,6 +4,7 @@ title: "추상팩토리 패턴 - Abstract Factory Pattern [디자인패턴/코�
 description: "추상팩토리 패턴은 어떤 연관된 클래스들을 팩토리를 통하여 일관성 있게 객체생성이 가능하도록 그룹으로 묶어 제공하고 변경도 유연하도록 제공한다."
 author: kimchanjung
 date: 2020-05-14 09:00:00 +0900
+images: ["/post-img/design-pattern/abstract-pattern-class-diagram.png"]
 categories: design pattern
 published: true
 ---

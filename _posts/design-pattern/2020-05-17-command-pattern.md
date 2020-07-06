@@ -5,6 +5,7 @@ description: "커맨드 패턴은 각각 형태가 다른 메소드를 추상화
 author: kimchanjung
 date: 2020-05-17 09:00:00 +0900
 categories: design pattern
+images: ["/post-img/design-pattern/command-pattern-class-diagram.png"]
 published: true
 ---
 

@@ -5,6 +5,7 @@ description: "방문자 패턴은 정의가 가장 어려운 패턴 중에 하�
 author: kimchanjung
 date: 2020-05-29 18:00:00 +0900 
 categories: design pattern
+images: ["/post-img/design-pattern/adapter-pattern-class-diagram.png"]
 published: true
 ---
 
