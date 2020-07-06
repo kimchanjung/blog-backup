@@ -20,7 +20,7 @@
             "name": "{{site.username}}"
           },
           "headline": "{{ page.title }}",
-          "publisher" "{{site.username}}",
+          "publisher": "{{site.username}}",
           "datePublished": "{{page.date}}",
           "dateModified": "{% if page.modDate %}{{ page.modDate }}{% else %}{{ page.date }}{% endif %}",
           "articleBody": "{{page.content | strip_html | strip_newlines | replace: '"', ''}}"
