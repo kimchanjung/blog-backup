@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "[Socket.io][websocket] 실시간 서비스 경험기(배달운영시스템 BROS1.0)"
-description: "websocket 웹소켓 실시간 채팅 socket.io"
+description: "배달의민족 배민라이더스의 배달처리시스템 개발기와 socket.io(websocket)를 이용한 실시간 시스템 구현 방법을 자세히 알아 봅니다."
 author: kimchanjung
 date: 2020-05-08 00:00:00 +0900
 categories: tech
+images: ["/post-img/real-time-service/bros-gps.png", "/post-img/real-time-service/order-delivery-activity.png"]
 published: true
 ---
 

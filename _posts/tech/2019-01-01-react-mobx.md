@@ -1,10 +1,12 @@
 ---
 layout: post
 title: "[Mobx] React 에서 Mobx 사용기"
-description: "mobx react 사용기 비교기 경험기 redux vs mobx 프로젝트구조 atomic design material-ui"
+description: "react와 mobx그리고 material-ui를 이용한 개발기와 예제코드를 통한 mobx vs react 차이점 비교 및 atomic design을 통한 프로젝트구조 react 서드파티 라이브러리 리뷰정보등을 알아봅니다."
 author: kimchanjung
 date: 2020-05-08 00:00:00 +0900
 categories: tech
+images: ["/post-img/react-mobx/brms-dashboard.png","/post-img/react-mobx/atomic-design.png","/post-img/react-mobx/brms-dashboard-dark.png"]
+published: true
 ---
 
 # React에서 Mobx 경험기 (Redux와 비교기)

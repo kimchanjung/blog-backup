@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "[마이크로서비스] 스프링 마이크로서비스 요약 정리 (spring microservice, msa)"
-description: "spring 스프링 msa 마이크로서비스 cqrs 이벤트소싱 event sourcing 설계 원칙 정리 요약"
+description: "스프링마이크로서비스의 책내용중 마이크로서비스를 개발함에 있어 가장 중요한 개념과 원칙들 설계방법 부분을 예제 와 함께 정리"
 author: kimchanjung
 date: 2020-05-06 00:00:00 +0900
 categories: tech
+images: ["/post-img/spring-microservice/spring-microservice-diagrams-monolithic-to-microservice.png","/post-img/spring-microservice/dependency-diagram.png"]
 published: true
 ---
 
