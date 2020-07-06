@@ -5,6 +5,7 @@ description: "spring security custom filter auth structure"
 author: kimchanjung
 date: 2020-07-01 01:00:00 +0900
 categories: spring
+images: ["/post-img/spring-security/spring-security-flow-diagram.png", "/post-img/spring-security/spring-security-flow-diagram.png"]
 published: true
 ---
 
