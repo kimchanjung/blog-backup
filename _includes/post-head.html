@@ -21,6 +21,7 @@
           },
           "datePublished": "{{page.date}}",
           "dateModified": "{% if page.modDate %}{{ page.modDate }}{% else %}{{ page.date }}{% endif %}",
+          "articleBody": "{{page.content | strip_html | strip_newlines | replace: '"', ''}}",
         }
     </script>
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
