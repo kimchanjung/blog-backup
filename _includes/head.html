@@ -8,4 +8,19 @@
   <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "TechArticle",
+      "additionalType": "SoftwareApplication",
+      "url" : "{{site.url}}"
+      "about": "Career"
+      "name": "{{ site.title }}",
+      "description": "{{site.description}}",
+      "author": {
+        "@type": "Person",
+        "name": "{{site.username}}"
+      }
+    }
+</script>
 </head>

@@ -6,7 +6,24 @@
     
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org/",
+          "@type": "TechArticle",
+          "additionalType": "SoftwareApplication",
+          "url" : "{{site.url}}{{page.url}}"
+          "about": "{{page.categories}}"
+          "name": "{{ page.title }}",
+          "description": "{{page.description}}",
+          "author": {
+            "@type": "Person",
+            "name": "{{site.username}}"
+          },
+          "datePublished": "{{page.date}}",
+          "dateModified": "{% if page.modDate %}{{ page.modDate }}{% else %}{{ page.date }}{% endif %}",
+          "articleBody": "{{page.content | strip_html  }}",
+        }
+    </script>
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="/assets/css/syntax.css">
     <link rel="stylesheet" href="/assets/css/post.css">
