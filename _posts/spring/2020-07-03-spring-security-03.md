@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Spring Security] 커스텀 필터를 이용한 인증 구현 - 커스텀 필터의 구현(3)"
-description: "spring security custom filter auth structure configuration"
+description: "스프링시큐리티의 커스텀 필터를 생성하고 적용하는 방법을 예제코드와 함께 알아봅니다."
 author: kimchanjung
 date: 2020-07-03 14:00:00 +0900
 categories: spring

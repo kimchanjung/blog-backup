@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "실시간 메시징 서버(socket.io)"
-description: "실시간 메시징 서버(socket.io)"
+description: "배달의민족 배민라이더스의 실시간 배달처리 시스템을 위한 실시간 메시징 서버(socket.io)개발 프로젝트의 소개입니다."
 author: kimchanjung
 date: 2020-01-01 09:00:00 +0900
 categories: projects

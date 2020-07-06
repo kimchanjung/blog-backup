@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "퍼사드 패턴 - Facade Pattern [디자인패턴/코틀린/kotlin]"
-description: "퍼사드 패턴 - Facade Pattern [디자인패턴/코틀린/kotlin]"
+description: "퍼사드 패턴은 아마도 우리가 프로그래밍 하면서 자연스럽게 사용되어지는 패턴중에 가장 흔한 패턴이 아닌가 싶다."
 author: kimchanjung
 date: 2020-05-20 09:00:00 +0900
 categories: design pattern

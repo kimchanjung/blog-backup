@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "방문자 패턴 - Visitor Pattern [디자인패턴/코틀린/kotlin]"
-description: "방문자 패턴 - Visitor Pattern [디자인패턴/코틀린/kotlin]"
+description: "방문자 패턴은 정의가 가장 어려운 패턴 중에 하나인 듯 하다 수많은 블로그의 방문자 패턴을 정의하는 문구를 아무리 봐도 이해가 가장 어려웠다"
 author: kimchanjung
 date: 2020-05-29 18:00:00 +0900 
 categories: design pattern

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JAVA - 자료구조, Collection 별 특징 정리"
-description: "JAVA - 기본"
+description: "JAVA Collection별 특징과 시간 메소드별 시간 복잡도를 일목요연하게 정리한 내용입니다."
 author: kimchanjung
 date: 2020-01-15 00:00:00 +0900
 categories: java

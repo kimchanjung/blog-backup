@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[React] react-router에서 인증 및 권한 Router(Private) 구현하기(권한별 routing)"
-description: "react react-router router route private 권한 인증 auth"
+description: "react-router의 url 권한을 체크하여 routing 이 가능하도록 하고 권한이 없으면 권한이 없다는 페이지로 redirect하는 방법을 알아보고자 합니다."
 author: kimchanjung
 date: 2020-06-24 18:00:00 +0900
 categories: react

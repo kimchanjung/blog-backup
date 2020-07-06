@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[typescript] npm 모듈 import시 오류를 해결하는 방법(d.ts 파일 생성법)"
-description: "typescript npm module import error d.ts"
+description: "typescript npm 모듈 import시 오류의 원인과 해결하는 방법을 알아봅니다."
 author: kimchanjung
 date: 2020-07-05 21:00:00 +0900
 modDate: 2020-07-05 21:00:00 +0900

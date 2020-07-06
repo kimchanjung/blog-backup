@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "전략 패턴 - Strategy Pattern [디자인패턴/코틀린/kotlin]"
-description: "전략 패턴 - Strategy Pattern [디자인패턴/코틀린/kotlin]"
+description: "전략 패턴은 알고리즘 및 로직을 따로 정의하여 필요에 의해 사용 또는 교체 할 수 있는 패턴"
 author: kimchanjung
 date: 2020-05-27 28:00:00 +0900
 categories: design pattern

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "옵저버 패턴 - Observer Pattern [디자인패턴/코틀린/kotlin]"
-description: "옵저버 패턴 - Observer Pattern [디자인패턴/코틀린/kotlin]"
+description: "옵저버 패턴은 그야 말로 발행/구독 모델 이라고 생각하면 쉽다. spring 의 ApplicationEvent 이용한 이벤트 발행/구독이나 javascript onClick 같은 이벤트 리스너를 사용한다거나 크게는 aws sns/sqs 같은 것들도 발생/구독 모델이다."
 author: kimchanjung
 date: 2020-05-23 18:00:00 +0900 
 categories: design pattern

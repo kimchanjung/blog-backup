@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[React] mobx-react-form 사용시 material-ui datepicker의 date format이 제대로 동작하지 않는 문제 해결"
-description: "react mobx-react-form material-ui datepicker date format bug not working 미동작"
+description: "Mobx사용시 form validation 라이브러리로 mobx-react-form을 사용했을 때 material-ui datepicker의 날짜를 변경한 후 화면에 표시되는 날짜는 설정한 date format 대로 표시가 되지만 실제 값은 적용되어 있지 않은 문제`가 있습니다."
 author: kimchanjung
 date: 2020-06-22 12:00:00 +0900
 categories: react

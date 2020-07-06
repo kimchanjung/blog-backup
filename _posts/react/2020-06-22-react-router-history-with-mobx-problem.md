@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[React] Mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법"
-description: "react mobx react-router history bug not working 버그 오류 미동작"
+description: "react에서 mobx와 react-router를 함께 사용할 시 history를 이용한 페이지 이동이 작동하지 않는 문제점을 해결합니다."
 author: kimchanjung
 date: 2020-06-22 12:00:00 +0900
 categories: react

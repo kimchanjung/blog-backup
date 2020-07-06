@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Spring] JPA EntityListeners에서 @Autowired를 통한 의존성 주입이 미동작하는 문제 해결"
-description: "spring jpa entity listener entityListeners @autowired di dependency injection not working null bug"
+description: "@EntityListeners로 지정한 클래스에 **의존성이 필요한 경우 @autowired를 통한 의존성 주입이 동작하지 않는 문제가 있습니다 설명과 예제를 통하여 원인과 해결방법을 알아보도록 하겠습니다"
 author: kimchanjung
 date: 2020-06-28 20:00:00 +0900
 categories: spring

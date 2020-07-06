@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "템플릿 메소드 패턴 - Template Method Pattern [디자인패턴/코틀린/kotlin]"
-description: "템플릿 메소드 패턴 - Template Method Pattern [디자인패턴/코틀린/kotlin]" 
+description: "템플릿 메소드 패턴 전체적으로는 동일하지만 부분적으로 다른 경우 중복을 최소화 하는 패턴 동일한 기능을 상위 클래스에 정의하고 부분적으로 다른부분은 서브클래스에 정의하여 사용한다" 
 author: kimchanjung
 date: 2020-05-28 16:00:00 +0900
 categories: design pattern

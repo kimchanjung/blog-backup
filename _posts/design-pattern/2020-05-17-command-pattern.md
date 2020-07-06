@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "커맨드 패턴 - Command Pattern [디자인패턴/코틀린/kotlin]"
-description: "커맨드 패턴 - Command Pattern [디자인패턴]"
+description: "커맨드 패턴은 각각 형태가 다른 메소드를 추상화하여 클라이언트가 사용할 수 있도록 하는 패턴"
 author: kimchanjung
 date: 2020-05-17 09:00:00 +0900
 categories: design pattern

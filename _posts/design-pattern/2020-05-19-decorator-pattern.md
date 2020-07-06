@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "데코레이터 패턴 - Decorator Pattern [디자인패턴/코틀린/kotlin]"
-description: "컴포지트 패턴 - Decorator Pattern [디자인패턴/코틀린/kotlin]"
+description: "데코레이터 패턴은 특정 클래스의 기본기능에 추가기능을 기존 클래스를 수정하지 않고 패턴을 통하여 덧 붙이고 싶을 때 사용한다."
 author: kimchanjung
 date: 2020-05-19 09:00:00 +0900
 categories: design pattern

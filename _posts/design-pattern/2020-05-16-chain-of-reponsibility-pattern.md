@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "책임 연쇄 패턴 - Chain Of Reponsibility Pattern [디자인패턴/코틀린/kotlin]"
-description: "책임 연쇄 패턴 - Chain Of Reponsibility Pattern [디자인패턴]"
+description: "요청을 처리를 하나이상의 체인형태로 구성된 객체에게 위임하고 요청을 처리할 수 있는 객체를 만날 때까지 다음 객체로 처리를 위임하는 패턴"
 author: kimchanjung
 date: 2020-05-16 09:00:00 +0900
 categories: design pattern

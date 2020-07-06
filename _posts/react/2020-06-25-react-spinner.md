@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[React] 로딩처리용 spinner를 효과적이고 깔끔하게 적용하는 방법"
-description: "react loading loader spinner api 적용 깔끔"
+description: "NPM react용 Spinner 모듈을 가져와 사용할 때 발생하는 문제점을 해결하고 깔끔한 방식으로 사용할 수 있는 방법을 알아봅니다"
 author: kimchanjung
 date: 2020-06-26 14:00:00 +0900
 categories: react

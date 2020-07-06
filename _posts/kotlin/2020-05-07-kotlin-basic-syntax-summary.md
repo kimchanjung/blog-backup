@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "코틀린 기본 문법 요약 정리 강좌 - [kotlin/cheat sheet]"
-description: "코틀린 강좌 kotlin 기본 문법 요약 정리"
+description: "코틀린의 기본문법을 치트형식의 예제코드와 설명을 포함한 깔끔하게 요약정리한 문법정리입니다."
 author: kimchanjung
 date: 2020-05-06 00:00:00 +0900
 categories: kotlin

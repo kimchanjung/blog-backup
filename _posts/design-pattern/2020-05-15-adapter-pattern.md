@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "어댑터 패턴 - Adapter Pattern [디자인패턴/코틀린/kotlin]"
-description: "어댑터 패턴 - Adapter Pattern"
+description: "사용자는 어댑터 패턴의 인터페이스를 사용함으로써 각각 구현체의 세부로직과 변경에 관계없이 일관성있는 사용이 가능하다."
 author: kimchanjung
 date: 2020-05-15 09:00:00 +0900
 categories: design pattern
