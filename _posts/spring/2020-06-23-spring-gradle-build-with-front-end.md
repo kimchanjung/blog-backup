@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[Spring] yarn 빌드 react 프로젝트를 gradle에 통합 포함하여 빌드하는 방법"
-description: "[스프링 프로젝트를 빌드할 때 백엔드 API + 프론트엔드 구성의 프로젝트 빌드시 yarn을 사용하여 빌드하는 프론트엔드 빌드를 Gradle 빌드에 포함하여 빌드하는 방법을 알아 봅니다."
+title: "[Gradle] node yarn 빌드 react 프로젝트를 gradle에 통합 포함하여 빌드하는 방법"
+description: "스프링 프로젝트를 빌드할 때 백엔드 API + 프론트엔드 구성의 프로젝트 빌드시 node yarn을 사용하여 빌드하는 프론트엔드 빌드를 Gradle 빌드에 포함하여 빌드하는 방법을 알아 봅니다."
 author: kimchanjung
 date: 2020-06-24 14:00:00 +0900
 categories: spring
