@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Spring Security] 커스텀 필터를 이용한 인증 구현 - 스프링시큐리티 설정(2)"
+title: "[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)"
 description: "스프링시큐리티의 여러가지 설정값들의 역할과 설정방법을 상세히 알아봅니다."
 author: kimchanjung
 date: 2020-07-02 12:00:00 +0900

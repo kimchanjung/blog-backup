@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[Spring Security] 커스텀 필터를 이용한 인증 구현 - 스프링시큐리티 동작구조의 이해(1)"
-description: "스프링시큐리티의 기본적인 동작구조와 별도의 인증을 도입할 때 필요한 커스텀인증필터를 작성하고 적용하는 방법을 알아봅니다"
+title: "[Spring Security] 스프링시큐리티 동작구조의 이해(1) "
+description: "스프링시큐리티의 기본적인 동작구조와 별도의 인증을 도입할 때 필요한 커스텀 필터를 작성하고 적용하는 방법을 알아봅니다"
 author: kimchanjung
 date: 2020-07-01 01:00:00 +0900
 categories: spring
