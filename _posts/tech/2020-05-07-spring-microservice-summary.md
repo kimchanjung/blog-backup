@@ -5,6 +5,7 @@ description: "스프링마이크로서비스의 책내용중 마이크로서비�
 author: kimchanjung
 date: 2020-05-06 00:00:00 +0900
 categories: tech
+top: true
 images: ["/post-img/spring-microservice/spring-microservice-diagrams-monolithic-to-microservice.png","/post-img/spring-microservice/dependency-diagram.png"]
 published: true
 ---

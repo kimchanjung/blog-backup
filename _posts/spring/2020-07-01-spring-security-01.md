@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "[Spring Security] 스프링시큐리티 동작구조의 이해(1) "
+title: "[Spring Security] 스프링시큐리티 동작구조의 이해(1)"
 description: "스프링시큐리티의 기본적인 동작구조와 별도의 인증을 도입할 때 필요한 커스텀 필터를 작성하고 적용하는 방법을 알아봅니다"
 author: kimchanjung
 date: 2020-07-01 01:00:00 +0900
 categories: spring
+top: true
 iimages: ["/post-img/spring-security/spring-security-flow-diagram.png", "/post-img/spring-security/spring-security-flow-diagram.png"]
 published: true
 ---
@@ -21,7 +22,7 @@ published: true
 > 스프링시큐리티는 **인증과 권한등의 많은 기능을 편리하게 적용**할 수 있도록 도와 주는 라이브러리이지만 **사용법은 결코 만만하지 않다는 느낌을 받습니다.** 스프링과 JAVA공식 문서들이 그렇지만 **방대한 내용과 설명이 많아** 학습하는 것도 쉽지 않습니다. (요즘 React나 Vue같은 프론트엔드 공식문서는 너무도 잘되어 있는 최근 추세에 비해서)  
 
 ## 가장 먼저 학습 해야하는 부분
-그래서 저는 일단 공식 문서를 처음부터 정독하거나, 튜토리얼을 보는 것도 좋지만 `가장 먼저 스프링시큐리티의 동작 구조를 먼저 이해`하는 것이 나중에 학습 + 개발의 리소스를 줄여주는 방법이라고 생각합니다. 
+일단 공식 문서를 처음부터 정독하거나, 튜토리얼을 보는 것도 좋지만 `가장 먼저 스프링시큐리티의 동작 구조를 먼저 이해`하는 것이 나중에 학습 + 개발의 리소스를 줄여주는 방법이라고 생각합니다. 
 > 스프링시큐리티의 동작 구조를 이해하면 **설정과 추가적인 구현 및 변경이 어느 부분에 적용되어야 되는지 파악이 빨라** 집니다.
 
 ## 스프링시큐리티의 동작 구조
@@ -39,7 +40,7 @@ published: true
 브라우저의 로그인화면에서 아이디와 비번을 입력하고 확인을 누르면 서버에 로그인 인증 요청을 하게 되고 
 스프링시큐리티에 `Chain형태로 구성된 Filter들의 doFilter메소드들이 순서에 따라 호출`되어 각각의 역할로직들이 수행되게 됩니다.
 
-#### 2. 인증 처리 담당하는 UsernamePasswordAuthenticationFilter 실행된다.
+#### 2. 인증 처리 담당하는 UsernamePasswordAuthenticationFilter가 실행된다.
 ```java
 2: attemptAuthentication(request: HttpServletRequest, response: HttpServletResponse):Authentication  
 ```  
@@ -70,4 +71,9 @@ published: true
 개발자는 UserDetailsService 인터페이스를 구현해야합니다. UserDetailsService의 구현체에는 일반적으로 회원정보가 DB에 있다고 한다면 사용자의 이름(ID)로 DB를 조회하여 비밀번호가 일치하는지 확인하여 인증을 처리합니다. 인증이 완료되면 UsernamePasswordAuthenticationToken에 회원정보를 담아 리턴하게 됩니다.
 
 ### 마무리
-인증을 구현하기 앞서 스프링시큐리티의 대략적인 동작구조를 알아보았습니다. 다음 포스팅에서는 본격적으로 어떤 부분을 커스텀해야 하는지에 대해 알아 보도록 하겠습니다.
+인증을 구현하기 앞서 스프링시큐리티의 대략적인 동작구조를 알아보았습니다. 다음 포스팅에서는 본격적으로 `어떤 부분을 커스텀해야 하는지에 대해 알아 보도록 하겠습니다`.
+
+
+### 연관 글
+[[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)](/spring/2020/07/02/spring-security-02.html)  
+[[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)](/spring/2020/07/03/spring-security-03.html)

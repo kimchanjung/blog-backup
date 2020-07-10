@@ -4,6 +4,7 @@ title: "[Spring Security] 스프링시큐리티 설정값들의 역할과 설정
 description: "스프링시큐리티의 여러가지 설정값들의 역할과 설정방법을 상세히 알아봅니다."
 author: kimchanjung
 date: 2020-07-02 12:00:00 +0900
+top: true
 categories: spring
 published: true
 ---
@@ -273,3 +274,8 @@ filter.setAuthenticationFailureHandler(new CustomAuthenticationFailureHandler("/
 ### 마무리
 스프링시큐리티의 기본적인 설정 방법과 커스텀 필터를 등록하는 방법을 알아 보았습니다. 설정의 세부 내용이 방대하기 때문에 공식 문서를 참고해야합니다.
 본 글에서는 대략적인 설정 내용을 알아 보았습니다. 다음 포스팅에는 `커스텀 필터를 생성해서 사용자가 별도의 인증로직을 구현`하는 커스텀 필터의 세부 내용을 알아보도록 하겠습니다.
+
+
+### 연관 글
+[[Spring Security] 스프링시큐리티 동작구조의 이해(1) ](/spring/2020/07/01/spring-security-01.html)  
+[[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)](/spring/2020/07/03/spring-security-03.html)

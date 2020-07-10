@@ -4,6 +4,7 @@ title: "[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)"
 description: "스프링시큐리티의 커스텀 필터를 생성하고 적용하는 방법을 예제코드와 함께 알아봅니다."
 author: kimchanjung
 date: 2020-07-03 14:00:00 +0900
+top: true
 categories: spring
 published: true
 ---
@@ -218,3 +219,6 @@ public class BrmsWebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 ### 마무리
 최종적으로 `커스텀 인증 필터와 그에 필요한 클래스들의 생성 방법`을 알아보고 적용하는 방법까지 알아 보았습니다. 물론 `세부적인 내용이나 구현은 내용이 많아 생략`하였지만 원래 글의 의도인 `인증로직을 사용자에 상황에 맞게 구현`할 때 대략적인 `스프링시큐리티의 구조속에서 어떤 방향으로 접근`해야하는지에 중점을 두어 글을 작성하였습니다.
 
+### 연관 글
+[[Spring Security] 스프링시큐리티 동작구조의 이해(1) ](/spring/2020/07/01/spring-security-01.html)  
+[[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)](/spring/2020/07/02/spring-security-02.html)

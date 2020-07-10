@@ -5,6 +5,7 @@ description: "배달의민족 배민라이더스의 배달처리시스템 개발
 author: kimchanjung
 date: 2020-05-08 00:00:00 +0900
 categories: tech
+top: true
 images: ["/post-img/real-time-service/bros-gps.png", "/post-img/real-time-service/order-delivery-activity.png"]
 published: true
 ---

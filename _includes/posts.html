@@ -1,7 +1,13 @@
 <div style="width: 90%;margin: auto;">
     <div class="user-details">
         <h1> Posts </h1>
-        {% for post in site.posts %}
+        {% assign topPosts = site.posts | where: "top", true %}
+        {% assign posts = site.posts | where: "top", null %}
+       
+        {% for post in topPosts %}
+        <p><a class="post_link" href="{{ post.url }}">{{ post.title }}</a></p>
+        {% endfor %}
+        {% for post in posts %}
         <p><a class="post_link" href="{{ post.url }}">{{ post.title }}</a></p>
         {% endfor %}
     </div>

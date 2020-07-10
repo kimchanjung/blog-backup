@@ -5,6 +5,7 @@ description: "react와 mobx그리고 material-ui를 이용한 개발기와 예�
 author: kimchanjung
 date: 2020-05-08 00:00:00 +0900
 categories: tech
+top: true
 images: ["/post-img/react-mobx/brms-dashboard.png","/post-img/react-mobx/atomic-design.png","/post-img/react-mobx/brms-dashboard-dark.png"]
 published: true
 ---
