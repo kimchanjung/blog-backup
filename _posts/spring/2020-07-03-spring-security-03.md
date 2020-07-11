@@ -12,7 +12,7 @@ published: true
 # Spring Security 커스텀 필터를 이용한 인증 구현 - 커스텀 필터의 구현(3)
 > 본 포스팅은 스프링시큐리티의 전반적인 사용방법을 설명하는 포스팅은 아닙니다. 기본적인 동작구조와 별도의 인증을 도입할 때 필요한 커스텀인증필터를 작성하고 적용하는 방법을 알아봅니다.
 
-## 버전정보
+### 버전정보
 - Spring Boot v2.1.2
 - Spring Security v 5.1.3
 
@@ -45,10 +45,10 @@ public class CustomAuthenticationProcessingFilter extends AbstractAuthentication
 > - `username, password를 가져오는 로직의 예외처리`는 필수 입니다. 핵심로직만 설명하기 위해 간략한 코드로 설명합니다.
 
 
-## 커스텀 인증매니저 CustomAuthenticationManager를 생성
+### 커스텀 인증매니저 CustomAuthenticationManager를 생성
 `커스텀 필터는 전체적인 인증처리를 담당`하는 역할을 하고 `인증매니저는 실제 인증처리를 하는 로직을 구현`하는 클래스입니다.
 
-### CustomAuthenticationManager
+#### CustomAuthenticationManager
 ```java
 public class CustomAuthenticationManager implements AuthenticationManager {
 

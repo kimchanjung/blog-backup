@@ -12,14 +12,14 @@ published: true
 # Spring Security 커스텀 필터를 이용한 인증 구현 - 스프링시큐리티 설정(2)
 > 본 포스팅은 스프링시큐리티의 전반적인 사용방법을 설명하는 포스팅은 아닙니다. 기본적인 동작구조와 별도의 인증을 도입할 때 필요한 커스텀인증필터를 작성하고 적용하는 방법을 알아봅니다.
 
-## 버전정보
+### 버전정보
 - Spring Boot v2.1.2
 - Spring Security v 5.1.3
 
-## Spring Security 설정
+### Spring Security 설정
 스프링부트를 사용한다면 application.yml에서 설정도 가능하지만 몇가지 설정만 제공하고 모든 설정을 할 수 없으므로 `Configuration Class에서 하는 설정이 기본`이라고 생각하시면 됩니다.
 
-## Configuration Class 작성
+### Configuration Class 작성
 스프링시큐리티 Configuration Class를 작성하기 위해서는 WebSecurityConfigurerAdapter를 상속하여 클래스를 생성하고 @EnableWebSecurity 애노테이션을 추가합니다. (@Configuration 애노테이션 대신)
 ```java
 @EnableWebSecurity
@@ -182,7 +182,7 @@ successHandler(new CustomAuthenticationFailureHandler("/login-fail"))
 ```
 커스텀 핸들러를 생성하여 등록하면 인증실패 후 사용자가 추가한 로직을 수행하고 실패 페이지로 이동합니다.
 
-## 커스텀 필터 등록
+### 커스텀 필터 등록
 스프링시큐리티는 `각각역할에 맞는 필터들이 체인형태로 구성되서 순서에 맞게 실행`되는 구조로 동작합니다. 사용자는 특정 기능의 필터를 생성하여 등록할 수 있습니다. `인증을 처리하는 기본필터 UsernamePasswordAuthenticationFilter` 대신 `별도의 인증 로직을 가진 필터를 생성하고 사용하고 싶을 때 아래와 같이 필터를 등록`하고 사용합니다.
 ```java
 @EnableWebSecurity
