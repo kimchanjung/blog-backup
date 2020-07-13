@@ -25,18 +25,20 @@ h1, h2, h3, h4, stong {
     color: #333;
     font-weight: bold;
 }
-h1 {
-    font-size: 2.5rem;
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.7rem; }
+h3 { font-size: 1.2rem; }
+h4 { font-size: 1rem; }
+
+@media screen and (max-width: $cut) { 
+    h1 { font-size: 2rem; } 
+    h2 { font-size: 1.5rem; } 
+    h3 { font-size: 1rem; } 
+    h4 { font-size: 0.9rem; } 
+    body { font-size: 0.9rem; } 
 }
-h2 {
-    font-size: 2rem;
-}
-h3 {
-    font-size: 1.5rem;
-}
-h4 {
-    font-size: 1rem;
-}
+
 ul, ol {
     margin: 1em 0;
     padding-left: 40px;

@@ -13,17 +13,18 @@
 
 .user {
   text-align: center;
-  font-size: 60px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  p {
-    font-size: 1rem;
+  i {
+    font-size: 60px;
   }
   @media only screen and (min-width: $cut) {
     flex-wrap: nowrap;
-    font-size: 75px;
+    i {
+      font-size: 75px;
+    }
   }
 }
 

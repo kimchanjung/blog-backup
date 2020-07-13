@@ -36,7 +36,7 @@ a:hover { color: #111; text-decoration: underline; }
 .social-media-list a:hover .username { text-decoration: underline; }
 
 /** Blockquotes */
-blockquote { color: #2a2b33; border-left: 4px solid #ef07f3; padding: 15px; font-size: 1rem; background-color: #f1f1f1;}
+blockquote { color: #2a2b33; border-left: 4px solid #ef07f3; padding: 15px; background-color: #f1f1f1;}
 
 blockquote > :last-child { margin-bottom: 0; }
 
@@ -157,17 +157,6 @@ table td { border: 1px solid #e8e8e8; }
 
 .post-content { margin-bottom: 30px; }
 
-.post-content h2 { font-size: 32px; }
-
-@media screen and (max-width: 800px) { .post-content h2 { font-size: 28px; } }
-
-.post-content h3 { font-size: 26px; }
-
-@media screen and (max-width: 800px) { .post-content h3 { font-size: 22px; } }
-
-.post-content h4 { font-size: 20px; }
-
-@media screen and (max-width: 800px) { .post-content h4 { font-size: 18px; } }
 
 /** Syntax highlighting styles */.highlight .hll { background-color: #49483e }
 .highlight  {font-size: .85rem; background: #011627; border-radius: 8px }
