@@ -50,7 +50,6 @@ pre { padding: 8px 12px; overflow-x: auto; }
 pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 code.highlighter-rouge {  
-  font-size: 1rem; 
   border-radius: 3px;
   background-color: #0985ef;
   color: white;
@@ -159,7 +158,14 @@ table td { border: 1px solid #e8e8e8; }
 
 
 /** Syntax highlighting styles */.highlight .hll { background-color: #49483e }
-.highlight  {font-size: .85rem; background: #011627; border-radius: 8px }
+.highlight  {
+  font-size: 1rem; 
+  background: #011627; 
+  border-radius: 8px; 
+  @media only screen and (max-width: 550px) {
+    font-size: .98rem
+  }
+}
 
 .img-center {
   display: block;
