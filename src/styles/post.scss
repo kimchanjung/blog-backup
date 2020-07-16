@@ -43,7 +43,7 @@ blockquote > :last-child { margin-bottom: 0; }
 /** Code formatting */
 
 
-code { padding: 1px 5px; }
+code { padding: 1px 5px; font-family: monospace; }
 
 pre { padding: 8px 12px; overflow-x: auto; }
 
@@ -53,6 +53,7 @@ code.highlighter-rouge {
   border-radius: 3px;
   background-color: #0985ef;
   color: white;
+  font-family: "Roboto", "Spoqa Han Sans", sans-serif;
 }
 
 /** Wrapper */
@@ -162,6 +163,7 @@ table td { border: 1px solid #e8e8e8; }
   font-size: 1rem; 
   background: #011627; 
   border-radius: 8px; 
+  box-shadow: 5px 5px 5px #8c8888;
   @media only screen and (max-width: 550px) {
     font-size: .98rem
   }
