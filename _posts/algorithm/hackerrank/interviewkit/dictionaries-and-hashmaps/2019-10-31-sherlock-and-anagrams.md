@@ -9,7 +9,7 @@ categories: algorithm/hackerrank/interviewkit/dictionaries-and-hashmaps
 published: true
 ---
 
-## 특정 문자열의 개별 문자를 쌍으로 구성하는 경우 가능한 케이스의 개수를 찾는 문제 
+## 특정 문자열의 개별 문자를 쌍으로 구성하는 경우 가능한 케이스의 개수를 찾는 문제
 
 [문제바로가기](https://www.hackerrank.com/challenges/sherlock-and-anagrams)
 
